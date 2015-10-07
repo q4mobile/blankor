@@ -438,10 +438,3 @@ body {
 .grid__col--am {
   vertical-align: middle;
 }
-
-.slider {
-  display: inline;
-}
-.slider h1 {
-  color: red;
-}
