@@ -1,0 +1,10 @@
+/*-----------------------------------*\
+  Default CSS - 2015-10-07
+\*-----------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

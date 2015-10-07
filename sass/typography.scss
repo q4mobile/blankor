@@ -1,0 +1,31 @@
+/*-----------------------------------*\
+  Typography CSS - 2015-10-07
+\*-----------------------------------*/
+
+$default-font: 'Roboto', sans-serif !default;
+
+@mixin normal-weight {
+  font: {
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+@mixin light-weight {
+  font: {
+    font-style: normal;
+    font-weight: 300;
+  }
+}
+
+@mixin bold-weight {
+  font: {
+    font-style: normal;
+    font-weight: 600;
+  }
+}
+
+body {
+	font-family: $default-font;
+	@include normal-weight;
+}
