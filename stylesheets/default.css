@@ -1,5 +1,5 @@
 /*-----------------------------------*\
-  Default CSS - 2015-10-07
+  Default CSS
 \*-----------------------------------*/
 html {
   box-sizing: border-box;
@@ -7,4 +7,17 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body.PreviewBody {
+  margin: 0;
+  background-position: 0 0;
+}
+
+.PreviewToolBar {
+  display: none;
+}
+
+.lazy-hidden {
+  background: #eee url("http://q4blankor.s2.q4web.com/files/design/ajax-loader.gif") no-repeat 50% 50%;
 }

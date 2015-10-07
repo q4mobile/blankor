@@ -8,8 +8,11 @@
 
 // Toast - https://github.com/daneden/toast
 
-@import "_grid.scss";
-
 @import "navigation.scss";
 
+// Modules
+
 @import "slider.scss";
+@import "hero.scss";
+
+@import "_grid.scss";

@@ -1,5 +1,5 @@
 /*-----------------------------------*\
-  Typography CSS - 2015-10-07
+  Typography CSS
 \*-----------------------------------*/
 
 $default-font: 'Roboto', sans-serif !default;
@@ -21,7 +21,7 @@ $default-font: 'Roboto', sans-serif !default;
 @mixin bold-weight {
   font: {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
   }
 }
 
