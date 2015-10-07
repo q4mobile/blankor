@@ -29,3 +29,7 @@ body {
 	font-family: $default-font;
 	@include normal-weight;
 }
+
+h1 {
+	font-size: 22px;
+}
