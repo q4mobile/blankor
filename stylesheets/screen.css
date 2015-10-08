@@ -75,10 +75,16 @@ img {
   max-width: 100%;
 }
 
-.clearfix:after {
+.clearfix:after,
+.ContentContainer:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.overlayBackground .ContentContainer {
+  background-image: url("https://q4blankor.s2.q4web.com/files/temp/trans-bg.png");
+  background-repeat: repeat;
 }
 
 .PreviewToolBar {
@@ -259,10 +265,6 @@ h1 {
 }
 
 /* Dots */
-.slick-slider {
-  margin-bottom: 30px;
-}
-
 .slick-dots {
   position: absolute;
   bottom: -45px;
