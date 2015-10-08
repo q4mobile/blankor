@@ -1,18 +1,15 @@
-// Compass Reset CSS
-
+// Reset
 @import "compass/reset";
+@import "includes/variables.scss";
 
+// Page
 @import "default.scss";
-
+@import "navigation.scss";
 @import "typography.scss";
 
-// Toast - https://github.com/daneden/toast
-
-@import "navigation.scss";
-
 // Modules
+@import "modules/hero.scss";
+@import "modules/slider.scss";
 
-@import "slider.scss";
-@import "hero.scss";
-
-@import "_grid.scss";
+// Toast - https://github.com/daneden/toast
+@import "includes/_grid.scss";
