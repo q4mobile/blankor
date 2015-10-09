@@ -1,8 +1,13 @@
 /*-----------------------------------*\
   Typography CSS
 \*-----------------------------------*/
+i {
+  font-family: 'Q4-Default-Icons';
+  height: 32px;
+  width: 32px;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
   font-font-style: normal;
   font-font-weight: 400;
 }

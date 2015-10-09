@@ -25,8 +25,14 @@ $default-font: 'Roboto', sans-serif !default;
   }
 }
 
+i {
+  font-family: 'Q4-Default-Icons';
+  height: 32px;
+  width: 32px;
+}
+
 body {
-	font-family: $default-font;
+	//font-family: $default-font;
 	@include normal-weight;
 }
 

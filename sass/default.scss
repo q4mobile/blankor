@@ -22,15 +22,19 @@ img {
 }
 
 .clearfix:after,
-.ContentContainer:after, {
+.container:after, {
   content: "";
   display: table;
   clear: both;
 }
 
-.overlayBackground .ContentContainer {
+.overlayBackground .container {
   background-image: url($site + "files/temp/trans-bg.png");
   background-repeat: repeat;
+}
+
+.PageDefaultInner {
+  overflow: hidden;
 }
 
 .PreviewToolBar {
