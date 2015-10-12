@@ -18,6 +18,10 @@ img {
   max-width: 100%;
 }
 
+.container {
+  padding: 6% 0;
+}
+
 .clearfix:after,
 .container:after {
   content: "";
@@ -25,9 +29,9 @@ img {
   clear: both;
 }
 
-.overlayBackground .container {
-  background-image: url("http://blankor.q4web.com/files/temp/trans-bg.png");
+.overlayBackground.container {
   background-repeat: repeat;
+  padding: 0;
 }
 
 .PageDefaultInner {
@@ -49,4 +53,20 @@ img {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 1;
+}
+
+.fixed-bg {
+  min-height: 100%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.shareholder .container {
+  padding: 10% 0;
+}
+
+.letter {
+  height: 1000px;
 }
