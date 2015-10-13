@@ -75,8 +75,12 @@ img {
   max-width: 100%;
 }
 
-.container {
-  padding: 6% 0;
+.PreviewToolBar {
+  display: none;
+}
+
+.PageDefaultInner {
+  overflow: hidden;
 }
 
 .clearfix:after,
@@ -86,19 +90,17 @@ img {
   clear: both;
 }
 
-.overlayBackground.container {
+.container {
+  padding: 6% 0;
+}
+
+.overlayBackground {
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
   padding: 0;
 }
 
-.PageDefaultInner {
-  overflow: hidden;
-}
-
-.PreviewToolBar {
-  display: none;
-}
-
+/* Lazy Loading XT */
 .lazy-hidden {
   opacity: 0;
 }
@@ -112,6 +114,7 @@ img {
   opacity: 1;
 }
 
+/* Fixed BG */
 .fixed-bg {
   min-height: 100%;
   background-size: 100% auto;
@@ -120,12 +123,9 @@ img {
   background-position: center center;
 }
 
-.shareholder .container {
-  padding: 10% 0;
-}
-
-.letter {
-  height: 1000px;
+.jumbotron {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /*-----------------------------------*\
@@ -234,8 +234,6 @@ i {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-font-style: normal;
-  font-font-weight: 400;
 }
 
 h1 {
@@ -558,6 +556,13 @@ h1 {
   height: 100%;
   vertical-align: middle;
   width: 75%;
+}
+
+/*-----------------------------------*\
+  Client CSS
+\*-----------------------------------*/
+.shareholder .container {
+  padding: 10% 0;
 }
 
 /*-----------------------------------*\

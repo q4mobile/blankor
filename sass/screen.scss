@@ -2,14 +2,19 @@
 @import "compass/reset";
 @import "includes/variables.scss";
 
-// Page
+//Default CSS
 @import "default.scss";
-@import "navigation.scss";
-@import "typography.scss";
+
+// Global
+@import "global/navigation.scss";
+@import "global/typography.scss";
 
 // Modules
 @import "modules/hero.scss";
 @import "modules/slider.scss";
+
+// Client Specific CSS
+@import "client.scss";
 
 // Toast - https://github.com/daneden/toast
 @import "includes/_grid.scss";
