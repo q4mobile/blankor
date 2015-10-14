@@ -242,14 +242,10 @@
 
 /* Custom Slider Styles */
 .introBox {
-  color: #fff;
-  display: inline-block;
-  float: left;
   height: 100%;
-  width: 25%;
 }
 
-.introBox .introText {
+.introText {
   padding: 12.5% 8.5%;
   position: relative;
   font-size: 12px;
@@ -259,10 +255,6 @@
 }
 
 .introSlider {
-  color: #fff;
-  display: inline-block;
-  float: left;
   height: 100%;
   vertical-align: middle;
-  width: 75%;
 }

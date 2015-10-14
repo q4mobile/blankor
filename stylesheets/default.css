@@ -40,7 +40,6 @@ img {
 .overlayBackground {
   background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
-  padding: 0;
 }
 
 /* Lazy Loading XT */
@@ -66,7 +65,7 @@ img {
   background-position: center center;
 }
 
-.jumbotron {
+.container-thin {
   padding-top: 50px;
   padding-bottom: 50px;
 }

@@ -1,5 +1,6 @@
 // Reset
-@import "compass/reset";
+//@import "compass/reset";
+@import "includes/reset.scss";
 @import "includes/variables.scss";
 
 //Default CSS
@@ -12,6 +13,7 @@
 // Modules
 @import "modules/hero.scss";
 @import "modules/slider.scss";
+@import "modules/html-content.scss";
 
 // Client Specific CSS
 @import "client.scss";
