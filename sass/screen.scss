@@ -6,17 +6,20 @@
 //Default CSS
 @import "default.scss";
 
+
 // Global
 @import "global/navigation.scss";
 @import "global/typography.scss";
 
-// Modules
-@import "modules/hero.scss";
+// Plugins
 @import "modules/slider.scss";
-@import "modules/html-content.scss";
-
-// Client Specific CSS
-@import "client.scss";
 
 // Toast - https://github.com/daneden/toast
 @import "includes/_grid.scss";
+
+// Modules
+@import "modules/html-content.scss";
+@import "modules/hero.scss";
+
+// Client Specific CSS
+@import "client.scss";

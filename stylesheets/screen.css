@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*-----------------------------------*\
+  Reset CSS
+\*-----------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -88,15 +91,6 @@ img {
   clear: both;
 }
 
-.container {
-  padding: 6% 0;
-}
-
-.overlayBackground {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
-  background-repeat: repeat;
-}
-
 /* Lazy Loading XT */
 .lazy-hidden {
   opacity: 0;
@@ -109,20 +103,6 @@ img {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 1;
-}
-
-/* Fixed BG */
-.fixed-bg {
-  min-height: 100%;
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.container-thin {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 /*-----------------------------------*\
@@ -234,7 +214,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 i {
@@ -251,56 +231,25 @@ h1 {
   font-size: 22px;
 }
 
-.hero-container {
-  background-color: #1f181e;
-  display: table;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-.hero-container .hero-overlay {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-}
-.hero-container img {
-  width: 100%;
-  height: auto;
-}
-.hero-container h2 {
-  text-align: right;
-  color: #fff;
-  display: inline-block;
-  float: right;
-  clear: both;
-  font-size: 40px;
-  line-height: 44px;
-  margin: 0;
-  margin-right: 5%;
-}
-.hero-container h3 {
-  color: #fff;
-  display: inline-block;
-  float: right;
-  clear: both;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
-  margin: 20px 5% 5px 15px;
-  text-transform: capitalize;
-}
-.hero-container a {
-  color: #fff;
-  display: block;
-  font-size: 14px;
-  cursor: pointer;
-  float: right;
-  clear: both;
-  margin: 20px 5% 25px 15px;
-  vertical-align: top;
+h2 {
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
 }
 
+p {
+  margin: 10px 0;
+  line-height: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*-----------------------------------*\
+  Slick - Slider CSS
+\*-----------------------------------*/
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url(http://blankor.q4web.com/files/design/ajax-loader.gif) center center no-repeat;
@@ -371,10 +320,10 @@ h1 {
   right: -25px;
 }
 .slick-prev:before {
-  content: "←";
+  content: "ÔåÉ";
 }
 [dir="rtl"] .slick-prev:before {
-  content: "→";
+  content: "ÔåÆ";
 }
 
 .slick-next {
@@ -385,10 +334,10 @@ h1 {
   right: auto;
 }
 .slick-next:before {
-  content: "→";
+  content: "ÔåÆ";
 }
 [dir="rtl"] .slick-next:before {
-  content: "←";
+  content: "ÔåÉ";
 }
 
 /* Dots */
@@ -433,7 +382,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  content: "•";
+  content: "ÔÇó";
   width: 20px;
   height: 20px;
   font-family: "slick";
@@ -561,14 +510,6 @@ h1 {
   vertical-align: middle;
 }
 
-@media screen and (max-width: 960px) {
-  .story-alternate {
-    float: right;
-  }
-}
-/*-----------------------------------*\
-  Client CSS
-\*-----------------------------------*/
 /*-----------------------------------*\
   Toast - Grid CSS
 \*-----------------------------------*/
@@ -671,7 +612,7 @@ h1 {
   padding-left: 0;
   vertical-align: top;
 }
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .col {
     display: block;
     margin-left: 0;
@@ -679,7 +620,7 @@ h1 {
     width: auto;
   }
 }
-@media (max-width: 1200px) and (min-width: 960px) {
+@media (max-width: 1200px) and (min-width: 768px) {
   .col[class*="col-lg-"] {
     display: inline-block;
     margin-right: -.24em;
@@ -703,7 +644,7 @@ h1 {
     width: 75%;
   }
 }
-@media (max-width: 960px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 480px) {
   .col[class*="col-md-"] {
     display: inline-block;
     margin-right: -.24em;
@@ -782,3 +723,165 @@ h1 {
 .col-am {
   vertical-align: middle;
 }
+
+/*-----------------------------------*\
+  html-content module CSS
+\*-----------------------------------*/
+.html-content .container {
+  padding: 6% 0;
+}
+.html-content .container.thin {
+  padding: 4% 0;
+}
+.html-content .container.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 960px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.html-content .overlay-background {
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+.html-content .story, .html-content .story-image, .html-content .story-content,
+.html-content .story-slider, .html-content .story-slider-content {
+  vertical-align: middle;
+}
+.html-content .story-image, .html-content .story-slider {
+  height: 100%;
+}
+.html-content .story-image img {
+  width: 100%;
+}
+.html-content .story-content {
+  padding: 2 9%;
+}
+.html-content .story-content.center {
+  text-align: center;
+}
+.html-content .story-slider-content {
+  text-transform: uppercase;
+  padding: 1.375%;
+  line-height: 25px;
+}
+.html-content .arrow {
+  display: inline-block;
+  margin-top: 10px;
+}
+.html-content .arrow:before {
+  font-family: 'Q4-Default-Icons';
+  content: "\e802";
+  font-size: 60px;
+}
+.html-content .arrow.alt:before {
+  content: "\e806";
+}
+
+/* Themes */
+.dark {
+  color: #fff;
+}
+.dark a {
+  color: #fff;
+}
+
+.light {
+  color: #000;
+}
+.light a {
+  color: #000;
+}
+
+.corporate-one {
+  background-color: #fd7700;
+}
+
+.corporate-two {
+  background-color: #efefef;
+}
+
+.corporate-three {
+  background-color: #231f20;
+}
+
+/* Fixed BG */
+.fixed-bg {
+  min-height: 100%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .story-image {
+    display: none;
+  }
+
+  .story-image.mobile {
+    display: inline-block;
+  }
+
+  .story-alternate {
+    float: right;
+  }
+}
+/*-----------------------------------*\
+  Hero Banner CSS
+\*-----------------------------------*/
+.hero-container {
+  background-color: #1f181e;
+  display: table;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.hero-container .hero-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.hero-container img {
+  width: 100%;
+  height: auto;
+}
+.hero-container h2 {
+  text-align: right;
+  color: #fff;
+  display: inline-block;
+  float: right;
+  clear: both;
+  font-size: 40px;
+  line-height: 44px;
+  margin: 0;
+  margin-right: 5%;
+}
+.hero-container h3 {
+  color: #fff;
+  display: inline-block;
+  float: right;
+  clear: both;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 20px 5% 5px 15px;
+  text-transform: capitalize;
+}
+.hero-container a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+  float: right;
+  clear: both;
+  margin: 20px 5% 25px 15px;
+  vertical-align: top;
+}
+
+/*-----------------------------------*\
+  Client CSS
+\*-----------------------------------*/

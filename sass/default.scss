@@ -36,15 +36,6 @@ img {
   clear: both;
 }
 
-.container {
-  padding: 6% 0;
-}
-
-.overlayBackground {
-  background-image: url($site+'files/temp/overlay-bg.png');
-  background-repeat: repeat;
-}
-
 /* Lazy Loading XT */
 
 .lazy-hidden {
@@ -58,19 +49,4 @@ img {
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
     opacity: 1;
-}
-
-/* Fixed BG */
-
-.fixed-bg {
-  min-height: 100%;
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.container-thin {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }

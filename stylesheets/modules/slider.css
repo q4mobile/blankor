@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*-----------------------------------*\
+  Slick - Slider CSS
+\*-----------------------------------*/
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url(http://blankor.q4web.com/files/design/ajax-loader.gif) center center no-repeat;
@@ -69,10 +72,10 @@
   right: -25px;
 }
 .slick-prev:before {
-  content: "←";
+  content: "ÔåÉ";
 }
 [dir="rtl"] .slick-prev:before {
-  content: "→";
+  content: "ÔåÆ";
 }
 
 .slick-next {
@@ -83,10 +86,10 @@
   right: auto;
 }
 .slick-next:before {
-  content: "→";
+  content: "ÔåÆ";
 }
 [dir="rtl"] .slick-next:before {
-  content: "←";
+  content: "ÔåÉ";
 }
 
 /* Dots */
@@ -131,7 +134,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  content: "•";
+  content: "ÔÇó";
   width: 20px;
   height: 20px;
   font-family: "slick";
