@@ -69,6 +69,20 @@
 		content: "\e806";
 	}
 
+	/* Responsive */
+
+	@media screen and (max-width: 768px) {
+		.story-image {
+			display: none;
+		}
+	    .story-image.mobile {
+			display: inline-block;
+		}
+	    .story-alternate {
+	        float: right;
+	    }
+	}
+
 }
 
 /* Themes */
@@ -88,7 +102,7 @@
 }
 
 .corporate-one {
-	background-color: #fd7700;
+	background-color: $corporate-one;
 }
 
 .corporate-two {
@@ -107,18 +121,4 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-/* Responsive */
-
-@media screen and (max-width: 768px) {
-	.story-image {
-		display: none;
-	}
-    .story-image.mobile {
-		display: inline-block;
-	}
-    .story-alternate {
-        float: right;
-    }
 }

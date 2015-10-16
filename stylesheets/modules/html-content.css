@@ -1,6 +1,9 @@
 /*-----------------------------------*\
   html-content module CSS
 \*-----------------------------------*/
+.html-content {
+  /* Responsive */
+}
 .html-content .container {
   padding: 6% 0;
 }
@@ -52,6 +55,17 @@
 .html-content .arrow.alt:before {
   content: "\e806";
 }
+@media screen and (max-width: 768px) {
+  .html-content .story-image {
+    display: none;
+  }
+  .html-content .story-image.mobile {
+    display: inline-block;
+  }
+  .html-content .story-alternate {
+    float: right;
+  }
+}
 
 /* Themes */
 .dark {
@@ -87,19 +101,4 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .story-image {
-    display: none;
-  }
-
-  .story-image.mobile {
-    display: inline-block;
-  }
-
-  .story-alternate {
-    float: right;
-  }
 }
