@@ -34,7 +34,7 @@ $(function(){
     q4._init();
     q4._setHeight( $('.hero-container') );
 
-    var slick = $('.introSlider').slick({
+    var slick = $('.story-slider').slick({
         infinite: true,
         arrows: false,
         pauseOnHover: false,
