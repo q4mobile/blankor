@@ -3,26 +3,26 @@
         options: {
             templates: {
                 story: (
-                    '<div class="story-item">' +
+                    '<div id="{{SeoName}}" class="story-item {{cls}}">' +
                         '<div class="col col-1-of-3 story-image">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
                         '</div>' +
                         '<div class="col col-2-of-3 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
-                                '<h2>{{Headline}}</h2>' +
-                                '{{#Body}}<p>{{{Body}}}</p>{{/Body}}' +
-                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow alt"></a>{{/LinkToDetailPage}}' +
+                                '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
+                                '{{#Body}}{{{Body}}}{{/Body}}' +
+                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
                         '</div>' +
                     '</div>'
                 ),
-                storyAlt: (
-                    '<div class="story-item">' +
+                'story-alt': (
+                    '<div id="{{SeoName}}" class="story-item {{cls}}">' +
                         '<div class="col col-2-of-3 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
-                                '<h2>{{Headline}}</h2>' +
-                                '{{#Body}}<p>{{{Body}}}</p>{{/Body}}' +
-                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow alt"></a>{{/LinkToDetailPage}}' +
+                                '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
+                                '{{#Body}}{{{Body}}}{{/Body}}' +
+                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
                         '</div>' +
                         '<div class="col col-1-of-3 story-image">' +
@@ -31,43 +31,44 @@
                     '</div>'
                 ),
                 stories: (
-                    '<div class="stories-item col col-flex">' +
+                    '<div id="{{SeoName}}" class="stories-item col col-flex {{cls}}">' +
                         '<div class="col story-image">' +
                             '<a href=""><img class="ModuleThumbnail" src="{{ThumbnailPath}}"></a>' +
                         '</div>' +
                         '<div class="col story-content">' +
-                            '<h2 class="story-title">{{Headline}}</h2>' +
+                            '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
                             '<div class="story-body">{{Body}}</div>' +
-                            '<a href="{{LinkToDetailPage}}" class="arrow"></a>' +
+                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
                     '</div>'
                 ),
-                storiesAlt: (
-                    '<div class="stories-item alt col col-flex ">' +
+                'stories-alt': (
+                    '<div id="{{SeoName}}" class="stories-item alt col col-flex {{cls}}">' +
                         '<div class="col story-image">' +
                             '<a href=""><img class="ModuleThumbnail" src="{{ThumbnailPath}}"></a>' +
                         '</div>' +
                         '<div class="col story-content">' +
-                            '<h2 class="story-title">{{Headline}}</h2>' +
+                            '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
                             '<div class="story-body">{{Body}}</div>' +
-                            '<a href="{{LinkToDetailPage}}" class="arrow"></a>' +
+                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
                     '</div>'
                 ),
                 feature: (
-                    '<div class="feature-item">' +
-                        '<div id="{{SeoName}}" data-bg="{{{ThumbnailPath}}}" class="fixed-bg">' +
+                    '<div id="{{SeoName}}" class="feature-item {{cls}}">' +
+                        '<div {{#ThumbnailPath}}data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
-                                '<div class="container center dark">' +
-                                    '<h2>{{Headline}}</h2>' +
-                                    '{{#Body}}<p>{{{Body}}}</p>{{/Body}}' +
-                                    '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow alt"></a>{{/LinkToDetailPage}}' +
+                                '<div class="container">' +
+                                    '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
+                                    '{{#Body}}{{{Body}}}{{/Body}}' +
+                                    '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                                 '</div>' +
                             '{{#overlay}}</div>{{/overlay}}' +
                         '</div>' +
                     '</div>'
                 )
-            }
+            },
+            onComplete: function(){}
         },
 
         _init: function() {
@@ -115,7 +116,7 @@
 
                 $.each(data.GetPressReleaseListResult, function(i, story){
                     var tpl = inst.options.templates,
-                        tag = '';
+                        cls = '', tag = '';
 
                     $.each(story.TagsList, function(idx, item){
                         switch(item) {
@@ -123,20 +124,27 @@
                                 tag = 'feature';
                                 break;
                             case 'story':
-                                storyAlt % 2 === 0 ? tag = 'story' : tag = 'storyAlt';
+                                storyAlt % 2 === 0 ? tag = 'story' : tag = 'story-alt';
                                 storyAlt += 1;
                                 break;
                             case 'stories':
-                                storiesAlt % 2 === 0 ? tag = 'stories' : tag = 'storiesAlt';
+                                storiesAlt % 2 === 0 ? tag = 'stories' : tag = 'stories-alt';
                                 storiesAlt += 1;
                                 break;
+                            case 'no-title':
+                                story.Headline = '';
+                                break;
+                            case 'overlay-background':
+                                story.overlay = true;
+                                break;
                             default:
-                                story[item] = true;
+                                cls += ' ' + item;
                                 break;
                         }
                     });
-
-                    story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
+                    
+                    story.cls = cls;
+                    story.LinkToDetailPage = story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
                     stories += Mustache.render(tpl[tag], story);
                 });
 
