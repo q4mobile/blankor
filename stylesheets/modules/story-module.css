@@ -1,0 +1,143 @@
+/*-----------------------------------*\
+  Story, Stories, and Feature CSS
+\*-----------------------------------*/
+.story-container {
+  /* Global */
+  /* Stories */
+}
+.story-container > div {
+  /*Container Config */
+  /* Fixed BG */
+  /* Themes */
+}
+.story-container > div .container {
+  padding: 6% 0;
+}
+.story-container > div.thin .container {
+  padding: 4% 0;
+}
+.story-container > div.thick .container {
+  padding: 12% 0;
+}
+.story-container > div.center {
+  text-align: center;
+}
+.story-container > div.center .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.story-container > div .overlay-background {
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+.story-container > div .fixed-bg {
+  min-height: 100%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.story-container > div.dark {
+  color: #fff;
+}
+.story-container > div.dark a {
+  color: #fff;
+}
+.story-container > div.light {
+  color: #000;
+}
+.story-container > div.light a {
+  color: #000;
+}
+.story-container > div.corporate-one {
+  background-color: #fd7700;
+}
+.story-container > div.corporate-two {
+  background-color: #efefef;
+}
+.story-container > div.corporate-three {
+  background-color: #231f20;
+}
+.story-container > div.corporate-four {
+  background-color: #767574;
+}
+.story-container .stories-item.col-flex > div {
+  width: 50%;
+}
+
+/* Typography */
+.story-image a {
+  font-size: 0;
+}
+
+/* Containers */
+.story-image, .story-content,
+.story-slider, .story-slider-content {
+  vertical-align: middle;
+}
+
+.story-image, .story-slider {
+  height: 100%;
+}
+
+.story-image img {
+  width: 100%;
+}
+
+.story-content {
+  padding: 2% 9%;
+}
+
+.story-content.center {
+  text-align: center;
+}
+
+.story-slider-content {
+  text-transform: uppercase;
+  padding: 1.375%;
+  line-height: 25px;
+}
+
+/* Default Story */
+/* Stories */
+.col-2 .col-flex, .col-2 .col-flex > div {
+  width: 50%;
+}
+
+/* Elements */
+.ModuleDate {
+  display: none;
+}
+
+.arrow {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.arrow:before {
+  font-family: 'Q4-Default-Icons';
+  content: "\e802";
+  font-size: 60px;
+}
+
+.arrow.alt:before {
+  content: "\e806";
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .story-image {
+    display: none;
+  }
+
+  .story-image.mobile {
+    display: inline-block;
+  }
+
+  .story-alternate {
+    float: right;
+  }
+}
