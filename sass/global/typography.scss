@@ -2,6 +2,8 @@
   Typography CSS
 \*-----------------------------------*/
 
+@import "includes/variables.scss";
+
 $default-font: 'Roboto', sans-serif !default;
 $corporate-font: 'OCRB', sans-serif !default;
 
@@ -30,7 +32,8 @@ body {
 }
 
 h1 {
-	font-size: 22px;
+	font-size: 40px;
+	line-height: 44px;
 }
 
 h2 {
@@ -47,4 +50,13 @@ p {
 a {
 	text-decoration: none;
 	color: #000;
+}
+
+@media screen and (max-width: $screen-medium) {
+
+	h2 {
+		font-size: 30px;
+	    line-height: 36px;
+	}
+
 }

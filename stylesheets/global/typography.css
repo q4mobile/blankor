@@ -26,7 +26,8 @@ body {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 h2 {
@@ -43,4 +44,11 @@ p {
 a {
   text-decoration: none;
   color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }

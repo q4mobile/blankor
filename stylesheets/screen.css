@@ -57,7 +57,7 @@ table {
 }
 
 /*-----------------------------------*\
-  Default CSS
+	Default CSS
 \*-----------------------------------*/
 html {
   box-sizing: border-box;
@@ -89,6 +89,92 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+/*Container Config */
+.container {
+  padding: 6% 0;
+}
+
+.center {
+  text-align: center;
+}
+.center .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.overlay-background {
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+
+@media screen and (min-width: 481px) {
+  .thin .container {
+    padding: 4% 0;
+  }
+
+  .thick .container {
+    padding: 12% 0;
+  }
+}
+/* Fixed BG */
+.fixed-bg {
+  min-height: 100%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Themes */
+.dark {
+  color: #fff;
+}
+.dark a {
+  color: #fff;
+}
+
+.light {
+  color: #000;
+}
+.light a {
+  color: #000;
+}
+
+.corporate-one {
+  background-color: #fd7700;
+}
+
+.corporate-two {
+  background-color: #efefef;
+}
+
+.corporate-three {
+  background-color: #231f20;
+}
+
+.corporate-four {
+  background-color: #767574;
+}
+
+/* Elements */
+.arrow {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.arrow:before {
+  font-family: 'Q4-Default-Icons';
+  content: "\e802";
+  font-size: 60px;
+}
+
+.arrow.alt:before {
+  content: "\e806";
 }
 
 /* Lazy Loading XT */
@@ -228,7 +314,8 @@ body {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 h2 {
@@ -247,6 +334,12 @@ a {
   color: #000;
 }
 
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
 /*-----------------------------------*\
   Slick - Slider CSS
 \*-----------------------------------*/
@@ -612,7 +705,7 @@ a {
   padding-left: 0;
   vertical-align: top;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .col {
     display: block;
     margin-left: 0;
@@ -727,98 +820,129 @@ a {
 /*-----------------------------------*\
   Story, Stories, and Feature CSS
 \*-----------------------------------*/
-.story-container {
+.story-item {
   /* Global */
-  /* Stories */
+  /* Single Story */
+  /* Multi Story */
+  /* Feature Story */
+  /* Download Item */
 }
-.story-container > div {
-  /*Container Config */
-  /* Fixed BG */
-  /* Themes */
+.story-item .ModuleDate {
+  display: none;
 }
-.story-container > div .container {
-  padding: 6% 0;
+.story-item .story-image, .story-item .story-content {
+  vertical-align: middle;
 }
-.story-container > div.thin .container {
-  padding: 4% 0;
+.story-item .story-image {
+  height: 100%;
 }
-.story-container > div.thick .container {
-  padding: 12% 0;
+.story-item .story-image img {
+  width: 100%;
 }
-.story-container > div.center {
-  text-align: center;
+.story-item .story-content {
+  padding: 2% 9%;
 }
-.story-container > div.center .container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 960px;
-  padding-left: 5%;
-  padding-right: 5%;
+.story-item .story-image a {
+  font-size: 0;
 }
-.story-container > div .overlay-background {
+.story-item.single {
+  /* Responsive */
+}
+@media screen and (max-width: 768px) {
+  .story-item.single .story-image {
+    display: none;
+  }
+}
+.story-item.multi {
+  position: relative;
+}
+.story-item.multi:hover {
   background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
 }
-.story-container > div .fixed-bg {
-  min-height: 100%;
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
+.story-item.multi .story-image, .story-item.multi .story-content {
+  width: 100%;
 }
-.story-container > div.dark {
-  color: #fff;
+.story-item.multi .story-content {
+  position: absolute;
+  top: 25%;
+  left: 0;
 }
-.story-container > div.dark a {
-  color: #fff;
-}
-.story-container > div.light {
-  color: #000;
-}
-.story-container > div.light a {
-  color: #000;
-}
-.story-container > div.corporate-one {
-  background-color: #fd7700;
-}
-.story-container > div.corporate-two {
-  background-color: #efefef;
-}
-.story-container > div.corporate-three {
-  background-color: #231f20;
-}
-.story-container > div.corporate-four {
-  background-color: #767574;
-}
-.story-container .stories-item.col-flex > div {
+.story-item.multi.split .story-image, .story-item.multi.split .story-content {
   width: 50%;
+}
+.story-item.multi.split .story-content {
+  position: static;
+}
+.story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
+  margin-right: -50%;
+}
+.story-item.multi.split.third .story-content, .story-item.multi.split.fourth .story-content {
+  margin-left: -50%;
+}
+@media screen and (max-width: 768px) {
+  .story-item.multi.split.second .story-image {
+    margin-right: -50%;
+  }
+  .story-item.multi.split.second .story-content {
+    margin-left: -50%;
+  }
+  .story-item.multi.split.third .story-image {
+    margin-right: 0;
+  }
+  .story-item.multi.split.third .story-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .story-item.multi.split .story-image, .story-item.multi.split .story-content {
+    width: 100%;
+  }
+  .story-item.multi.split.second .story-image, .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
+    margin-right: 0;
+  }
+  .story-item.multi.split.second .story-content, .story-item.multi.split.third .story-content, .story-item.multi.split.fourth .story-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .story-item.multi .story-content h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .story-item.multi .story-content h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.story-item.feature .arrow:before {
+  content: "\e806";
+}
+.story-item.download .download-text {
+  display: block;
+  font-size: 16px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .story-item.download .download-item img {
+    max-width: 175px;
+  }
 }
 
 /* Typography */
-.story-image a {
-  font-size: 0;
-}
-
-/* Containers */
-.story-image, .story-content,
+/*-----------------------------------*\
+  html-content module CSS
+\*-----------------------------------*/
+/* Slider */
 .story-slider, .story-slider-content {
   vertical-align: middle;
 }
 
-.story-image, .story-slider {
+.story-slider {
   height: 100%;
-}
-
-.story-image img {
-  width: 100%;
-}
-
-.story-content {
-  padding: 2% 9%;
-}
-
-.story-content.center {
-  text-align: center;
 }
 
 .story-slider-content {
@@ -827,49 +951,6 @@ a {
   line-height: 25px;
 }
 
-/* Default Story */
-/* Stories */
-.col-2 .col-flex, .col-2 .col-flex > div {
-  width: 50%;
-}
-
-/* Elements */
-.ModuleDate {
-  display: none;
-}
-
-.arrow {
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.arrow:before {
-  font-family: 'Q4-Default-Icons';
-  content: "\e802";
-  font-size: 60px;
-}
-
-.arrow.alt:before {
-  content: "\e806";
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .story-image {
-    display: none;
-  }
-
-  .story-image.mobile {
-    display: inline-block;
-  }
-
-  .story-alternate {
-    float: right;
-  }
-}
-/*-----------------------------------*\
-  html-content module CSS
-\*-----------------------------------*/
 /*-----------------------------------*\
   Hero Banner CSS
 \*-----------------------------------*/
@@ -878,63 +959,24 @@ a {
   display: table;
   height: 100%;
   position: relative;
-  text-align: center;
   width: 100%;
 }
 .hero-container .hero-overlay {
   position: absolute;
-  bottom: 0;
-  right: 20px;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
 }
 .hero-container img {
   width: 100%;
   height: auto;
 }
-.hero-container h2 {
-  text-align: right;
-  color: #fff;
-  display: inline-block;
-  float: right;
-  clear: both;
-  font-size: 40px;
-  line-height: 44px;
-  margin: 0;
-  margin-right: 5%;
-}
-.hero-container h3 {
-  color: #fff;
-  display: inline-block;
-  float: right;
-  clear: both;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
-  margin: 20px 5% 5px 15px;
-  text-transform: capitalize;
+.hero-container h1, .hero-container h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 .hero-container a {
-  color: #fff;
-  display: block;
-  font-size: 14px;
-  cursor: pointer;
-  float: right;
-  clear: both;
-  margin: 20px 5% 25px 15px;
-  vertical-align: top;
-}
-
-/*-----------------------------------*\
-  Downloads Module CSS
-\*-----------------------------------*/
-.downloads .download-text {
-  display: block;
   font-size: 16px;
-  margin-top: 15px;
-}
-@media screen and (max-width: 768px) {
-  .downloads .download-item img {
-    max-width: 175px;
-  }
 }
 
 /*-----------------------------------*\

@@ -4,3 +4,18 @@
 
 @import "includes/variables.scss";
 
+/* Slider */
+
+.story-slider, .story-slider-content {
+	vertical-align: middle;
+}
+
+.story-slider {
+	height: 100%;
+}
+
+.story-slider-content {
+	text-transform: uppercase;
+	padding: 1.375%;
+	line-height: 25px;
+}

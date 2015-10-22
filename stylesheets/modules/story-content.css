@@ -1,0 +1,116 @@
+/*-----------------------------------*\
+  Story, Stories, and Feature CSS
+\*-----------------------------------*/
+.story-item {
+  /* Global */
+  /* Single Story */
+  /* Multi Story */
+  /* Feature Story */
+  /* Download Item */
+}
+.story-item .ModuleDate {
+  display: none;
+}
+.story-item .story-image, .story-item .story-content {
+  vertical-align: middle;
+}
+.story-item .story-image {
+  height: 100%;
+}
+.story-item .story-image img {
+  width: 100%;
+}
+.story-item .story-content {
+  padding: 2% 9%;
+}
+.story-item .story-image a {
+  font-size: 0;
+}
+.story-item.single {
+  /* Responsive */
+}
+@media screen and (max-width: 768px) {
+  .story-item.single .story-image {
+    display: none;
+  }
+}
+.story-item.multi {
+  position: relative;
+}
+.story-item.multi:hover {
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+.story-item.multi .story-image, .story-item.multi .story-content {
+  width: 100%;
+}
+.story-item.multi .story-content {
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+.story-item.multi.split .story-image, .story-item.multi.split .story-content {
+  width: 50%;
+}
+.story-item.multi.split .story-content {
+  position: static;
+}
+.story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
+  margin-right: -50%;
+}
+.story-item.multi.split.third .story-content, .story-item.multi.split.fourth .story-content {
+  margin-left: -50%;
+}
+@media screen and (max-width: 768px) {
+  .story-item.multi.split.second .story-image {
+    margin-right: -50%;
+  }
+  .story-item.multi.split.second .story-content {
+    margin-left: -50%;
+  }
+  .story-item.multi.split.third .story-image {
+    margin-right: 0;
+  }
+  .story-item.multi.split.third .story-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .story-item.multi.split .story-image, .story-item.multi.split .story-content {
+    width: 100%;
+  }
+  .story-item.multi.split.second .story-image, .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
+    margin-right: 0;
+  }
+  .story-item.multi.split.second .story-content, .story-item.multi.split.third .story-content, .story-item.multi.split.fourth .story-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .story-item.multi .story-content h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .story-item.multi .story-content h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.story-item.feature .arrow:before {
+  content: "\e806";
+}
+.story-item.download .download-text {
+  display: block;
+  font-size: 16px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .story-item.download .download-item img {
+    max-width: 175px;
+  }
+}
+
+/* Typography */

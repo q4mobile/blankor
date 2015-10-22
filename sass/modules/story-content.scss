@@ -1,0 +1,185 @@
+/*-----------------------------------*\
+  Story, Stories, and Feature CSS
+\*-----------------------------------*/
+
+@import "includes/variables.scss";
+
+
+.story-item {
+
+	/* Global */
+
+	.ModuleDate {
+		display: none;
+	}
+
+	.story-image, .story-content {
+		vertical-align: middle;
+	}
+	.story-image {
+		height: 100%;
+	}
+	.story-image img {
+		width: 100%;
+	}
+	.story-content {
+		padding: 2% 9%;
+	}
+	.story-image a {
+	    font-size: 0;
+	}
+
+	/* Single Story */
+
+	&.single {
+
+		/* Responsive */
+
+		@media screen and (max-width: $screen-medium) {
+			.story-image {
+				display: none;
+			}
+		}
+
+	}
+
+
+	/* Multi Story */
+
+	&.multi {
+
+		position: relative;
+		&:hover {
+			background-image: url($site+'files/temp/overlay-bg.png');
+			background-repeat: repeat;
+		}
+
+		.story-image, .story-content {
+			width: 100%;
+		}
+
+		.story-content {
+			position: absolute;
+			top: 25%;
+			left: 0;
+		}
+
+		&.split {
+
+			.story-image, .story-content {
+				width: 50%;
+			}
+
+			.story-content {
+				position: static;
+			}
+
+
+			&.third, &.fourth {
+
+				.story-image {
+					margin-right: -50%;
+				}
+				.story-content {
+					margin-left: -50%;
+				}
+
+			}
+
+
+			@media screen and (max-width: $screen-medium) {
+
+				&.second {
+
+					.story-image {
+						margin-right: -50%;
+					}
+					.story-content {
+						margin-left: -50%;
+					}
+
+				}
+
+				&.third {
+
+					.story-image {
+						margin-right: 0;
+					}
+					.story-content {
+						margin-left: 0;
+					}
+
+				}
+
+			}
+
+			@media screen and (max-width: $screen-small) {
+				.story-image, .story-content {
+					width: 100%;
+				}
+
+				&.second, &.third, &.fourth {
+
+					.story-image {
+						margin-right: 0;
+					}
+					.story-content {
+						margin-left: 0;
+					}
+
+				}
+			}
+
+		}
+
+		@media screen and (max-width: $screen-large) {
+
+			.story-content h2 {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+		}
+
+		@media screen and (max-width: $screen-medium) {
+
+			.story-content h2 {
+				font-size: 30px;
+				line-height: 36px;
+			}
+
+		}
+
+	}
+
+	/* Feature Story */
+
+	&.feature {
+
+		.arrow:before {
+			content: "\e806";
+		}
+
+	}
+
+	/* Download Item */
+
+	&.download {
+
+		.download-text {
+			display: block;
+			font-size: 16px;
+			margin-top: 15px;
+			text-transform: uppercase;
+		}
+
+		@media screen and (max-width: $screen-medium) {
+			.download-item img {
+				max-width: 175px;
+			}
+		}
+
+	}
+}
+
+/* Typography */

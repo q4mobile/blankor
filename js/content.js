@@ -2,12 +2,12 @@
     $.widget("q4.stories", {
         options: {
             templates: {
-                story: (
-                    '<div id="{{SeoName}}" class="story-item {{cls}}">' +
+                single: (
+                    '<div id="{{SeoName}}" class="story-item single {{cls}}">' +
                         '<div class="col col-1-of-3 story-image">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
                         '</div>' +
-                        '<div class="col col-2-of-3 col-sm-1-of-1 story-content">' +
+                        '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
                                 '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
                                 '{{#Body}}{{{Body}}}{{/Body}}' +
@@ -16,9 +16,9 @@
                         '</div>' +
                     '</div>'
                 ),
-                'story-alt': (
-                    '<div id="{{SeoName}}" class="story-item {{cls}}">' +
-                        '<div class="col col-2-of-3 col-sm-1-of-1 story-content">' +
+                'single-alt': (
+                    '<div id="{{SeoName}}" class="story-item single alt {{cls}}">' +
+                        '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
                                 '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
                                 '{{#Body}}{{{Body}}}{{/Body}}' +
@@ -30,8 +30,8 @@
                         '</div>' +
                     '</div>'
                 ),
-                stories: (
-                    '<div id="{{SeoName}}" class="stories-item col col-flex {{cls}}">' +
+                multi: (
+                    '<div id="{{SeoName}}" class="story-item multi col {{cls}}">' +
                         '<div class="col story-image">' +
                             '<a href=""><img class="ModuleThumbnail" src="{{ThumbnailPath}}"></a>' +
                         '</div>' +
@@ -42,8 +42,8 @@
                         '</div>' +
                     '</div>'
                 ),
-                'stories-alt': (
-                    '<div id="{{SeoName}}" class="stories-item alt col col-flex {{cls}}">' +
+                'multi-alt': (
+                    '<div id="{{SeoName}}" class="story-item multi alt col {{cls}}">' +
                         '<div class="col story-image">' +
                             '<a href=""><img class="ModuleThumbnail" src="{{ThumbnailPath}}"></a>' +
                         '</div>' +
@@ -55,7 +55,7 @@
                     '</div>'
                 ),
                 feature: (
-                    '<div id="{{SeoName}}" class="feature-item {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item feature {{cls}}">' +
                         '<div {{#ThumbnailPath}}data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
                                 '<div class="container">' +
@@ -64,6 +64,16 @@
                                     '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                                 '</div>' +
                             '{{#overlay}}</div>{{/overlay}}' +
+                        '</div>' +
+                    '</div>'
+                ),
+                download: (
+                    '<div id="{{SeoName}}" class="story-item download {{cls}}">' +
+                        '<div class="container">' +
+                            '<a href="{{LinkToDetailPage}}" target="_blank" class="download-item">' +
+                                '{{#ThumbnailPath}}<img src="{{{ThumbnailPath}}}">{{/ThumbnailPath}}' +
+                                '{{#Headline}}<span class="download-text">{{Headline}}</span>{{/Headline}}' +
+                            '</a>' +
                         '</div>' +
                     '</div>'
                 )
@@ -123,12 +133,15 @@
                             case 'feature':
                                 tag = 'feature';
                                 break;
-                            case 'story':
-                                storyAlt % 2 === 0 ? tag = 'story' : tag = 'story-alt';
+                            case 'download':
+                                tag = 'download';
+                                break;
+                            case 'single':
+                                storyAlt % 2 === 0 ? tag = 'single' : tag = 'single-alt';
                                 storyAlt += 1;
                                 break;
-                            case 'stories':
-                                storiesAlt % 2 === 0 ? tag = 'stories' : tag = 'stories-alt';
+                            case 'multi':
+                                storiesAlt % 2 === 0 ? tag = 'multi' : tag = 'multi-alt';
                                 storiesAlt += 1;
                                 break;
                             case 'no-title':

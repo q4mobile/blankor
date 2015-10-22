@@ -6,47 +6,22 @@
   display: table;
   height: 100%;
   position: relative;
-  text-align: center;
   width: 100%;
 }
 .hero-container .hero-overlay {
   position: absolute;
-  bottom: 0;
-  right: 20px;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
 }
 .hero-container img {
   width: 100%;
   height: auto;
 }
-.hero-container h2 {
-  text-align: right;
-  color: #fff;
-  display: inline-block;
-  float: right;
-  clear: both;
-  font-size: 40px;
-  line-height: 44px;
-  margin: 0;
-  margin-right: 5%;
-}
-.hero-container h3 {
-  color: #fff;
-  display: inline-block;
-  float: right;
-  clear: both;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
-  margin: 20px 5% 5px 15px;
-  text-transform: capitalize;
+.hero-container h1, .hero-container h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 .hero-container a {
-  color: #fff;
-  display: block;
-  font-size: 14px;
-  cursor: pointer;
-  float: right;
-  clear: both;
-  margin: 20px 5% 25px 15px;
-  vertical-align: top;
+  font-size: 16px;
 }

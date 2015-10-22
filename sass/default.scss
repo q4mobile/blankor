@@ -1,20 +1,20 @@
 /*-----------------------------------*\
-  Default CSS
+	Default CSS
 \*-----------------------------------*/
 
 @import "includes/variables.scss";
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body.PreviewBody {
-    margin: 0;
-    background-position: 0 0;
+	margin: 0;
+	background-position: 0 0;
 }
 
 img {
@@ -22,31 +22,123 @@ img {
 }
 
 .PreviewToolBar {
-  display: none;
+	display: none;
 }
 
 .PageDefaultInner {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .clearfix:after,
 .container:after, {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*Container Config */
+
+.container {
+	padding: 6% 0;
+}
+
+.center {
+	text-align: center;
+
+	.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 960px;
+	padding-left: 5%;
+	padding-right: 5%;
+	}
+
+}
+
+.overlay-background {
+	background-image: url($site+'files/temp/overlay-bg.png');
+	background-repeat: repeat;
+}
+
+@media screen and (min-width: $screen-small+1) {
+	.thin .container {
+		padding: 4% 0;
+	}
+
+	.thick .container {
+		padding: 12% 0;
+	}
+}
+
+/* Fixed BG */
+
+.fixed-bg {
+	min-height: 100%;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* Themes */
+
+.dark {
+	color: #fff;
+	a {
+	color: #fff;
+	}
+}
+
+.light {
+	color: #000;
+	a {
+	color: #000;
+	}
+}
+
+.corporate-one {
+	background-color: #fd7700;
+}
+
+.corporate-two {
+	background-color: #efefef;
+}
+
+.corporate-three {
+	background-color: #231f20;
+}
+
+.corporate-four {
+	background-color: #767574;
+}
+
+/* Elements */
+
+.arrow {
+	display: inline-block;
+	margin-top: 10px;
+}
+.arrow:before {
+	font-family: 'Q4-Default-Icons';
+	content: "\e802";
+	font-size: 60px;
+}
+
+.arrow.alt:before {
+	content: "\e806";
 }
 
 /* Lazy Loading XT */
 
 .lazy-hidden {
-    opacity: 0;
+	opacity: 0;
 }
 
 .lazy-loaded {
-    -webkit-transition: opacity 0.3s;
-    -moz-transition: opacity 0.3s;
-    -ms-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    opacity: 1;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	-ms-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	opacity: 1;
 }

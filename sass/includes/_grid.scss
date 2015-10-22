@@ -2,6 +2,8 @@
   Toast - Grid CSS
 \*-----------------------------------*/
 
+@import "includes/variables.scss";
+
 // Namespaces
 // This stops me from being overzealous with enforcing classes
 $toast-grid-namespace: "grid" !default;
@@ -16,9 +18,9 @@ $toast-col-groups: (2, 3, 4, 5, 6, 8, 12) !default;
 $toast-gutter-width: 0 !default;
 
 // Breakpoints
-$toast-breakpoint-large: 1200px !default;
-$toast-breakpoint-medium: 768px !default;
-$toast-breakpoint-small: 480px !default;
+$toast-breakpoint-large: $screen-large !default;
+$toast-breakpoint-medium: $screen-medium !default;
+$toast-breakpoint-small: $screen-small !default;
 
 // Pushes and pulls
 $toast-pushes: true !default;
@@ -150,7 +152,7 @@ $toast-pulls: true !default;
   padding-left: $toast-gutter-width;
   vertical-align: top;
 
-  @media (max-width: $toast-breakpoint-medium) {
+  @media (max-width: $toast-breakpoint-small) {
     display: block;
     margin-left: 0;
     margin-right: 0;
