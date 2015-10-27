@@ -8,7 +8,7 @@
   /* Feature Story */
   /* Download Item */
 }
-.story-item .ModuleDate {
+.story-item .details-content, .story-item .ModuleDate {
   display: none;
 }
 .story-item .story-image, .story-item .story-content {

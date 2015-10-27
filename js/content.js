@@ -33,11 +33,11 @@
                 multi: (
                     '<div id="{{SeoName}}" class="story-item multi col {{cls}}">' +
                         '<div class="col story-image">' +
-                            '<a href=""><img class="ModuleThumbnail" src="{{ThumbnailPath}}"></a>' +
+                            '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
                         '</div>' +
                         '<div class="col story-content">' +
                             '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                            '<div class="story-body">{{Body}}</div>' +
+                            '<div class="story-body">{{{Body}}}</div>' +
                             '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
                     '</div>'
@@ -45,11 +45,11 @@
                 'multi-alt': (
                     '<div id="{{SeoName}}" class="story-item multi alt col {{cls}}">' +
                         '<div class="col story-image">' +
-                            '<a href=""><img class="ModuleThumbnail" src="{{ThumbnailPath}}"></a>' +
+                            '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
                         '</div>' +
                         '<div class="col story-content">' +
                             '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                            '<div class="story-body">{{Body}}</div>' +
+                            '<div class="story-body">{{{Body}}}</div>' +
                             '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
                     '</div>'
@@ -71,7 +71,7 @@
                     '<div id="{{SeoName}}" class="story-item download {{cls}}">' +
                         '<div class="container">' +
                             '<a href="{{LinkToDetailPage}}" target="_blank" class="download-item">' +
-                                '{{#ThumbnailPath}}<img src="{{{ThumbnailPath}}}">{{/ThumbnailPath}}' +
+                                '{{#ThumbnailPath}}<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">{{/ThumbnailPath}}' +
                                 '{{#Headline}}<span class="download-text">{{Headline}}</span>{{/Headline}}' +
                             '</a>' +
                         '</div>' +
