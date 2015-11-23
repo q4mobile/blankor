@@ -98,19 +98,23 @@ img {
 }
 
 .corporate-one {
-	background-color: #fd7700;
+	background-color: $corporate-one;
 }
 
 .corporate-two {
-	background-color: #efefef;
+	background-color: $corporate-two;
 }
 
 .corporate-three {
-	background-color: #231f20;
+	background-color: $corporate-three;
 }
 
 .corporate-four {
-	background-color: #767574;
+	background-color: $corporate-four;
+}
+
+.corporate-color {
+	color: $corporate-one;
 }
 
 /* Elements */

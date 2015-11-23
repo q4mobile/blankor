@@ -104,6 +104,10 @@ img {
   background-color: #767574;
 }
 
+.corporate-color {
+  color: #fd7700;
+}
+
 /* Elements */
 .arrow {
   display: inline-block;

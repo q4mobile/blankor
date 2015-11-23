@@ -3,13 +3,27 @@ $site: "http://blankor.q4web.com/" !default;
 //$site: "/" !default;
 
 
+//Client logo
+$client-logo: url($site+'files/design/nav-logo.png') !default;
+
+//Corporate Fonts 
+//$default-font: 'Roboto', sans-serif !default;
+$default-font: 'Open Sans', sans-serif !default;
+$corporate-font: 'OCRB', sans-serif !default;
+
 //Default Screen Sizes
 $screen-large: 1200px !default;
 $screen-medium: 768px !default;
 $screen-small: 480px !default;
 
 //Corporate Themes
+
+//Brand Colour
 $corporate-one: #fd7700 !default;
+//Light BG 
 $corporate-two: #efefef !default;
+//Dark BG
 $corporate-three: #231f20 !default;
+//Medium BG
 $corporate-four: #767574 !default;
+

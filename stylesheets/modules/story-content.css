@@ -26,6 +26,12 @@
 .story-item .story-image a {
   font-size: 0;
 }
+.story-item h2, .story-item .story-body {
+  position: relative;
+}
+.story-item h2, .story-item .story-body, .story-item .arrow {
+  visibility: hidden;
+}
 .story-item.single {
   /* Responsive */
 }
@@ -110,6 +116,11 @@
 @media screen and (max-width: 768px) {
   .story-item.download .download-item img {
     max-width: 175px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .story-item .story-content {
+    padding: 9%;
   }
 }
 

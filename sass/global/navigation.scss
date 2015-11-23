@@ -37,7 +37,6 @@
 	color: #fff;
 	z-index: 9000;
 
- 	@include transition(background-color .3s, linear);
 	@include transition(left .5s, ease-in-out);
 	
 	i {
@@ -57,7 +56,16 @@
 	}
 
 	.nav-logo {
+		width: 50px;
+		height: 50px;
 		margin-left: 40px;
+		background: $client-logo;
+		background-repeat: no-repeat;
+	
+		img {
+			max-width: 100%;
+		}
+
 	}
 }
 

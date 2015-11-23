@@ -28,6 +28,13 @@
 	.story-image a {
 	    font-size: 0;
 	}
+	h2, .story-body {
+		position: relative;
+	}
+
+	h2, .story-body, .arrow {
+		visibility: hidden;
+	}
 
 	/* Single Story */
 
@@ -180,6 +187,16 @@
 		}
 
 	}
+
+
+	@media screen and (max-width: $screen-small) {
+
+		.story-content {
+			padding: 9%;
+		}
+
+	}
+
 }
 
 /* Typography */

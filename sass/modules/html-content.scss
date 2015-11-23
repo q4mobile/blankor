@@ -19,3 +19,138 @@
 	padding: 1.375%;
 	line-height: 25px;
 }
+
+/* Numbered Data */
+
+.tabs-menu {
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.tabs-menu li {
+    padding: 10px 20px;
+    float: left;
+    display: inline-block;
+}
+.tabs-menu.clearfix li + li a:before {
+    border-left: 3px solid #253746;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 33px;
+    left: -21px;
+    top: 5px;
+}
+
+.tabs-menu li a {
+    position: relative;
+    color: #929292;
+    font-size: 36px;
+    line-height: 45px;
+    outline: none;
+}
+
+.tabs-menu li.current a {
+    color: #53585a;
+}
+
+.tab-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.tab-content.tab-1 {
+    display: block;
+}
+
+.tab-content li {
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    padding: 0 2%;
+    margin: 2% 0;
+}
+
+.tab-content li.setBorder {
+    border-left: 2px solid #bfc0c2;
+    border-right: 2px solid #bfc0c2;
+}
+
+.tab-content li span {
+    display: block;
+}
+
+.operation-title {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.operation-data {
+    color: #53585a;
+    font-size: 80px;
+    line-height: 87px;
+}
+
+.operation-label {
+    text-transform: uppercase;
+    color: #53585a;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+
+.timer {
+    display: inline !important;
+}
+
+.legend {
+    font-size: 11px;
+    line-height: 12px;
+    text-align: left;
+    padding-right: 12px;
+}
+
+@media screen and (max-width: 1023px) {
+    .operation-data {
+        font-size: 60px;
+    }
+    .operation-label {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .operation-data {
+        font-size: 48px;
+    }
+    .operation-label {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .tab-content li {
+        width: 50%;
+    }
+    .operation-title {
+        font-size: 12px;
+    }
+    .operation-data {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .operation-label {
+        font-size: 23px;
+        line-height: 30px;
+        min-height: 62px;
+    }
+    .tab-content li.setBorder {
+        border: none;
+    }
+}

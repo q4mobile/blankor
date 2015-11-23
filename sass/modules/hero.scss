@@ -2,6 +2,8 @@
   Hero Banner CSS
 \*-----------------------------------*/
 
+@import "includes/variables.scss";
+
 .hero-container {
 
 	background-color: #1f181e;
@@ -15,7 +17,22 @@
 		bottom: 5%;
 		right: 5%;
 		text-align: right;
-  }
+
+		@media screen and (max-width: $screen-medium) {
+
+			& {
+				bottom: 15%;
+			}
+		}
+
+		@media screen and (max-width: $screen-small) {
+
+			& {
+				bottom: 25%;
+			}
+		}
+
+	}
 
   	.scroll-button {
 		position: absolute;
@@ -28,6 +45,7 @@
 	    height: 50px;
 	    margin-left: -25px;
 	    padding-top: 5px;
+	    cursor: pointer;
 
 		i {
 			font-size: 40px;
