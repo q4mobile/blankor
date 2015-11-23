@@ -8,21 +8,21 @@
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
                         '</div>' +
                         '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
-                            '<div class="story-inner">' +
-                                '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                                '{{#Body}}{{{Body}}}{{/Body}}' +
-                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
+                            '<div class="story-inner animations">' +
+                                '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                                '{{#Body}}<div class="story-body fade-from-bottom">{{{Body}}}</div>{{/Body}}' +
+                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow fade-in"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
                         '</div>' +
                     '</div>'
                 ),
                 'single-alt': (
                     '<div id="{{SeoName}}" class="story-item single alt {{cls}}">' +
-                        '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
+                        '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content animations">' +
                             '<div class="story-inner">' +
-                                '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                                '{{#Body}}{{{Body}}}{{/Body}}' +
-                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
+                                '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                                '{{#Body}}<div class="story-body fade-from-bottom">{{{Body}}}</div>{{/Body}}' +
+                                '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow fade-in"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
                         '</div>' +
                         '<div class="col col-1-of-3 story-image">' +
@@ -35,10 +35,10 @@
                         '<div class="col story-image">' +
                             '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
                         '</div>' +
-                        '<div class="col story-content">' +
-                            '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                            '<div class="story-body">{{{Body}}}</div>' +
-                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
+                        '<div class="col story-content animations">' +
+                            '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                            '<div class="story-body fade-from-bottom">{{{Body}}}</div>' +
+                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow fade-in"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
                     '</div>'
                 ),
@@ -47,21 +47,21 @@
                         '<div class="col story-image">' +
                             '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
                         '</div>' +
-                        '<div class="col story-content">' +
-                            '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                            '<div class="story-body">{{{Body}}}</div>' +
-                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
+                        '<div class="col story-content animations">' +
+                            '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                            '<div class="story-body fade-from-bottom">{{{Body}}}</div>' +
+                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow fade-in"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
                     '</div>'
                 ),
                 feature: (
                     '<div id="{{SeoName}}" class="story-item feature {{cls}}">' +
-                        '<div {{#ThumbnailPath}}data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
+                        '<div{{#ThumbnailPath}} data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
-                                '<div class="container">' +
-                                    '{{#Headline}}<h2>{{Headline}}</h2>{{/Headline}}' +
-                                    '{{#Body}}{{{Body}}}{{/Body}}' +
-                                    '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="arrow"></a>{{/LinkToDetailPage}}' +
+                                '<div class="container animations">' +
+                                    '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                                    '{{#Body}}<div class="story-body fade-from-bottom">{{{Body}}}</div>{{/Body}}' +
+                                    '{{#LinkToDetailPage}}<a class="arrow fade-in" href="{{LinkToDetailPage}}"></a>{{/LinkToDetailPage}}' +
                                 '</div>' +
                             '{{#overlay}}</div>{{/overlay}}' +
                         '</div>' +
@@ -69,11 +69,13 @@
                 ),
                 download: (
                     '<div id="{{SeoName}}" class="story-item download {{cls}}">' +
-                        '<div class="container">' +
-                            '<a href="{{LinkToDetailPage}}" target="_blank" class="download-item">' +
-                                '{{#ThumbnailPath}}<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">{{/ThumbnailPath}}' +
-                                '{{#Headline}}<span class="download-text">{{Headline}}</span>{{/Headline}}' +
-                            '</a>' +
+                        '<div class="container animations">' +
+                            '<div class="story-body {{animationCls}}">' +
+                                '<a href="{{LinkToDetailPage}}" target="_blank" class="download-item">' +
+                                    '{{#ThumbnailPath}}<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">{{/ThumbnailPath}}' +
+                                    '{{#Headline}}<span class="download-text">{{Headline}}</span>{{/Headline}}' +
+                                '</a>' +
+                            '</div>' +
                         '</div>' +
                     '</div>'
                 )
@@ -121,12 +123,15 @@
                 })
             ).done(function (data) {
                 var stories = '',
-                    storyAlt = 0;
-                    storiesAlt = 0;
+                    storyAlt = 0,
+                    storiesAlt = 0,
+                    downloadAlt = 0;
 
                 $.each(data.GetPressReleaseListResult, function(i, story){
                     var tpl = inst.options.templates,
-                        cls = '', tag = '';
+                        animationCls = '',
+                        cls = '', 
+                        tag = '';
 
                     $.each(story.TagsList, function(idx, item){
                         switch(item) {
@@ -134,14 +139,16 @@
                                 tag = 'feature';
                                 break;
                             case 'download':
+                                animationCls = downloadAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
                                 tag = 'download';
+                                downloadAlt += 1;
                                 break;
                             case 'single':
-                                storyAlt % 2 === 0 ? tag = 'single' : tag = 'single-alt';
+                                tag = storyAlt % 2 === 0 ? 'single' : 'single-alt';
                                 storyAlt += 1;
                                 break;
                             case 'multi':
-                                storiesAlt % 2 === 0 ? tag = 'multi' : tag = 'multi-alt';
+                                tag = storiesAlt % 2 === 0 ? 'multi' : 'multi-alt';
                                 storiesAlt += 1;
                                 break;
                             case 'no-title':
@@ -157,13 +164,24 @@
                     });
                     
                     story.cls = cls;
+                    story.animationCls = animationCls;
                     story.LinkToDetailPage = story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
                     stories += Mustache.render(tpl[tag], story);
                 });
 
                 inst.element.html(stories);
+                inst._lazyLoad();
 
+                $(window).on( 'DOMContentLoaded load resize scroll', q4._onVisibilityChange( $('.animations') ) );
             });
+        },
+
+        _windowResize: function(){
+            $(window).trigger('resize').trigger('scroll');
+        },
+
+        _lazyLoad: function(){
+            $(window).lazyLoadXT();
         },
 
         destroy: function() {
