@@ -1,10 +1,10 @@
 /*-----------------------------------*\
   Navigation CSS
 \*-----------------------------------*/
-.toggle-nav-open nav {
+.toggle-nav-open .nav-container {
   left: 0;
 }
-.toggle-nav-open .nav-toggle {
+.toggle-nav-open .header-assets {
   left: 270px;
 }
 .toggle-nav-open .main-wrapper {
@@ -20,18 +20,11 @@
   transition: left 0.5s, ease-in-out;
 }
 
-.nav-toggle {
-  background-color: #000;
-  background-color: rgba(0, 0, 0, 0.2);
-  background-color: transparent;
-  border-radius: 3px;
-  color: #fff;
-  display: inline-block;
-  left: 30px;
-  top: 20px;
-  padding: 10px;
-  vertical-align: middle;
+.header-assets {
   position: fixed;
+  left: 40px;
+  top: 30px;
+  color: #fff;
   z-index: 9000;
   -moz-transition: background-color 0.3s, linear;
   -o-transition: background-color 0.3s, linear;
@@ -42,15 +35,25 @@
   -webkit-transition: left 0.5s, ease-in-out;
   transition: left 0.5s, ease-in-out;
 }
-.nav-toggle i {
-  line-height: 40px;
+.header-assets i {
   width: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 10px;
   text-align: center;
-  cursor: pointer;
   font-size: 21px;
+  line-height: 40px;
+}
+.header-assets .nav-toggle, .header-assets .nav-logo {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.header-assets .nav-logo {
+  margin-left: 40px;
 }
 
-nav {
+.nav-container {
   position: fixed;
   display: inline-block;
   left: -240px;
@@ -65,21 +68,17 @@ nav {
   -webkit-transition: left 0.5s, ease-in-out;
   transition: left 0.5s, ease-in-out;
 }
-nav .level1 > li > a {
-  display: none;
-}
-nav ul {
+.nav-container .toggle-nav {
   margin: 80px 0 0;
   padding: 0;
   list-style-type: none;
-  border-top: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
 }
-nav ul li {
+.nav-container .toggle-nav li {
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
 }
-nav ul li a {
+.nav-container .toggle-nav li a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -89,6 +88,42 @@ nav ul li a {
   padding: 15px 15px;
   letter-spacing: 1px;
 }
-nav ul li a.active {
+.nav-container .toggle-nav li a:hover {
   background-color: #444343;
+}
+.nav-container .toggle-nav li .level2 li:first-child {
+  border-top: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.nav-container .toggle-nav .level1 > li > a {
+  display: none;
+}
+.nav-container .close {
+  width: 50px;
+  padding: 20px 0;
+  float: right;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  cursor: pointer;
+}
+.nav-container .QuickLinks {
+  padding: 15px 15px;
+}
+.nav-container .QuickLinks h2 {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.nav-container .QuickLinks .quick-links li {
+  display: inline-block;
+  margin-right: 8px;
+}
+.nav-container .QuickLinks .quick-links i {
+  color: #fff;
+  font-size: 40px;
 }
