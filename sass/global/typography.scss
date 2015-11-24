@@ -29,14 +29,32 @@ body {
 }
 
 h1 {
+	font-family: $default-font;
 	font-size: 40px;
 	line-height: 44px;
 }
 
 h2 {
+	font-family: $default-font;
 	font-size: 36px;
     line-height: 45px;
     text-transform: uppercase;
+}
+
+h3 {
+	font-family: $default-font;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    color: $corporate-one;
+}
+
+h4 {
+	margin: 1em 0;
+	font-family: $default-font;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
 }
 
 p {
@@ -47,6 +65,10 @@ p {
 a {
 	text-decoration: none;
 	color: #000;
+}
+
+button {
+	font-family: $default-font;
 }
 
 @media screen and (max-width: $screen-medium) {

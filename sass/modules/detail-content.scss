@@ -1,0 +1,129 @@
+/*-----------------------------------*\
+  Details module CSS
+\*-----------------------------------*/
+
+@import "includes/variables.scss";
+
+.header-image { 
+	position: relative;
+	padding-top: 25%; 
+	background-repeat: no-repeat; 
+	background-position: top; 
+	-webkit-background-size: cover; 
+	background-size: cover; 
+	background-color: $corporate-three;
+
+	.header-overlay {
+		width: 100%;
+		position: absolute;
+		top: 30%;
+		font-size: 20px;
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+
+		i {
+			display: block;
+			width: auto;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+			font-size: 100px;
+			cursor: pointer;
+
+			&:hover {
+				color: $corporate-one;
+			}
+
+		}
+	}
+
+	@media screen and (max-width: $screen-large) {
+		padding-top: 30%;
+	}
+
+	@media screen and (max-width: $screen-legacy) {
+		padding-top: 35%;
+	}
+
+	@media screen and (max-width: $screen-medium) {
+		padding-top: 45%;
+	}
+
+	@media screen and (max-width: $screen-small) {
+		padding-top: 65%;
+
+		.header-overlay {
+
+			top: 20%;
+
+			i {
+				font-size: 80px;
+			}
+
+		}
+	}
+
+}
+
+.back {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 8px 18px 8px 8px;
+	background-color: $corporate-one;
+	border: none;
+	font-size: 18px;
+	line-height: 26px;
+	color: #fff;
+	z-index: 999;
+
+	i {
+		font-size: 30px;
+		vertical-align: middle;
+	}
+}
+
+.story-details-container {
+
+	a {
+		color: $corporate-one;
+	}
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 960px;
+	}
+
+	.left {
+		padding-right: 5%;
+	}
+	.right {
+		padding-left: 5%;
+	}
+
+	.landing-content, .story-hidden {
+		display: none;
+	}
+
+	@media screen and (max-width: $screen-legacy) {
+
+		.container {
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+
+	}
+
+	@media screen and (max-width: $screen-small) {
+	
+		.left, .right {
+			padding: 0;
+		}
+
+	}
+
+}
