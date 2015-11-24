@@ -23,6 +23,8 @@ var q4 = {
             container.animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500, 'linear');
+
+            location.hash = $.attr(this, 'href');
             return false;
         });
     },
@@ -41,7 +43,10 @@ var q4 = {
     _letScroll: function(position){
         $('html, body').animate({
             scrollTop: position
-        }, 1000);
+        }, 1000, 'linear', function(){
+            console.log('x')
+            $('body').removeClass('toggle-nav-open');
+        });
     },
     _isElementInViewport: function(el) {
         el = el[0];

@@ -172,8 +172,19 @@
                 inst.element.html(stories);
                 inst._lazyLoad();
 
+                if (location.hash.length){
+                    inst._scrollTo(location.hash);
+                }
+
+
                 $(window).on( 'DOMContentLoaded load resize scroll', q4._onVisibilityChange( $('.animations') ) );
             });
+        },
+
+        _scrollTo: function(location){
+            $('html, body').animate({
+                scrollTop: $( location ).offset().top
+            }, 500, 'linear');
         },
 
         _windowResize: function(){
