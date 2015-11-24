@@ -80,6 +80,9 @@
 .story-details-container a {
   color: #fd7700;
 }
+.story-details-container img {
+  max-width: 100%;
+}
 .story-details-container .container {
   margin-left: auto;
   margin-right: auto;
