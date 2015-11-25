@@ -10,9 +10,9 @@
 }
 .hero-container .hero-overlay {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
-  text-align: right;
+  top: 30%;
+  left: 5%;
+  text-align: left;
 }
 @media screen and (max-width: 768px) {
   .hero-container .hero-overlay {
@@ -29,7 +29,7 @@
   left: 50%;
   bottom: 40px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #ec6a4c;
   border-radius: 25px;
   width: 50px;
   height: 50px;
@@ -44,9 +44,13 @@
   width: 100%;
   height: auto;
 }
-.hero-container h1, .hero-container h2 {
-  text-transform: uppercase;
+.hero-container h1, .hero-container h2, .hero-container h3, .hero-container h4 {
   margin-bottom: 15px;
+  font-weight: normal;
+  color: #545b62;
+}
+.hero-container h2, .hero-container h3, .hero-container h4 {
+  text-transform: uppercase;
 }
 .hero-container a {
   font-size: 16px;

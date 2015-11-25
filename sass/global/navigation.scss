@@ -2,6 +2,7 @@
   Navigation CSS
 \*-----------------------------------*/
 @import "compass/css3";
+@import "includes/variables.scss";
 
 @mixin transition($transition...) {
   -moz-transition:    $transition;
@@ -41,7 +42,7 @@
 	
 	i {
 		width: 40px;
-		background-color: rgba(0, 0, 0, .2);
+		background-color: $corporate-one;
 		border-radius: 3px;
 		padding: 10px;
 		text-align: center;
@@ -56,8 +57,8 @@
 	}
 
 	.nav-logo {
-		width: 50px;
-		height: 50px;
+		width: 60px;
+		height: 45px;
 		margin-left: 40px;
 		background: $client-logo;
 		background-repeat: no-repeat;

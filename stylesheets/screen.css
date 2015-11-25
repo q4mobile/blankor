@@ -57,153 +57,6 @@ table {
 }
 
 /*-----------------------------------*\
-	Default CSS
-\*-----------------------------------*/
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body.PreviewBody {
-  margin: 0;
-  background-position: 0 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-.PreviewToolBar {
-  display: none;
-}
-
-.PageDefaultInner {
-  overflow: hidden;
-}
-
-.clearfix:after,
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*Container Config */
-.container {
-  padding: 6% 0;
-}
-
-.center {
-  text-align: center;
-}
-.center .container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 960px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.overlay-background {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
-  background-repeat: repeat;
-}
-
-@media screen and (min-width: 481px) {
-  .thin .container {
-    padding: 4% 0;
-  }
-
-  .thick .container {
-    padding: 12% 0;
-  }
-}
-@media screen and (min-width: 769px) {
-  .full .container {
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-}
-/* Fixed BG */
-.fixed-bg {
-  min-height: 100%;
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background-attachment: scroll\9;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-/* Themes */
-.dark {
-  color: #fff;
-}
-.dark a {
-  color: #fff;
-}
-
-.light {
-  color: #000;
-}
-.light a {
-  color: #000;
-}
-
-.corporate-one {
-  background-color: #fd7700;
-}
-
-.corporate-two {
-  background-color: #efefef;
-}
-
-.corporate-three {
-  background-color: #231f20;
-}
-
-.corporate-four {
-  background-color: #767574;
-}
-
-.corporate-color {
-  color: #fd7700;
-}
-
-/* Elements */
-.arrow {
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.arrow:before {
-  font-family: 'Q4-Default-Icons';
-  content: "\e802";
-  font-size: 60px;
-}
-
-.arrow.alt:before {
-  content: "\e806";
-}
-
-/* Lazy Loading XT */
-.lazy-hidden {
-  opacity: 0;
-}
-
-.lazy-loaded {
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -ms-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  opacity: 1;
-}
-
-/*-----------------------------------*\
   Navigation CSS
 \*-----------------------------------*/
 .toggle-nav-open .nav-container {
@@ -238,7 +91,7 @@ img {
 }
 .header-assets i {
   width: 40px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #3498db;
   border-radius: 3px;
   padding: 10px;
   text-align: center;
@@ -251,8 +104,8 @@ img {
   cursor: pointer;
 }
 .header-assets .nav-logo {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 45px;
   margin-left: 40px;
   background: url("http://blankor.q4web.com/files/design/nav-logo.png");
   background-repeat: no-repeat;
@@ -355,25 +208,24 @@ time, mark, audio, video {
 
 i {
   font-family: 'Q4-Default-Icons';
-  height: 32px;
-  width: 32px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: #949494;
 }
 
 h1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 50px;
+  line-height: 50px;
 }
 
 h2 {
   font-family: "Open Sans", sans-serif;
+  color: #3498db;
   font-size: 36px;
   line-height: 45px;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -381,7 +233,7 @@ h3 {
   font-size: 20px;
   line-height: 28px;
   font-weight: bold;
-  color: #fd7700;
+  color: #3498db;
 }
 
 h4 {
@@ -1082,6 +934,9 @@ button {
 .story-item h2, .story-item .story-body, .story-item .arrow {
   visibility: hidden;
 }
+.story-item .arrow {
+  color: #ec6a4c;
+}
 .story-item.single {
   /* Responsive */
 }
@@ -1185,7 +1040,7 @@ button {
   background-position: top;
   -webkit-background-size: cover;
   background-size: cover;
-  background-color: #231f20;
+  background-color: #545b62;
 }
 .header-image .header-overlay {
   width: 100%;
@@ -1207,7 +1062,7 @@ button {
   cursor: pointer;
 }
 .header-image .header-overlay i:hover {
-  color: #fd7700;
+  color: #3498db;
 }
 @media screen and (max-width: 1200px) {
   .header-image {
@@ -1242,7 +1097,7 @@ button {
   top: 0;
   left: 0;
   padding: 8px 18px 8px 8px;
-  background-color: #fd7700;
+  background-color: #3498db;
   border: none;
   font-size: 18px;
   line-height: 26px;
@@ -1255,7 +1110,7 @@ button {
 }
 
 .story-details-container a {
-  color: #fd7700;
+  color: #3498db;
 }
 .story-details-container img {
   max-width: 100%;
@@ -1313,14 +1168,14 @@ button {
   display: inline-block;
   margin: 10px 0;
   padding: 0 20px;
-  color: #231f20;
+  color: #545b62;
   font-size: 36px;
   line-height: 45px;
   opacity: 0.5;
   cursor: pointer;
 }
 .data-container .data-tabs-nav li:first-child {
-  border-right: 1px solid #767574;
+  border-right: 1px solid #22272b;
 }
 .data-container .data-tabs-nav li.selected {
   opacity: 1;
@@ -1335,8 +1190,8 @@ button {
   margin: 2% 0;
 }
 .data-container .data-content .data-border {
-  border-right: 2px solid #767574;
-  border-left: 2px solid #767574;
+  border-right: 2px solid #22272b;
+  border-left: 2px solid #22272b;
 }
 .data-container .data-content span {
   display: block;
@@ -1427,9 +1282,9 @@ button {
 }
 .hero-container .hero-overlay {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
-  text-align: right;
+  top: 30%;
+  left: 5%;
+  text-align: left;
 }
 @media screen and (max-width: 768px) {
   .hero-container .hero-overlay {
@@ -1446,7 +1301,7 @@ button {
   left: 50%;
   bottom: 40px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #ec6a4c;
   border-radius: 25px;
   width: 50px;
   height: 50px;
@@ -1461,14 +1316,194 @@ button {
   width: 100%;
   height: auto;
 }
-.hero-container h1, .hero-container h2 {
-  text-transform: uppercase;
+.hero-container h1, .hero-container h2, .hero-container h3, .hero-container h4 {
   margin-bottom: 15px;
+  font-weight: normal;
+  color: #545b62;
+}
+.hero-container h2, .hero-container h3, .hero-container h4 {
+  text-transform: uppercase;
 }
 .hero-container a {
   font-size: 16px;
 }
 
 /*-----------------------------------*\
+	Default CSS
+\*-----------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body.PreviewBody {
+  margin: 0;
+  background-position: 0 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.PreviewToolBar {
+  display: none;
+}
+
+.PageDefaultInner {
+  overflow: hidden;
+}
+
+.clearfix:after,
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Container Config */
+.container {
+  padding: 6% 0;
+}
+
+.center {
+  text-align: center;
+}
+.center .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.overlay-background {
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+
+@media screen and (min-width: 481px) {
+  .thin .container {
+    padding: 4% 0;
+  }
+
+  .thick .container {
+    padding: 12% 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .full .container {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+/* Fixed BG */
+.fixed-bg {
+  min-height: 100%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-attachment: scroll\9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Themes */
+.dark {
+  color: #fff;
+}
+.dark a, .dark h2, .dark .arrow {
+  color: #fff;
+}
+
+.light {
+  color: #000;
+}
+.light a {
+  color: #000;
+}
+
+.corporate-one {
+  background-color: #3498db;
+}
+
+.corporate-two {
+  background-color: #ec6a4c;
+}
+
+.corporate-three {
+  background-color: #545b62;
+}
+
+.corporate-four {
+  background-color: #22272b;
+}
+
+.corporate-color {
+  color: #3498db;
+}
+
+/* Elements */
+.arrow {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.arrow:before {
+  font-family: 'Q4-Default-Icons';
+  content: "\e802";
+  font-size: 60px;
+}
+
+.arrow.alt:before {
+  content: "\e806";
+}
+
+/* Lazy Loading XT */
+.lazy-hidden {
+  opacity: 0;
+}
+
+.lazy-loaded {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+/*-----------------------------------*\
   Client CSS
 \*-----------------------------------*/
+h2 {
+  margin-bottom: 20px;
+}
+
+.q4-button {
+  display: inline-block;
+  margin: 35px 5px 10px;
+  padding: 20px 35px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.feature i {
+  font-size: 50px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.arrow {
+  margin: 25px 0 0;
+}
+
+.arrow:before {
+  font-size: 30px;
+}
+
+.story-item.feature .arrow:before {
+  content: "\e802";
+}

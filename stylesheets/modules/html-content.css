@@ -25,14 +25,14 @@
   display: inline-block;
   margin: 10px 0;
   padding: 0 20px;
-  color: #231f20;
+  color: #545b62;
   font-size: 36px;
   line-height: 45px;
   opacity: 0.5;
   cursor: pointer;
 }
 .data-container .data-tabs-nav li:first-child {
-  border-right: 1px solid #767574;
+  border-right: 1px solid #22272b;
 }
 .data-container .data-tabs-nav li.selected {
   opacity: 1;
@@ -47,8 +47,8 @@
   margin: 2% 0;
 }
 .data-container .data-content .data-border {
-  border-right: 2px solid #767574;
-  border-left: 2px solid #767574;
+  border-right: 2px solid #22272b;
+  border-left: 2px solid #22272b;
 }
 .data-container .data-content span {
   display: block;

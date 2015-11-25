@@ -32,6 +32,9 @@
 .story-item h2, .story-item .story-body, .story-item .arrow {
   visibility: hidden;
 }
+.story-item .arrow {
+  color: #ec6a4c;
+}
 .story-item.single {
   /* Responsive */
 }

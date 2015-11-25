@@ -3,10 +3,6 @@
 @import "includes/reset.scss";
 @import "includes/variables.scss";
 
-//Default CSS
-@import "default.scss";
-
-
 // Global
 @import "global/navigation.scss";
 @import "global/typography.scss";
@@ -23,6 +19,9 @@
 @import "modules/detail-content.scss";
 @import "modules/html-content.scss";
 @import "modules/hero.scss";
+
+//Default CSS
+@import "default.scss";
 
 // Client Specific CSS
 @import "client.scss";

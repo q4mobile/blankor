@@ -7,13 +7,6 @@
 
 .story-item {
 
-	//position: relative;
-
-	.in-viewport {
-		// position: absolute;
-		// top: 50px;
-	}
-
 	/* Global */
 
 	.details-content, .ModuleDate {
@@ -41,6 +34,9 @@
 
 	h2, .story-body, .arrow {
 		visibility: hidden;
+	}
+	.arrow {
+		color: $corporate-two;
 	}
 
 	/* Single Story */

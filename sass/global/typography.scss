@@ -20,25 +20,26 @@ time, mark, audio, video {
 
 i {
   font-family: 'Q4-Default-Icons';
-  height: 32px;
-  width: 32px;
+  // height: 32px;
+  // width: 32px;
 }
 
 body {
 	font-family: $default-font;
+	color: $corporate-six;
 }
 
 h1 {
 	font-family: $default-font;
-	font-size: 40px;
-	line-height: 44px;
+	font-size: 50px;
+	line-height: 50px;
 }
 
 h2 {
 	font-family: $default-font;
+	color: $corporate-one;
 	font-size: 36px;
     line-height: 45px;
-    text-transform: uppercase;
 }
 
 h3 {

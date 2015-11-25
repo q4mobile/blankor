@@ -84,7 +84,7 @@ img {
 .dark {
   color: #fff;
 }
-.dark a {
+.dark a, .dark h2, .dark .arrow {
   color: #fff;
 }
 
@@ -96,23 +96,23 @@ img {
 }
 
 .corporate-one {
-  background-color: #fd7700;
+  background-color: #3498db;
 }
 
 .corporate-two {
-  background-color: #efefef;
+  background-color: #ec6a4c;
 }
 
 .corporate-three {
-  background-color: #231f20;
+  background-color: #545b62;
 }
 
 .corporate-four {
-  background-color: #767574;
+  background-color: #22272b;
 }
 
 .corporate-color {
-  color: #fd7700;
+  color: #3498db;
 }
 
 /* Elements */
