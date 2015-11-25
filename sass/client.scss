@@ -8,6 +8,10 @@ h2 {
 	margin-bottom: 20px;
 }
 
+.container {
+	padding: 8% 0;
+}
+
 .q4-button {
     display: inline-block;
 	margin: 35px 5px 10px;
@@ -33,3 +37,318 @@ h2 {
 .story-item.feature .arrow:before {
 	content: "\e802";
 }
+
+/*=========================FOOTER===============================*/
+
+.footer-container {
+    background: #25272a;
+    padding-top: 53px;
+    padding-bottom: 55px;
+
+    .container {
+		margin: 0 auto;
+		max-width: 1210px;
+		padding: 0 20px;
+    }
+}
+
+@media all and (max-width:1024px){
+	.footer-container{
+	    padding-bottom:25px;
+	    .container {
+	    	width: 100%;
+	    }
+	}
+}
+
+@media all and (max-width:1024px){
+	.footer-container{
+	    .container {
+	    	padding: 0 15px;
+	    }
+	}
+}
+
+/*----------------------FOOTER NAV-----------------------*/
+
+div.footerNav {
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+
+div.footerNav h1 {
+    color: #727272;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+div.footerNav h1 a{
+    color: #727272;
+}
+div.footerNav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height:20px;
+}
+
+div.footerNav ul a {
+    color: #fff;
+    margin: 2px 0;
+    display: inline-block;
+    font-size:14px;
+}
+div.footerNav ul a:hover{
+   color:#e3b80e;
+}
+div.footerNav.margin-left {
+    margin-left: 110px;
+}
+@media all and (max-width:1100px){
+
+div.footerNav.margin-left {
+    margin-left: 80px;
+}
+}
+@media all and (max-width:767px){
+div.footerNav{
+   width:33%;
+   font-size:11px;
+   line-height:20px;
+}
+div.footerNav.margin-left{
+    margin-left:0;
+}
+}
+/*-------------------END FOOTER NAV----------------------*/
+
+.socialLinks {
+    display: inline-block;
+    float: right;
+    text-align: left;
+}
+
+.socialLinks ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.socialLinks h1 {
+    display: inline-block;
+    float: left;
+    color: #727272;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin:0;
+    line-height:22px;
+}
+.socialLinks ul li {
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.socialLinks li a, .socialLinks li a i {
+    color:#ffffff;
+    height: 22px;
+    display: inline-block;
+    font-size: 20px;
+}
+.socialLinks li a:hover{
+    color:#e3b80e;
+}
+
+@media all and (max-width:767px){
+
+div.socialLinks{
+  float:none;
+  display:inline-block;
+  width:100%;
+  padding-bottom:20px;
+}
+div.socialLinks ul{
+  float:left;
+}
+}
+
+/*------------------END SOCIAL LINKS---------------------*/
+
+.PaneFooter2, .PaneFooter2 div {
+  text-align:right;
+  color:#828282;
+  font-size:12px;
+  margin-top:-30px;
+}
+.copyright{
+  display:inline-block;
+  vertical-align:top;
+  padding:5px 10px 5px 0;
+}
+.RightColumnBlock{
+  display:none;
+}
+.FooterLinks{
+  display:inline-block;
+  vertical-align:top;
+  margin:0;
+  padding:0;
+}
+div.FooterLinks{
+  padding:5px 0;
+}
+.FooterLinks li{
+  display:inline-block;
+  vertical-align:top;
+  list-style:none;
+  margin:0 3px;
+}
+.FooterLinks li a{
+  color:#d7d7d7;
+}
+.FooterLinks li a:hover{
+  color:#e3b80e;
+}
+.FooterLinks li .QuickLinkSeparator{
+  display:inline!important;
+}
+.btt{
+  display:inline-block;
+  vertical-align:top;
+  margin-left:15px;
+  opacity:0;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.btt.visible{
+  opacity:1;
+}
+.btt a{
+  color:#ffffff;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  font-size:22px;
+  display:inline-block;
+  border-radius:3px;
+  background-color:#3498db;
+  text-align:center;
+  position:relative;
+  top:30px;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.btt a:hover{
+  background-color:#5cbcfc ;
+}
+.btt.visible a{
+  top:0;
+}
+.Q4FooterContainer{
+  text-align:left!important;
+  padding:0!important;
+}
+.Q4FooterContainer a span{
+  color:#828282;
+  font-size:12px;
+}
+.storeLinks{
+  float:right;
+  clear:right;
+  padding:0 0 15px 0;
+  margin-top:-8px;
+  width:25%;
+}
+.storeLinks.mobileView{
+  display:none;
+}
+.storeLinks ul{
+  float:right;
+  margin:0;
+  padding:0;
+}
+
+.storeLinks ul li{
+  float:left;
+  padding:0 0 0 10px;
+}
+.storeLinks ul li a{
+  display:block;
+}
+.storeLinks ul li a img{
+  height:36px!important;
+}
+@media all and (max-width:1140px){
+.storeLinks{
+  width:30%;
+}
+}
+@media all and (max-width:1000px){
+.PaneFooter2{
+  margin-top:0;
+}
+}
+
+@media all and (max-width:940px){
+.storeLinks{
+  display:none;
+}
+.storeLinks.mobileView{
+  display:block;
+  margin-top:25px;
+  width:auto;
+}
+}
+@media all and (max-width:767px){
+.PaneFooter2 .Q4FooterContainer a span,
+.PaneFooter2 {
+  font-size:11px;
+}
+.PaneFooter2 .copyright{
+  float:left;
+  padding-right:0;
+}
+div.FooterLinks{
+  float:left;
+  clear:left;
+}
+.FooterLinks li:first-child{
+  margin-left:0;
+}
+.btt{
+  margin-top:-15px;
+  float:right;
+}
+.PaneFooter {
+  padding-bottom:15px;
+}
+
+.storeLinks ul,
+.storeLinks{
+  float:left;
+  clear:both;
+}
+.storeLinks ul li{
+  padding:0 10px 0 0;
+}
+}
+@media all and (max-width:479px){
+.PaneFooter2 .Q4FooterContainer a span,
+.PaneFooter2 {
+  font-size:9px;
+}
+.PaneFooter2 .copyright{
+  padding:10px 0 0 0;
+}
+div.FooterLinks{
+  padding-top:0;
+}
+}
+
+/*=======================END FOOTER=============================*/

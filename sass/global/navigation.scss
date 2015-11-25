@@ -89,7 +89,7 @@
 		list-style-type: none;
 		border-color: rgba(255, 255, 255, .1);
 
-		li {
+		.level2 li {
 			border-bottom: 1px solid #fff;
 			border-color: rgba(255, 255, 255, .1);
 
@@ -108,7 +108,7 @@
 				}
 			}
 
-			.level2 li:first-child {
+			&:first-child {
 				border-top: 1px solid #fff;
 				border-color: rgba(255, 255, 255, .1);
 			}
