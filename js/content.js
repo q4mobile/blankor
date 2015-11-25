@@ -193,10 +193,11 @@
                     story.cls = cls;
                     story.animationCls = animationCls;
                     story.LinkToDetailPage = story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
-                    story.Body = $(story.Body).find('.landing-content')[0] !== undefined ? $(story.Body).find('.landing-content')[0].outerHTML : '';
+                    story.Body = $(story.Body).find('.landing-content')[0] !== undefined || $(story.Body).hasClass('landing-content') ? $(story.Body).wrap('<div/>').parent().find('.landing-content')[0].outerHTML : '';
+                    
                     stories += Mustache.render(tpl[tag], story);
-
                 });
+
 
                 inst.element.html(stories);
                 inst._lazyLoad();
@@ -206,7 +207,12 @@
                     inst._scrollTo(location.hash);
                 }
 
-                $(window).on( 'DOMContentLoaded load resize scroll', q4._onVisibilityChange( $('.in-viewport') ) );
+                if (navigator.appVersion.indexOf("MSIE 8.") == -1) {
+                    $(window).on( 'DOMContentLoaded load resize scroll', q4._onVisibilityChange( $('.in-viewport') ) );
+                } else {
+                    $('.in-viewport').parent().addClass('animate');
+                    $(window).resize();
+                }
             });
         },
 
@@ -220,7 +226,7 @@
                 
                 var item = $container.parent().find('.data-content').hide().eq($(this).index()).show();
 
-                if ($container.parent().hasClass('count-to')){
+                if ($container.parent().hasClass('count-to') && navigator.appVersion.indexOf("MSIE 8.") == -1){
                     inst._countTo(item.find('.timer'))
                 }
             });

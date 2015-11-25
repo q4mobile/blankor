@@ -41,6 +41,7 @@ var q4 = {
         var inst = this;
         $('.nav-logo').on('click', function(){
             inst._letScroll( 0 );
+            $(window).resize();
         });
     },
     _letScroll: function(position){
@@ -69,7 +70,7 @@ var q4 = {
                     if (!$(this).parent().hasClass('animate')){
                         $(this).parent().addClass('animate');
 
-                        if ($(this).parent().find('.count-to').length){
+                        if ($(this).parent().find('.count-to').length && navigator.appVersion.indexOf("MSIE 8.") == -1){
                             $(this).parent().find('.timer').countTo({
                                 formatter: function (value, options) {
                                     return value.toFixed($(this).data('decimal') !== undefined ? $(this).data('decimal') : 0);

@@ -74,6 +74,7 @@ img {
   min-height: 100%;
   background-size: 100% auto;
   background-attachment: fixed;
+  background-attachment: scroll\9;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
