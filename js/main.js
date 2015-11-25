@@ -24,6 +24,8 @@ var q4 = {
             container.animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500, 'linear', function(){
+                console.log('complete')
+                $(window).resize();
                 $('body').removeClass('toggle-nav-open');
             });
 
@@ -106,21 +108,6 @@ var q4 = {
 $(function(){
     q4._init();
     q4._setHeight( $('.hero-container') );
-
-    var slick = $('.story-slider').slick({
-        infinite: true,
-        arrows: false,
-        pauseOnHover: false,
-        autoplay: true,
-        autoplaySpeed: 5000
-    });
-
-    slick.on('afterChange', function() {
-        var activeSlide = $('.slick-slide.slick-active');
-        activeSlide.next().find('img[data-srcset]').lazyLoadXT({
-            show: true
-        });
-    });
 });
 
 $(window).resize(function() {

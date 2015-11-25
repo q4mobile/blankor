@@ -100,6 +100,14 @@
                     '</div>'
                 )
             },
+            slickOpts: {
+                dots: true,
+                infinite: true,
+                arrows: false,
+                pauseOnHover: false,
+                autoplay: true,
+                autoplaySpeed: 5000
+            },
             onComplete: function(){}
         },
 
@@ -207,11 +215,21 @@
                     inst._scrollTo(location.hash);
                 }
 
+                if (inst.element.find('.story-slider').length){
+                    var slick = $('.story-slider').slick(inst.options.slickOpts);
+
+                    slick.on('afterChange', function() {
+                        var activeSlide = $('.slick-slide.slick-active');
+                        activeSlide.next().find('img[data-srcset]').lazyLoadXT({
+                            show: true
+                        });
+                    });
+                }
+
                 if (navigator.appVersion.indexOf("MSIE 8.") == -1) {
                     $(window).on( 'DOMContentLoaded load resize scroll', q4._onVisibilityChange( $('.in-viewport') ) );
                 } else {
                     $('.in-viewport').parent().addClass('animate');
-                    $(window).resize();
                 }
             });
         },
