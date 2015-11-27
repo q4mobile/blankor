@@ -6,6 +6,9 @@ $site: "http://blankor.q4web.com/" !default;
 //Client logo
 $client-logo: url($site+'files/design/nav-logo.png') !default;
 
+//Default Details Banner Image
+$details-default: url($site+'files/design/banner/details-default.jpg') !default;
+
 //Corporate Fonts 
 //$default-font: 'Roboto', sans-serif !default;
 $default-font: 'Open Sans', sans-serif !default;
@@ -24,7 +27,7 @@ $corporate-one: #3498db !default;
 //Salmon BG 
 $corporate-two: #ec6a4c !default;
 //Hero Text
-$corporate-three: #545b62 !default;
+$corporate-three: #FFF !default;
 //Dark BG
 $corporate-four: #22272b !default;
 //Dark BG Text

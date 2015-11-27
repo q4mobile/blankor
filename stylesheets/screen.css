@@ -135,9 +135,15 @@ table {
   list-style-type: none;
   border-color: rgba(255, 255, 255, 0.1);
 }
+.nav-container .toggle-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .nav-container .toggle-nav .level2 li {
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
+  margin: 0;
 }
 .nav-container .toggle-nav .level2 li a {
   color: #fff;
@@ -221,7 +227,7 @@ h1 {
   line-height: 50px;
 }
 
-h2 {
+h2, h2 span {
   font-family: "Open Sans", sans-serif;
   color: #3498db;
   font-size: 36px;
@@ -256,6 +262,21 @@ a {
 
 button {
   font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  margin: 10px 0;
+  line-height: 22px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+ul li {
+  margin: 10px 0;
+  line-height: 22px;
+}
+ul ul {
+  margin-left: 2em;
+  list-style-type: circle;
 }
 
 @media screen and (max-width: 768px) {
@@ -1037,13 +1058,14 @@ button {
   Details module CSS
 \*-----------------------------------*/
 .header-image {
+  background-image: url("http://blankor.q4web.com/files/design/banner/details-default.jpg");
   position: relative;
   padding-top: 25%;
   background-repeat: no-repeat;
   background-position: top;
   -webkit-background-size: cover;
   background-size: cover;
-  background-color: #545b62;
+  background-color: #FFF;
 }
 .header-image .header-overlay {
   width: 100%;
@@ -1151,12 +1173,13 @@ button {
 .data-container .data-tabs-nav {
   list-style: none;
   font-size: 0;
+  margin: 0;
 }
 .data-container .data-tabs-nav li {
   display: inline-block;
   margin: 10px 0;
   padding: 0 20px;
-  color: #545b62;
+  color: #FFF;
   font-size: 36px;
   line-height: 45px;
   opacity: 0.5;
@@ -1172,6 +1195,7 @@ button {
   display: none;
   list-style: none;
   font-size: 0;
+  margin: 0;
 }
 .data-container .data-content li {
   padding: 0 2%;
@@ -1311,8 +1335,7 @@ button {
 }
 .hero-container h1, .hero-container h2, .hero-container h3, .hero-container h4 {
   margin-bottom: 15px;
-  font-weight: normal;
-  color: #545b62;
+  color: #FFF;
 }
 .hero-container h2, .hero-container h3, .hero-container h4 {
   text-transform: uppercase;
@@ -1390,6 +1413,7 @@ img {
   .full .container {
     padding-left: 0%;
     padding-right: 0%;
+    max-width: 1200px;
   }
 }
 /* Fixed BG */
@@ -1427,7 +1451,7 @@ img {
 }
 
 .corporate-three {
-  background-color: #545b62;
+  background-color: #FFF;
 }
 
 .corporate-four {
@@ -1524,13 +1548,13 @@ h2 {
 
 .hero-container .hero-overlay {
   padding: 3%;
-  top: 26%;
+  top: 20%;
   left: 0%;
   right: auto !important;
   bottom: auto !important;
   text-align: left !important;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .hero-container .hero-overlay {
     background-color: #3498db;
   }
@@ -1578,8 +1602,9 @@ h2 {
   display: inline-block;
 }
 
-.data-content {
+.data-container .data-content {
   font-weight: 300;
+  margin-top: 50px;
 }
 
 .data-container .data-content .data-currency {
@@ -1650,6 +1675,9 @@ h2 {
   margin: 0 auto;
   max-width: 1210px;
   padding: 0 20px;
+}
+.footer-container ul {
+  list-style: none;
 }
 
 @media all and (max-width: 1024px) {
@@ -1750,7 +1778,8 @@ div.footerNav.margin-left {
   display: inline-block;
   float: left;
   vertical-align: middle;
-  margin-left: 20px;
+  margin: 0 0 0 20px;
+  line-height: inherit;
 }
 
 .socialLinks li a, .socialLinks li a i {

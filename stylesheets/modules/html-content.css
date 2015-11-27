@@ -5,12 +5,13 @@
 .data-container .data-tabs-nav {
   list-style: none;
   font-size: 0;
+  margin: 0;
 }
 .data-container .data-tabs-nav li {
   display: inline-block;
   margin: 10px 0;
   padding: 0 20px;
-  color: #545b62;
+  color: #FFF;
   font-size: 36px;
   line-height: 45px;
   opacity: 0.5;
@@ -26,6 +27,7 @@
   display: none;
   list-style: none;
   font-size: 0;
+  margin: 0;
 }
 .data-container .data-content li {
   padding: 0 2%;

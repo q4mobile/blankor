@@ -2,13 +2,14 @@
   Details module CSS
 \*-----------------------------------*/
 .header-image {
+  background-image: url("http://blankor.q4web.com/files/design/banner/details-default.jpg");
   position: relative;
   padding-top: 25%;
   background-repeat: no-repeat;
   background-position: top;
   -webkit-background-size: cover;
   background-size: cover;
-  background-color: #545b62;
+  background-color: #FFF;
 }
 .header-image .header-overlay {
   width: 100%;

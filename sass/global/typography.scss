@@ -35,7 +35,7 @@ h1 {
 	line-height: 50px;
 }
 
-h2 {
+h2, h2 span {
 	font-family: $default-font;
 	color: $corporate-one;
 	font-size: 36px;
@@ -70,6 +70,23 @@ a {
 
 button {
 	font-family: $default-font;
+}
+
+ul {
+	margin: 10px 0;
+    line-height: 22px;
+    list-style-type: disc;
+    list-style-position: inside;
+
+    li {
+    	margin: 10px 0;
+    	line-height: 22px;
+    }
+
+    ul {
+    	margin-left: 2em;
+    	list-style-type: circle;
+    }
 }
 
 @media screen and (max-width: $screen-medium) {

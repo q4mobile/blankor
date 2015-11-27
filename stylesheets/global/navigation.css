@@ -77,9 +77,15 @@
   list-style-type: none;
   border-color: rgba(255, 255, 255, 0.1);
 }
+.nav-container .toggle-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .nav-container .toggle-nav .level2 li {
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
+  margin: 0;
 }
 .nav-container .toggle-nav .level2 li a {
   color: #fff;

@@ -19,13 +19,13 @@ h2 {
 
 .hero-container .hero-overlay {
   padding: 3%;
-  top: 26%;
+  top: 20%;
   left: 0%;
   right: auto !important;
   bottom: auto !important;
   text-align: left !important;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .hero-container .hero-overlay {
     background-color: #3498db;
   }
@@ -73,8 +73,9 @@ h2 {
   display: inline-block;
 }
 
-.data-content {
+.data-container .data-content {
   font-weight: 300;
+  margin-top: 50px;
 }
 
 .data-container .data-content .data-currency {
@@ -145,6 +146,9 @@ h2 {
   margin: 0 auto;
   max-width: 1210px;
   padding: 0 20px;
+}
+.footer-container ul {
+  list-style: none;
 }
 
 @media all and (max-width: 1024px) {
@@ -245,7 +249,8 @@ div.footerNav.margin-left {
   display: inline-block;
   float: left;
   vertical-align: middle;
-  margin-left: 20px;
+  margin: 0 0 0 20px;
+  line-height: inherit;
 }
 
 .socialLinks li a, .socialLinks li a i {
