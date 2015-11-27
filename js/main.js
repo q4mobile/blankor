@@ -24,8 +24,6 @@ var q4 = {
             container.animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500, 'linear', function(){
-                console.log('complete')
-                $(window).resize();
                 $('body').removeClass('toggle-nav-open');
             });
 
@@ -43,7 +41,7 @@ var q4 = {
         var inst = this;
         $('.nav-logo').on('click', function(){
             inst._letScroll( 0 );
-            $(window).resize();
+            location.hash = 'top';
         });
     },
     _letScroll: function(position){
@@ -54,13 +52,14 @@ var q4 = {
     _isElementInViewport: function(el) {
         el = el[0];
         if (el === undefined) return false
-        var rect = el.getBoundingClientRect();
+        var rect = el.getBoundingClientRect(),
+            offset = $('.nav-container').width();
 
         return ( 
             rect.top >= 0 && 
             rect.left >= 0 && 
             rect.bottom + 250 <= $(window).height() && 
-            rect.right <= $(window).width()
+            rect.right <= $(window).width() + offset
         );
     },
     _onVisibilityChange:function (el) {

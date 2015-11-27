@@ -259,9 +259,11 @@
         },
 
         _scrollTo: function(location){
-            $('html, body').animate({
-                scrollTop: $( location ).offset().top
-            }, 500, 'linear');
+            if ($( location ).length) {
+                $('html, body').animate({
+                    scrollTop: $( location ).offset().top
+                }, 500, 'linear');
+            }
         },
 
         _windowResize: function(){
