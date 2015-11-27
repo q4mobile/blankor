@@ -31,6 +31,11 @@
   padding: 0 2%;
   margin: 2% 0;
 }
+@media screen and (max-width: 768px) {
+  .data-container .data-content li {
+    margin: 8% 0;
+  }
+}
 .data-container .data-content .data-border {
   border-right: 2px solid #22272b;
   border-left: 2px solid #22272b;

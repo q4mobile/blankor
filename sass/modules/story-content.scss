@@ -32,7 +32,7 @@
 		position: relative;
 	}
 
-	h2, .story-body, .arrow {
+	h2, .story-body, .arrow, .story-image {
 		visibility: hidden;
 	}
 	.arrow {
@@ -48,6 +48,9 @@
 		@media screen and (max-width: $screen-medium) {
 			.story-image {
 				display: none;
+			}
+			.story-content {
+				padding: 6% 9%;
 			}
 		}
 

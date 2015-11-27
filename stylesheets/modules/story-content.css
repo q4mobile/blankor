@@ -29,7 +29,7 @@
 .story-item h2, .story-item .story-body {
   position: relative;
 }
-.story-item h2, .story-item .story-body, .story-item .arrow {
+.story-item h2, .story-item .story-body, .story-item .arrow, .story-item .story-image {
   visibility: hidden;
 }
 .story-item .arrow {
@@ -41,6 +41,9 @@
 @media screen and (max-width: 768px) {
   .story-item.single .story-image {
     display: none;
+  }
+  .story-item.single .story-content {
+    padding: 6% 9%;
   }
 }
 .story-item.multi {

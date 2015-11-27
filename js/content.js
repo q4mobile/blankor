@@ -5,7 +5,7 @@
                 single: (
                     '<div id="{{SeoName}}" class="story-item single {{cls}}">' +
                         '<div class="in-viewport"></div>' +
-                        '<div class="col col-1-of-3 story-image">' +
+                        '<div class="col col-1-of-3 story-image fade-from-left">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
                         '</div>' +
                         '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
@@ -27,7 +27,7 @@
                                 '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
                         '</div>' +
-                        '<div class="col col-1-of-3 story-image">' +
+                        '<div class="col col-1-of-3 story-image fade-from-right">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
                         '</div>' +
                     '</div>'

@@ -931,7 +931,7 @@ button {
 .story-item h2, .story-item .story-body {
   position: relative;
 }
-.story-item h2, .story-item .story-body, .story-item .arrow {
+.story-item h2, .story-item .story-body, .story-item .arrow, .story-item .story-image {
   visibility: hidden;
 }
 .story-item .arrow {
@@ -943,6 +943,9 @@ button {
 @media screen and (max-width: 768px) {
   .story-item.single .story-image {
     display: none;
+  }
+  .story-item.single .story-content {
+    padding: 6% 9%;
   }
 }
 .story-item.multi {
@@ -1174,6 +1177,11 @@ button {
   padding: 0 2%;
   margin: 2% 0;
 }
+@media screen and (max-width: 768px) {
+  .data-container .data-content li {
+    margin: 8% 0;
+  }
+}
 .data-container .data-content .data-border {
   border-right: 2px solid #22272b;
   border-left: 2px solid #22272b;
@@ -1267,9 +1275,9 @@ button {
 }
 .hero-container .hero-overlay {
   position: absolute;
-  top: 30%;
-  left: 5%;
-  text-align: left;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
 }
 @media screen and (max-width: 768px) {
   .hero-container .hero-overlay {
@@ -1461,6 +1469,12 @@ img {
 }
 
 /* Slick Override */
+.slick-dots {
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+}
+
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -1492,8 +1506,37 @@ img {
 /*-----------------------------------*\
   Client CSS
 \*-----------------------------------*/
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
 h2 {
   margin-bottom: 20px;
+}
+
+.hero-container {
+  background-image: url("http://blankor.q4web.com//files/design/hero/hero-desktop.jpg");
+}
+
+.hero-container img {
+  display: none;
+}
+
+.hero-container .hero-overlay {
+  padding: 3%;
+  top: 26%;
+  left: 0%;
+  right: auto !important;
+  bottom: auto !important;
+  text-align: left !important;
+}
+@media screen and (max-width: 1200px) {
+  .hero-container .hero-overlay {
+    background-color: #3498db;
+  }
+  .hero-container .hero-overlay h1, .hero-container .hero-overlay h4 {
+    color: #fff;
+  }
 }
 
 .container {
@@ -1524,6 +1567,77 @@ h2 {
 
 .story-item.feature .arrow:before {
   content: "\e802";
+}
+
+.story-item .story-image {
+  text-align: center;
+}
+
+.story-item .story-image img {
+  width: auto;
+  display: inline-block;
+}
+
+.data-content {
+  font-weight: 300;
+}
+
+.data-container .data-content .data-currency {
+  padding-bottom: 65px;
+}
+
+.data-container .data-content .data-percent {
+  padding-bottom: 20px;
+}
+
+.data-container .data-content .data-currency,
+.data-container .data-content .data-percent {
+  font-size: 20px;
+  vertical-align: bottom;
+  display: inline-block;
+  line-height: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .data-container .data-content .data-currency {
+    padding-bottom: 45px;
+  }
+
+  .data-container .data-content .data-percent {
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .data-container .data-content .data-currency {
+    padding-bottom: 40px;
+  }
+
+  .data-container .data-content .data-percent {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .data-container .data-content .data-currency {
+    padding-bottom: 40px;
+    font-size: 15px;
+  }
+
+  .data-container .data-content .data-percent {
+    padding-bottom: 25px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .data-container .data-content .data-currency {
+    padding-bottom: 40px;
+  }
+
+  .data-container .data-content .data-percent {
+    padding-bottom: 23px;
+  }
+}
+#downloads .fixed-bg {
+  background-attachment: initial;
 }
 
 /*=========================FOOTER===============================*/
@@ -1749,6 +1863,10 @@ div.FooterLinks {
   top: 0;
 }
 
+.btt i {
+  font-size: 20px;
+}
+
 .Q4FooterContainer {
   text-align: left !important;
   padding: 0 !important;
@@ -1822,6 +1940,11 @@ div.FooterLinks {
     padding-right: 0;
   }
 
+  .PaneFooter2, .PaneFooter2 div {
+    margin-top: 5px;
+    text-align: left;
+  }
+
   div.FooterLinks {
     float: left;
     clear: left;
@@ -1834,10 +1957,6 @@ div.FooterLinks {
   .btt {
     margin-top: -15px;
     float: right;
-  }
-
-  .PaneFooter {
-    padding-bottom: 15px;
   }
 
   .storeLinks ul,

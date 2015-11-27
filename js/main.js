@@ -36,7 +36,7 @@ var q4 = {
     _onHeroScroll: function() {
         var inst = this;
         $('.scroll-button').on('click', function(){
-            inst._letScroll( $('.content-continer').offset().top );
+            inst._letScroll( $('.content-container').offset().top );
         });
     },
     _onLogoClick: function() {
