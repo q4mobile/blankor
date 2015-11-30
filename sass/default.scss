@@ -40,6 +40,14 @@ img {
 
 .container {
 	padding: 6% 0;
+
+	@media screen and (max-width: $screen-medium) {
+		padding: 10% 0;
+	}
+
+	@media screen and (max-width: $screen-medium) {
+		padding: 20% 0;
+	}
 }
 
 .center {
@@ -88,6 +96,11 @@ img {
 	background-repeat: no-repeat;
 	background-position: center center;
     background-size: cover;
+    -webkit-background-size: cover;
+
+	@media screen and (max-device-width: 480px) {
+		background-attachment: scroll;
+	}
 }
 
 /* Themes */

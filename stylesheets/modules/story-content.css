@@ -29,11 +29,13 @@
 .story-item h2, .story-item .story-body {
   position: relative;
 }
-.story-item h2, .story-item .story-body, .story-item .arrow, .story-item .story-image {
-  visibility: hidden;
-}
 .story-item .arrow {
   color: #ec6a4c;
+}
+@media screen and (min-width: 481px) {
+  .story-item h2, .story-item .story-body, .story-item .arrow, .story-item .story-image {
+    visibility: hidden;
+  }
 }
 .story-item.single {
   /* Responsive */
@@ -43,7 +45,12 @@
     display: none;
   }
   .story-item.single .story-content {
-    padding: 6% 9%;
+    padding: 10% 9%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .story-item.single .story-content {
+    padding: 20% 9%;
   }
 }
 .story-item.multi {

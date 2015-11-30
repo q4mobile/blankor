@@ -9,14 +9,23 @@ h2 {
   margin-bottom: 20px;
 }
 
+.header-assets {
+  background-image: url("http://blankor.q4web.com//files/design/nav-overlay.png");
+}
+@media screen and (max-width: 480px) {
+  .header-assets .nav-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+
 .hero-container {
   background-image: url("http://blankor.q4web.com//files/design/hero/hero-desktop.jpg");
 }
-
 .hero-container img {
   display: none;
 }
-
 .hero-container .hero-overlay {
   padding: 3%;
   top: 20%;
@@ -28,26 +37,24 @@ h2 {
 @media screen and (max-width: 768px) {
   .hero-container .hero-overlay {
     background-color: #3498db;
+    padding: 20px;
+    top: 22%;
   }
   .hero-container .hero-overlay h1, .hero-container .hero-overlay h4 {
     color: #fff;
   }
 }
 
-.container {
-  padding: 8% 0;
-}
-
 .q4-button {
   display: inline-block;
-  margin: 35px 5px 10px;
+  margin: 15px 5px 10px;
   padding: 20px 35px;
   border-radius: 3px;
   text-transform: uppercase;
 }
 
 .feature i {
-  font-size: 50px;
+  font-size: 51px;
   display: inline-block;
   margin-bottom: 40px;
 }
@@ -77,15 +84,12 @@ h2 {
   font-weight: 300;
   margin-top: 50px;
 }
-
 .data-container .data-content .data-currency {
   padding-bottom: 65px;
 }
-
 .data-container .data-content .data-percent {
   padding-bottom: 20px;
 }
-
 .data-container .data-content .data-currency,
 .data-container .data-content .data-percent {
   font-size: 20px;
@@ -93,23 +97,28 @@ h2 {
   display: inline-block;
   line-height: 0;
 }
-
 @media screen and (max-width: 1200px) {
   .data-container .data-content .data-currency {
     padding-bottom: 45px;
   }
-
   .data-container .data-content .data-percent {
     padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .data-container .data-content .data-label {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 768px) {
   .data-container .data-content .data-currency {
     padding-bottom: 40px;
   }
-
   .data-container .data-content .data-percent {
     padding-bottom: 20px;
+  }
+  .data-container .data-content .data-label {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -117,7 +126,6 @@ h2 {
     padding-bottom: 40px;
     font-size: 15px;
   }
-
   .data-container .data-content .data-percent {
     padding-bottom: 25px;
     font-size: 15px;
@@ -127,11 +135,14 @@ h2 {
   .data-container .data-content .data-currency {
     padding-bottom: 40px;
   }
-
   .data-container .data-content .data-percent {
     padding-bottom: 23px;
   }
+  .data-container .data-content .data-label {
+    font-size: 12px;
+  }
 }
+
 #downloads .fixed-bg {
   background-attachment: initial;
 }
@@ -484,3 +495,251 @@ div.FooterLinks {
   }
 }
 /*=======================END FOOTER=============================*/
+input {
+  color: inherit;
+}
+
+input[type="submit"],
+input[type="text"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type="text"],
+textarea {
+  border: 2px solid #3498db;
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  border: 1px solid #b89e32;
+}
+
+/**Request Header**/
+.SectionRequestDemo .LayoutDefaultInner {
+  background: #2c81ba url("/files/design/curve-bkgd.jpg") repeat scroll center center;
+  background-size: cover;
+}
+
+.requestHeader {
+  padding: 40px 0;
+  color: #ffffff;
+}
+
+.requestHeader h1 {
+  color: #ffffff;
+}
+
+.SectionRequestDemo .PaneContentInner {
+  display: block;
+  margin: 0 auto;
+  max-width: 1210px;
+  padding: 0 20px;
+}
+
+.SectionRequestDemo .PaneContent {
+  padding: 40px;
+  border-radius: 6px;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.FormBuilderContainer {
+  margin: 0 -15px;
+}
+
+.FormBuilderContainer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.FormBuilderContainer .Item {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  padding: 0 15px;
+  min-height: 65px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.FormBuilderContainer .Item.ItemCompanyName {
+  width: 100%;
+}
+
+.FormBuilderContainer .Item input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+}
+
+.FormBuilderContainer .sbHolder {
+  display: block;
+  margin: 0;
+}
+
+.FormBuilderContainer .SubmitButton {
+  margin: 0 15px;
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+.FormBuilderContainer .ErrorMessages,
+.FormBuilderContainer .ErrorMessage {
+  position: absolute;
+  left: 15px;
+  bottom: 90%;
+}
+
+.MessageSent {
+  color: #3498db;
+}
+
+.FormBuilderContainer .CaptchaContainer tr:first-child td[colspan="2"] {
+  display: none;
+}
+
+.FormBuilderContainer .CaptchaContainer input[type="text"] + span {
+  position: absolute;
+  bottom: 8px;
+  left: 103%;
+  white-space: nowrap;
+  color: red;
+}
+
+@media all and (max-width: 767px) {
+  .FormBuilderContainer .Item {
+    width: 100%;
+  }
+
+  .FormBuilderContainer .CaptchaContainer input[type="text"] + span {
+    left: 210px;
+    top: 0;
+    bottom: auto;
+  }
+}
+@media all and (max-width: 460px) {
+  .SectionRequestDemo .PaneContent {
+    padding: 20px;
+  }
+}
+.startedSection {
+  padding-top: 150px;
+  color: #297ac5;
+  padding-bottom: 0px;
+}
+
+.startedSection p {
+  font-size: 22px;
+  line-height: 26px;
+  color: #545b62;
+  font-weight: 300;
+}
+
+.startedForm {
+  padding: 0 15px;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+}
+
+.bottomSpacer {
+  padding-bottom: 150px;
+}
+
+.startedForm.FormBuilderContainer .Item {
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.startedForm.FormBuilderContainer .Item .RedStar,
+.startedForm.FormBuilderContainer .Item .Label {
+  display: none;
+}
+
+.startedForm .Item input[type="text"] {
+  border-color: #e7e7e7;
+  background-color: #e7e7e7;
+  color: #939ba0;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.startedForm .SubmitButton {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  clear: both;
+}
+
+.startedForm.FormBuilderContainer .ErrorMessages, .startedForm.FormBuilderContainer .ErrorMessage {
+  left: 103%;
+  bottom: 8px;
+  white-space: nowrap;
+}
+
+.MessageSent {
+  display: block;
+  margin: 0 auto 100px;
+  max-width: 480px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  .startedForm.FormBuilderContainer .Item {
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 760px) {
+  .startedForm.FormBuilderContainer .ErrorMessages, .startedForm.FormBuilderContainer .ErrorMessage {
+    left: 10px;
+    bottom: 90%;
+  }
+}
+@media all and (max-width: 460px) {
+  .startedSection {
+    padding-top: 70px;
+  }
+
+  .startedForm {
+    margin-bottom: 20px;
+  }
+
+  .bottomSpacer {
+    padding-bottom: 70px;
+  }
+}
+.InputButton,
+.ActionButton,
+.SubmitButton {
+  background: none repeat scroll 0 0 #3498db;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 0 none;
+}
+
+.InputButton:hover,
+.ActionButton:hover,
+.SubmitButton:hover {
+  background: none repeat scroll 0 0 #5cbcfc;
+}
+
+.ErrorMessage {
+  color: red;
+}

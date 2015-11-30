@@ -66,12 +66,6 @@
   font-size: 20px;
   line-height: 24px;
 }
-.data-container .data-content .data-note {
-  font-size: 11px;
-  line-height: 12px;
-  text-align: left;
-  padding: 5%;
-}
 @media screen and (max-width: 1200px) {
   .data-container .data-content .data-title {
     font-size: 16px;
@@ -117,4 +111,10 @@
   .data-container .data-content .data-label {
     font-size: 16px;
   }
+}
+.data-container .data-note {
+  font-size: 11px;
+  line-height: 12px;
+  text-align: center;
+  margin-top: 20px;
 }

@@ -13,6 +13,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   font-size: 14px;
+  line-height: 24px;
 }
 
 i {
@@ -24,10 +25,15 @@ body {
   color: #949494;
 }
 
+b {
+  font-weight: bold;
+}
+
 h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 50px;
   line-height: 50px;
+  margin: 15px 0;
 }
 
 h2, h2 span {

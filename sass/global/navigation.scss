@@ -15,11 +15,8 @@
 	.nav-container {
 		left: 0;
 	}
-	.header-assets {
-		left: 270px;
-	}
-	.main-wrapper {
-		left: 240px
+	.header-assets, .main-wrapper {
+		left: 240px;
 	}
 }
 
@@ -32,9 +29,11 @@
 
 
 .header-assets {
+	width: 100%;
 	position: fixed;
-	left: 40px;
-	top: 30px;
+	top: 0;
+	left: 0;
+	padding: 35px 40px;
 	color: #fff;
 	z-index: 9000;
 
@@ -67,6 +66,10 @@
 			max-width: 100%;
 		}
 
+	}
+
+	@media screen and (max-width: $screen-small) {
+		padding: 20px 20px;
 	}
 }
 

@@ -32,11 +32,15 @@
 		position: relative;
 	}
 
-	h2, .story-body, .arrow, .story-image {
-		visibility: hidden;
-	}
 	.arrow {
 		color: $corporate-two;
+	}
+
+	@media screen and (min-width: $screen-small+1) {
+		//Hide for Animation
+		h2, .story-body, .arrow, .story-image {
+			visibility: hidden;
+		}
 	}
 
 	/* Single Story */
@@ -50,7 +54,13 @@
 				display: none;
 			}
 			.story-content {
-				padding: 6% 9%;
+				padding: 10% 9%;
+			}
+		}
+
+		@media screen and (max-width: $screen-small) {
+			.story-content {
+				padding: 20% 9%;
 			}
 		}
 

@@ -4,10 +4,7 @@
 .toggle-nav-open .nav-container {
   left: 0;
 }
-.toggle-nav-open .header-assets {
-  left: 270px;
-}
-.toggle-nav-open .main-wrapper {
+.toggle-nav-open .header-assets, .toggle-nav-open .main-wrapper {
   left: 240px;
 }
 
@@ -21,9 +18,11 @@
 }
 
 .header-assets {
+  width: 100%;
   position: fixed;
-  left: 40px;
-  top: 30px;
+  top: 0;
+  left: 0;
+  padding: 35px 40px;
   color: #fff;
   z-index: 9000;
   -moz-transition: left 0.5s, ease-in-out;
@@ -54,6 +53,11 @@
 }
 .header-assets .nav-logo img {
   max-width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .header-assets {
+    padding: 20px 20px;
+  }
 }
 
 .nav-container {

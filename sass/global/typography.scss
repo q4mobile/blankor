@@ -16,6 +16,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	font-size: 14px;
+    line-height: 24px;
 }
 
 i {
@@ -29,10 +30,15 @@ body {
 	color: $corporate-six;
 }
 
+b {
+    font-weight: bold;
+}
+
 h1 {
 	font-family: $default-font;
 	font-size: 50px;
 	line-height: 50px;
+    margin: 15px 0;
 }
 
 h2, h2 span {

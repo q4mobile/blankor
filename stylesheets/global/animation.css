@@ -97,35 +97,37 @@
     left: 0;
   }
 }
-.story-item.animate .fade-in, .story-item.animate .fade-from-left, .story-item.animate .fade-from-right,
-.story-item.animate .fade-from-bottom, .story-item.animate .fade-from-top {
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  visibility: visible;
-}
-.story-item.animate .fade-in {
-  -webkit-animation-name: fade-in;
-  animation-name: fade-in;
-}
-.story-item.animate .fade-from-left {
-  -webkit-animation-name: fade-from-left;
-  animation-name: fade-from-left;
-}
-.story-item.animate .fade-from-right {
-  -webkit-animation-name: fade-from-right;
-  animation-name: fade-from-right;
-}
-.story-item.animate .fade-from-top {
-  -webkit-animation-name: fade-from-top;
-  animation-name: fade-from-top;
-}
-.story-item.animate .fade-from-bottom {
-  -webkit-animation-name: fade-from-bottom;
-  animation-name: fade-from-bottom;
+@media screen and (min-width: 481px) {
+  .story-item.animate .fade-in, .story-item.animate .fade-from-left, .story-item.animate .fade-from-right,
+  .story-item.animate .fade-from-bottom, .story-item.animate .fade-from-top {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+  }
+  .story-item.animate .fade-in {
+    -webkit-animation-name: fade-in;
+    animation-name: fade-in;
+  }
+  .story-item.animate .fade-from-left {
+    -webkit-animation-name: fade-from-left;
+    animation-name: fade-from-left;
+  }
+  .story-item.animate .fade-from-right {
+    -webkit-animation-name: fade-from-right;
+    animation-name: fade-from-right;
+  }
+  .story-item.animate .fade-from-top {
+    -webkit-animation-name: fade-from-top;
+    animation-name: fade-from-top;
+  }
+  .story-item.animate .fade-from-bottom {
+    -webkit-animation-name: fade-from-bottom;
+    animation-name: fade-from-bottom;
+  }
 }
 
 @-webkit-keyframes bounce {

@@ -3,6 +3,7 @@
 \*-----------------------------------*/
 
 @import "compass/css3";
+@import "includes/variables.scss";
 
 @mixin transition($transition...) {
   -moz-transition:    $transition;
@@ -65,40 +66,44 @@
 
 .story-item.animate {
 
-	.fade-in, .fade-from-left, .fade-from-right,
-	.fade-from-bottom, .fade-from-top {
-		-webkit-animation-duration: 0.5s;
-		-webkit-animation-fill-mode: both;
-		-webkit-animation-timing-function: ease-in-out;
-		animation-duration: 0.5s; 
-		animation-fill-mode: both; 
-		animation-timing-function: ease-in-out;
-		visibility: visible;
-	}
+	@media screen and (min-width: $screen-small+1) {
 
-	.fade-in {
-		-webkit-animation-name: fade-in;
-		animation-name: fade-in; 
-	}
+		.fade-in, .fade-from-left, .fade-from-right,
+		.fade-from-bottom, .fade-from-top {
+			-webkit-animation-duration: 0.5s;
+			-webkit-animation-fill-mode: both;
+			-webkit-animation-timing-function: ease-in-out;
+			animation-duration: 0.5s; 
+			animation-fill-mode: both; 
+			animation-timing-function: ease-in-out;
+			visibility: visible;
+		}
 
-	.fade-from-left {
-		-webkit-animation-name: fade-from-left;
-		animation-name: fade-from-left;
-	}
+		.fade-in {
+			-webkit-animation-name: fade-in;
+			animation-name: fade-in; 
+		}
 
-	.fade-from-right {
-		-webkit-animation-name: fade-from-right;
-		animation-name: fade-from-right;
-	}
+		.fade-from-left {
+			-webkit-animation-name: fade-from-left;
+			animation-name: fade-from-left;
+		}
 
-	.fade-from-top {
-		-webkit-animation-name: fade-from-top;
-		animation-name: fade-from-top;
-	}
+		.fade-from-right {
+			-webkit-animation-name: fade-from-right;
+			animation-name: fade-from-right;
+		}
 
-	.fade-from-bottom {
-		-webkit-animation-name: fade-from-bottom;
-		animation-name: fade-from-bottom;
+		.fade-from-top {
+			-webkit-animation-name: fade-from-top;
+			animation-name: fade-from-top;
+		}
+
+		.fade-from-bottom {
+			-webkit-animation-name: fade-from-bottom;
+			animation-name: fade-from-bottom;
+		}
+
 	}
 
 }
