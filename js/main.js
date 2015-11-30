@@ -5,7 +5,7 @@ var q4 = {
         inst._onMenuClick();
         inst._onMenuClose();
         inst._onHeroScroll();
-        inst._onLogoClick();
+        inst._onScrollTop();
         inst._onMenuItemClick($('html, body'));
     },
     _onMenuClick: function() {
@@ -37,11 +37,12 @@ var q4 = {
             inst._letScroll( $('.content-container').offset().top );
         });
     },
-    _onLogoClick: function() {
+    _onScrollTop: function() {
         var inst = this;
-        $('.nav-logo').on('click', function(){
+        $('.scroll-top').on('click', function(e){
+            e.preventDefault();
             inst._letScroll( 0 );
-            location.hash = 'top';
+            location.hash = '';
         });
     },
     _letScroll: function(position){
