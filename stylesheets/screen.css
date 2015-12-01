@@ -1077,14 +1077,19 @@ ul ul {
   Details module CSS
 \*-----------------------------------*/
 .header-image {
+  background-color: #FFF;
   background-image: url("http://blankor.q4web.com/files/design/banner/details-default.jpg");
   position: relative;
   padding-top: 25%;
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: top;
-  -webkit-background-size: cover;
   background-size: cover;
-  background-color: #FFF;
+}
+@media screen and (max-device-width: 480px) {
+  .header-image {
+    background-attachment: scroll;
+  }
 }
 .header-image .header-overlay {
   width: 100%;
@@ -1348,6 +1353,7 @@ ul ul {
 }
 .hero-container .scroll-button i {
   font-size: 40px;
+  line-height: 1;
 }
 .hero-container img {
   width: 100%;
@@ -1448,14 +1454,11 @@ img {
 }
 /* Fixed BG */
 .fixed-bg {
-  min-height: 100%;
-  background-size: 100% auto;
+  height: 100%;
   background-attachment: fixed;
-  background-attachment: scroll\9;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
-  -webkit-background-size: cover;
 }
 @media screen and (max-device-width: 480px) {
   .fixed-bg {
@@ -1584,6 +1587,15 @@ h2 {
     margin-left: -30px;
   }
 }
+.header-assets .nav-logo {
+  background: none;
+}
+.header-assets .nav-logo:before {
+  font-family: 'Q4-Default-Icons';
+  content: "\e903";
+  font-size: 60px;
+  line-height: 45px;
+}
 
 .hero-container {
   background-image: url("http://blankor.q4web.com//files/design/hero/hero-desktop.jpg");
@@ -1708,8 +1720,15 @@ h2 {
   }
 }
 
-#downloads .fixed-bg {
-  background-attachment: initial;
+/*Hacky Images!*/
+#Annual-Report-Trends .fixed-bg {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://s2.q4cdn.com/147129414/files/design/banner/data-desktop.jpg', sizingMethod='scale');
+}
+
+#downloads .fixed-bg,
+#benefits .fixed-bg,
+#required-assets .fixed-bg {
+  background-attachment: scroll;
 }
 
 /*=========================FOOTER===============================*/
@@ -1973,7 +1992,7 @@ div.FooterLinks {
 
 .storeLinks ul li {
   float: left;
-  padding: 0 0 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .storeLinks ul li a {
@@ -2042,7 +2061,7 @@ div.FooterLinks {
   }
 
   .storeLinks ul li {
-    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
   }
 }
 @media all and (max-width: 479px) {
@@ -2060,6 +2079,42 @@ div.FooterLinks {
   }
 }
 /*=======================END FOOTER=============================*/
+/*=======================GET STARTED============================*/
+.space-top {
+  padding-top: 6%;
+}
+@media screen and (max-width: 768px) {
+  .space-top {
+    padding-top: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .space-top {
+    padding-top: 20%;
+  }
+}
+
+.space-bottom {
+  padding-bottom: 6%;
+}
+@media screen and (max-width: 768px) {
+  .space-bottom {
+    padding-bottom: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .space-bottom {
+    padding-bottom: 20%;
+  }
+}
+
+.get-started p {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
 input {
   color: inherit;
 }
@@ -2263,8 +2318,9 @@ input[type="checkbox"] {
 }
 @media all and (max-width: 760px) {
   .startedForm.FormBuilderContainer .ErrorMessages, .startedForm.FormBuilderContainer .ErrorMessage {
+    display: block;
     left: 10px;
-    bottom: 90%;
+    bottom: -17px;
   }
 }
 @media all and (max-width: 460px) {

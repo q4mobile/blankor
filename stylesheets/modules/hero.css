@@ -39,6 +39,7 @@
 }
 .hero-container .scroll-button i {
   font-size: 40px;
+  line-height: 1;
 }
 .hero-container img {
   width: 100%;

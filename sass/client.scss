@@ -22,6 +22,16 @@ h2 {
             margin-left: -30px;
         }
     }
+
+    .nav-logo {
+      background: none;
+    }
+    .nav-logo:before {
+      font-family: 'Q4-Default-Icons';
+      content: "\e903";
+      font-size: 60px;
+      line-height: 45px;
+    }
 }
 
 .hero-container {
@@ -165,8 +175,15 @@ h2 {
     }
 }
 
-#downloads .fixed-bg {
-	background-attachment: initial;
+/*Hacky Images!*/
+
+#Annual-Report-Trends .fixed-bg {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://s2.q4cdn.com/147129414/files/design/banner/data-desktop.jpg', sizingMethod='scale');
+}
+#downloads .fixed-bg,
+#benefits .fixed-bg,
+#required-assets .fixed-bg {
+  background-attachment: scroll;
 }
 
 /*=========================FOOTER===============================*/
@@ -419,7 +436,7 @@ div.FooterLinks{
 
 .storeLinks ul li{
   float:left;
-  padding:0 0 0 10px;
+  margin: 0 0 0 10px;
 }
 .storeLinks ul li a{
   display:block;
@@ -484,7 +501,7 @@ div.FooterLinks{
 	  clear:both;
 	}
 	.storeLinks ul li{
-	  padding:0 10px 0 0;
+	  margin: 0 10px 0 0;
 	}
 }
 
@@ -502,6 +519,39 @@ div.FooterLinks{
 }
 
 /*=======================END FOOTER=============================*/
+
+/*=======================GET STARTED============================*/
+
+.space-top {
+  padding-top: 6%;
+
+  @media screen and (max-width: $screen-medium) {
+    padding-top: 10%;
+  }
+
+  @media screen and (max-width: $screen-medium) {
+    padding-top: 20%;
+  }
+}
+
+.space-bottom {
+  padding-bottom: 6%;
+
+  @media screen and (max-width: $screen-medium) {
+    padding-bottom: 10%;
+  }
+
+  @media screen and (max-width: $screen-medium) {
+    padding-bottom: 20%;
+  }
+}
+
+.get-started p {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
 
 input {
     color: inherit;
@@ -683,8 +733,9 @@ input[type="checkbox"] {
 }
 @media all and (max-width:760px){
     .startedForm.FormBuilderContainer .ErrorMessages, .startedForm.FormBuilderContainer .ErrorMessage{
-      left:10px;
-      bottom:90%;
+      display: block;
+      left: 10px;
+      bottom: -17px;
     }
 }
 @media all and (max-width:460px){
