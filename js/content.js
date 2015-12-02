@@ -1,6 +1,7 @@
 (function($) {
     $.widget("q4.stories", {
         options: {
+            tolerance: '-250',
             templates: {
                 single: (
                     '<div id="{{SeoName}}" class="story-item single {{cls}}">' +
@@ -226,11 +227,11 @@
                     });
                 }
 
-                if (navigator.appVersion.indexOf("MSIE 8.") == -1) {
-                    $(window).on( 'DOMContentLoaded load resize scroll', q4._onVisibilityChange( $('.in-viewport') ) );
-                } else {
-                    $('.in-viewport').parent().addClass('animate');
-                }
+                $(window).on( 'DOMContentLoaded load resize scroll', function(){
+                    $('.story-container > div').isInViewport({
+                        tolerance: inst.options.tolerance
+                    }).addClass('animate');
+                });
             });
         },
 
