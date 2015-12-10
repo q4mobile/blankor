@@ -56,23 +56,31 @@
 .story-item.multi {
   position: relative;
 }
-.story-item.multi:hover {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
-  background-repeat: repeat;
-}
 .story-item.multi .story-image, .story-item.multi .story-content {
   width: 100%;
 }
 .story-item.multi .story-content {
+  height: 100%;
   position: absolute;
-  top: 25%;
+  top: 0;
   left: 0;
+}
+.story-item.multi .story-content:hover {
+  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+.story-item.multi.split:hover {
+  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
 }
 .story-item.multi.split .story-image, .story-item.multi.split .story-content {
   width: 50%;
 }
 .story-item.multi.split .story-content {
   position: static;
+}
+.story-item.multi.split .story-content:hover {
+  background-image: none;
 }
 .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
   margin-right: -50%;
@@ -97,6 +105,7 @@
 @media screen and (max-width: 480px) {
   .story-item.multi.split .story-image, .story-item.multi.split .story-content {
     width: 100%;
+    padding-top: 25%;
   }
   .story-item.multi.split.second .story-image, .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
     margin-right: 0;

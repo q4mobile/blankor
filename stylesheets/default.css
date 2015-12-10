@@ -42,7 +42,7 @@ img {
     padding: 10% 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .container {
     padding: 20% 0;
   }
@@ -60,7 +60,7 @@ img {
 }
 
 .overlay-background {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
 }
 
@@ -103,30 +103,58 @@ img {
 }
 
 .light {
-  color: #000;
+  color: #727272;
 }
 .light a {
-  color: #000;
+  color: #727272;
 }
 
-.corporate-one {
+.corporate-bg-one {
   background-color: #3498db;
 }
 
-.corporate-two {
+.corporate-bg-two {
   background-color: #ec6a4c;
 }
 
-.corporate-three {
+.corporate-bg-three {
   background-color: #FFF;
 }
 
-.corporate-four {
+.corporate-bg-four {
   background-color: #22272b;
 }
 
-.corporate-color {
+.corporate-bg-five {
+  background-color: #727272;
+}
+
+.corporate-bg-six {
+  background-color: #949494;
+}
+
+.corporate-color-one {
   color: #3498db;
+}
+
+.corporate-color-two {
+  color: #ec6a4c;
+}
+
+.corporate-color-three {
+  color: #FFF;
+}
+
+.corporate-color-four {
+  color: #22272b;
+}
+
+.corporate-color-five {
+  color: #727272;
+}
+
+.corporate-color-six {
+  color: #949494;
 }
 
 /* Elements */

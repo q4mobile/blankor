@@ -45,7 +45,7 @@ img {
 		padding: 10% 0;
 	}
 
-	@media screen and (max-width: $screen-medium) {
+	@media screen and (max-width: $screen-small) {
 		padding: 20% 0;
 	}
 }
@@ -64,7 +64,7 @@ img {
 }
 
 .overlay-background {
-	background-image: url($site+'files/temp/overlay-bg.png');
+	background-image: $overlay-background;
 	background-repeat: repeat;
 }
 
@@ -103,37 +103,65 @@ img {
 /* Themes */
 
 .dark {
-	color: #fff;
+	color: $corporate-light;
 	a, h2, .arrow {
-	color: #fff;
+	color: $corporate-light;
 	}
 }
 
 .light {
-	color: #000;
+	color: $corporate-dark;
 	a {
-	color: #000;
+	color: $corporate-dark;
 	}
 }
 
-.corporate-one {
+.corporate-bg-one {
 	background-color: $corporate-one;
 }
 
-.corporate-two {
+.corporate-bg-two {
 	background-color: $corporate-two;
 }
 
-.corporate-three {
+.corporate-bg-three {
 	background-color: $corporate-three;
 }
 
-.corporate-four {
+.corporate-bg-four {
 	background-color: $corporate-four;
 }
 
-.corporate-color {
+.corporate-bg-five {
+	background-color: $corporate-five;
+}
+
+.corporate-bg-six {
+	background-color: $corporate-six;
+}
+
+.corporate-color-one {
 	color: $corporate-one;
+}
+
+.corporate-color-two {
+	color: $corporate-two;
+}
+
+.corporate-color-three {
+	color: $corporate-three;
+}
+
+.corporate-color-four {
+	color: $corporate-four;
+}
+
+.corporate-color-five {
+	color: $corporate-five;
+}
+
+.corporate-color-six {
+	color: $corporate-six;
 }
 
 /* Elements */

@@ -106,7 +106,7 @@ table {
   width: 60px;
   height: 45px;
   margin-left: 40px;
-  background: url("http://blankor.q4web.com/files/design/nav-logo.png");
+  background: url("http://yamanaor.q4web.com/files/design/nav-logo.png");
   background-repeat: no-repeat;
 }
 .header-assets .nav-logo img {
@@ -125,7 +125,7 @@ table {
   top: 0;
   bottom: 0;
   width: 240px;
-  background-color: #373737;
+  background-color: #22272b;
   overflow-y: auto;
   z-index: 10;
   -moz-transition: left 0.5s, ease-in-out;
@@ -461,14 +461,14 @@ ul ul {
 \*-----------------------------------*/
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url(http://blankor.q4web.com/files/design/ajax-loader.gif) center center no-repeat;
+  background: #fff url(http://yamanaor.q4web.com/files/design/ajax-loader.gif) center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("http://blankor.q4web.com/files/fonts/slick.eot");
-  src: url("http://blankor.q4web.com/files/fonts/slick.eot?#iefix") format("embedded-opentype"), url("http://blankor.q4web.com/files/fonts/slick.woff") format("woff"), url("http://blankor.q4web.com/files/fonts/slick.ttf") format("truetype"), url("http://blankor.q4web.com/files/fonts/slick.svg#slick") format("svg");
+  src: url("http://yamanaor.q4web.com/files/fonts/slick.eot");
+  src: url("http://yamanaor.q4web.com/files/fonts/slick.eot?#iefix") format("embedded-opentype"), url("http://yamanaor.q4web.com/files/fonts/slick.woff") format("woff"), url("http://yamanaor.q4web.com/files/fonts/slick.ttf") format("truetype"), url("http://yamanaor.q4web.com/files/fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -991,23 +991,31 @@ ul ul {
 .story-item.multi {
   position: relative;
 }
-.story-item.multi:hover {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
-  background-repeat: repeat;
-}
 .story-item.multi .story-image, .story-item.multi .story-content {
   width: 100%;
 }
 .story-item.multi .story-content {
+  height: 100%;
   position: absolute;
-  top: 25%;
+  top: 0;
   left: 0;
+}
+.story-item.multi .story-content:hover {
+  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
+}
+.story-item.multi.split:hover {
+  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-repeat: repeat;
 }
 .story-item.multi.split .story-image, .story-item.multi.split .story-content {
   width: 50%;
 }
 .story-item.multi.split .story-content {
   position: static;
+}
+.story-item.multi.split .story-content:hover {
+  background-image: none;
 }
 .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
   margin-right: -50%;
@@ -1032,6 +1040,7 @@ ul ul {
 @media screen and (max-width: 480px) {
   .story-item.multi.split .story-image, .story-item.multi.split .story-content {
     width: 100%;
+    padding-top: 25%;
   }
   .story-item.multi.split.second .story-image, .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
     margin-right: 0;
@@ -1078,7 +1087,7 @@ ul ul {
 \*-----------------------------------*/
 .header-image {
   background-color: #FFF;
-  background-image: url("http://blankor.q4web.com/files/design/banner/details-default.jpg");
+  background-image: url("http://yamanaor.q4web.com/files/design/banner/details-default.jpg");
   position: relative;
   padding-top: 25%;
   height: 100%;
@@ -1316,6 +1325,7 @@ ul ul {
   Hero Banner CSS
 \*-----------------------------------*/
 .hero-container {
+  background-image: url("http://yamanaor.q4web.com/files/design/hero/hero-desktop.jpg");
   background-color: #1f181e;
   display: table;
   height: 100%;
@@ -1414,7 +1424,7 @@ img {
     padding: 10% 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .container {
     padding: 20% 0;
   }
@@ -1432,7 +1442,7 @@ img {
 }
 
 .overlay-background {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
 }
 
@@ -1475,30 +1485,58 @@ img {
 }
 
 .light {
-  color: #000;
+  color: #727272;
 }
 .light a {
-  color: #000;
+  color: #727272;
 }
 
-.corporate-one {
+.corporate-bg-one {
   background-color: #3498db;
 }
 
-.corporate-two {
+.corporate-bg-two {
   background-color: #ec6a4c;
 }
 
-.corporate-three {
+.corporate-bg-three {
   background-color: #FFF;
 }
 
-.corporate-four {
+.corporate-bg-four {
   background-color: #22272b;
 }
 
-.corporate-color {
+.corporate-bg-five {
+  background-color: #727272;
+}
+
+.corporate-bg-six {
+  background-color: #949494;
+}
+
+.corporate-color-one {
   color: #3498db;
+}
+
+.corporate-color-two {
+  color: #ec6a4c;
+}
+
+.corporate-color-three {
+  color: #FFF;
+}
+
+.corporate-color-four {
+  color: #22272b;
+}
+
+.corporate-color-five {
+  color: #727272;
+}
+
+.corporate-color-six {
+  color: #949494;
 }
 
 /* Elements */
@@ -1578,7 +1616,7 @@ h2 {
 }
 
 .header-assets {
-  background-image: url("http://blankor.q4web.com//files/design/nav-overlay.png");
+  background-image: url("http://yamanaor.q4web.com//files/design/nav-overlay.png");
 }
 @media screen and (max-width: 480px) {
   .header-assets .nav-logo {
@@ -1598,7 +1636,7 @@ h2 {
 }
 
 .hero-container {
-  background-image: url("http://blankor.q4web.com//files/design/hero/hero-desktop.jpg");
+  background-image: url("http://yamanaor.q4web.com//files/design/hero/hero-desktop.jpg");
 }
 .hero-container img {
   display: none;

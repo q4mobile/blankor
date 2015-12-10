@@ -4,14 +4,14 @@
 \*-----------------------------------*/
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url(http://blankor.q4web.com/files/design/ajax-loader.gif) center center no-repeat;
+  background: #fff url(http://yamanaor.q4web.com/files/design/ajax-loader.gif) center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("http://blankor.q4web.com/files/fonts/slick.eot");
-  src: url("http://blankor.q4web.com/files/fonts/slick.eot?#iefix") format("embedded-opentype"), url("http://blankor.q4web.com/files/fonts/slick.woff") format("woff"), url("http://blankor.q4web.com/files/fonts/slick.ttf") format("truetype"), url("http://blankor.q4web.com/files/fonts/slick.svg#slick") format("svg");
+  src: url("http://yamanaor.q4web.com/files/fonts/slick.eot");
+  src: url("http://yamanaor.q4web.com/files/fonts/slick.eot?#iefix") format("embedded-opentype"), url("http://yamanaor.q4web.com/files/fonts/slick.woff") format("woff"), url("http://yamanaor.q4web.com/files/fonts/slick.ttf") format("truetype"), url("http://yamanaor.q4web.com/files/fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal;
 }

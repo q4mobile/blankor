@@ -72,22 +72,29 @@
 	&.multi {
 
 		position: relative;
-		&:hover {
-			background-image: url($site+'files/temp/overlay-bg.png');
-			background-repeat: repeat;
-		}
 
 		.story-image, .story-content {
 			width: 100%;
 		}
 
 		.story-content {
+			height: 100%;
 			position: absolute;
-			top: 25%;
+			top: 0;
 			left: 0;
+
+			&:hover {
+				background-image: url($site+'files/temp/overlay-bg.png');
+				background-repeat: repeat;
+			}
 		}
 
 		&.split {
+
+			&:hover {
+				background-image: url($site+'files/temp/overlay-bg.png');
+				background-repeat: repeat;
+			}
 
 			.story-image, .story-content {
 				width: 50%;
@@ -95,6 +102,10 @@
 
 			.story-content {
 				position: static;
+
+				&:hover {
+					background-image: none;
+				}
 			}
 
 
@@ -139,6 +150,7 @@
 			@media screen and (max-width: $screen-small) {
 				.story-image, .story-content {
 					width: 100%;
+					padding-top: 25%;
 				}
 
 				&.second, &.third, &.fourth {

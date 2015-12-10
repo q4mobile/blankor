@@ -48,7 +48,7 @@
   width: 60px;
   height: 45px;
   margin-left: 40px;
-  background: url("http://blankor.q4web.com/files/design/nav-logo.png");
+  background: url("http://yamanaor.q4web.com/files/design/nav-logo.png");
   background-repeat: no-repeat;
 }
 .header-assets .nav-logo img {
@@ -67,7 +67,7 @@
   top: 0;
   bottom: 0;
   width: 240px;
-  background-color: #373737;
+  background-color: #22272b;
   overflow-y: auto;
   z-index: 10;
   -moz-transition: left 0.5s, ease-in-out;

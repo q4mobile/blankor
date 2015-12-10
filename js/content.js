@@ -74,7 +74,7 @@
                     '</div>'
                 ),
                 'feature-half': (
-                    '<div id="{{SeoName}}" class="story-item feature feature-half {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item feature feature-half col col-1-of-2 col-md-1-of-1 {{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div{{#ThumbnailPath}} data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
@@ -88,7 +88,7 @@
                     '</div>'
                 ),
                 download: (
-                    '<div id="{{SeoName}}" class="story-item download {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item download col col-1-of-2 col-sm-1-of-1 {{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="container">' +
                             '<div class="story-body {{animationCls}}">' +

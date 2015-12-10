@@ -10,7 +10,7 @@ h2 {
 }
 
 .header-assets {
-  background-image: url("http://blankor.q4web.com//files/design/nav-overlay.png");
+  background-image: url("http://yamanaor.q4web.com//files/design/nav-overlay.png");
 }
 @media screen and (max-width: 480px) {
   .header-assets .nav-logo {
@@ -30,7 +30,7 @@ h2 {
 }
 
 .hero-container {
-  background-image: url("http://blankor.q4web.com//files/design/hero/hero-desktop.jpg");
+  background-image: url("http://yamanaor.q4web.com//files/design/hero/hero-desktop.jpg");
 }
 .hero-container img {
   display: none;

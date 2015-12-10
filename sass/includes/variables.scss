@@ -1,16 +1,21 @@
-//$site: "https://q4blankor.s2.q4web.com/" !default;
-$site: "http://blankor.q4web.com/" !default;
+//$site: "http://blankor.q4web.com/" !default;
+$site: "http://yamanaor.q4web.com/" !default;
 //$site: "/" !default;
 
 
 //Client logo
 $client-logo: url($site+'files/design/nav-logo.png') !default;
 
+//Default Hero Banner Image
+$hero-default: url($site+'files/design/hero/hero-desktop.jpg') !default;
+
 //Default Details Banner Image
 $details-default: url($site+'files/design/banner/details-default.jpg') !default;
 
+//Default Overlay Background Image:
+$overlay-background: url($site+'files/temp/overlay-bg.png') !default;
+
 //Corporate Fonts 
-//$default-font: 'Roboto', sans-serif !default;
 $default-font: 'Open Sans', sans-serif !default;
 $corporate-font: 'OCRB', sans-serif !default;
 
@@ -34,3 +39,8 @@ $corporate-four: #22272b !default;
 $corporate-five: #727272 !default;
 //Light BG Text 
 $corporate-six: #949494 !default;
+
+//Text colour within .dark container
+$corporate-light: #fff !default;
+//Text colour within .light container
+$corporate-dark: #727272 !default;
