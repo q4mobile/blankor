@@ -72,10 +72,10 @@
   right: -25px;
 }
 .slick-prev:before {
-  content: "ÔåÉ";
+  content: "ΓåÉ";
 }
 [dir="rtl"] .slick-prev:before {
-  content: "ÔåÆ";
+  content: "ΓåÆ";
 }
 
 .slick-next {
@@ -86,10 +86,10 @@
   right: auto;
 }
 .slick-next:before {
-  content: "ÔåÆ";
+  content: "ΓåÆ";
 }
 [dir="rtl"] .slick-next:before {
-  content: "ÔåÉ";
+  content: "ΓåÉ";
 }
 
 /* Dots */
@@ -134,7 +134,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  content: "ÔÇó";
+  content: "ΓÇó";
   width: 20px;
   height: 20px;
   font-family: "slick";
