@@ -11,7 +11,7 @@
                         '</div>' +
                         '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
-                                '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                                '{{#Headline}}<h2 class="fade-from-top">{{{Headline}}}</h2>{{/Headline}}' +
                                 '{{#Body}}<div class="story-body fade-from-bottom">{{{Body}}}</div>{{/Body}}' +
                                 '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
@@ -23,7 +23,7 @@
                         '<div class="in-viewport"></div>' +
                         '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
-                                '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                                '{{#Headline}}<h2 class="fade-from-top">{{{Headline}}}</h2>{{/Headline}}' +
                                 '{{#Body}}<div class="story-body fade-from-bottom">{{{Body}}}</div>{{/Body}}' +
                                 '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                             '</div>' +
@@ -36,11 +36,11 @@
                 multi: (
                     '<div id="{{SeoName}}" class="story-item multi col {{cls}}">' +
                         '<div class="in-viewport"></div>' +
-                        '<div class="col story-image">' +
+                        '<div class="col story-image fade-in">' +
                             '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
                         '</div>' +
                         '<div class="col story-content">' +
-                            '{{#Headline}}<h2 class="{{animationCls}}">{{Headline}}</h2>{{/Headline}}' +
+                            '{{#Headline}}<h2 class="{{animationCls}}">{{{Headline}}}</h2>{{/Headline}}' +
                             '<div class="story-body fade-from-bottom">{{{Body}}}</div>' +
                             '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
@@ -49,11 +49,11 @@
                 'multi-alt': (
                     '<div id="{{SeoName}}" class="story-item multi alt col {{cls}}">' +
                         '<div class="in-viewport"></div>' +
-                        '<div class="col story-image">' +
+                        '<div class="col story-image fade-in">' +
                             '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
                         '</div>' +
                         '<div class="col story-content">' +
-                            '{{#Headline}}<h2 class="{{animationCls}}">{{Headline}}</h2>{{/Headline}}' +
+                            '{{#Headline}}<h2 class="{{animationCls}}">{{{Headline}}}</h2>{{/Headline}}' +
                             '<div class="story-body fade-from-bottom">{{{Body}}}</div>' +
                             '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                         '</div>' +
@@ -65,7 +65,7 @@
                         '<div{{#ThumbnailPath}} data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
                                 '<div class="container">' +
-                                    '{{#Headline}}<h2 class="fade-from-top">{{Headline}}</h2>{{/Headline}}' +
+                                    '{{#Headline}}<h2 class="fade-from-top">{{{Headline}}}</h2>{{/Headline}}' +
                                     '{{#Body}}<div class="story-body fade-from-bottom">{{{Body}}}</div>{{/Body}}' +
                                     '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                                 '</div>' +
@@ -79,7 +79,7 @@
                         '<div{{#ThumbnailPath}} data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
                                 '<div class="container">' +
-                                    '{{#Headline}}<h2 class="{{animationCls}}">{{Headline}}</h2>{{/Headline}}' +
+                                    '{{#Headline}}<h2 class="{{animationCls}}">{{{Headline}}}</h2>{{/Headline}}' +
                                     '{{#Body}}<div class="story-body {{animationCls}}">{{{Body}}}</div>{{/Body}}' +
                                     '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}" class="details arrow fade-in"></a>{{/LinkToDetailPage}}' +
                                 '</div>' +
@@ -88,13 +88,13 @@
                     '</div>'
                 ),
                 download: (
-                    '<div id="{{SeoName}}" class="story-item download col col-1-of-2 col-sm-1-of-1 {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item download col col-1-of-2 {{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="container">' +
                             '<div class="story-body {{animationCls}}">' +
                                 '<a href="{{LinkToDetailPage}}" target="_blank" class="download-item">' +
                                     '{{#ThumbnailPath}}<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">{{/ThumbnailPath}}' +
-                                    '{{#Headline}}<span class="download-text">{{Headline}}</span>{{/Headline}}' +
+                                    '{{#Headline}}<span class="download-text">{{{Headline}}}</span>{{/Headline}}' +
                                 '</a>' +
                             '</div>' +
                         '</div>' +

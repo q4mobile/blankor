@@ -30,19 +30,19 @@ body {
 	color: $corporate-six;
 }
 
-b {
+b, strong {
     font-weight: bold;
 }
 
 h1 {
-	font-family: $default-font;
+	font-family: $corporate-font;
 	font-size: 50px;
 	line-height: 50px;
     margin: 15px 0;
 }
 
 h2, h2 span {
-	font-family: $default-font;
+	font-family: $corporate-font;
 	color: $corporate-one;
 	font-size: 36px;
     line-height: 45px;
@@ -62,10 +62,11 @@ h4 {
     font-size: 20px;
     line-height: 28px;
     font-weight: bold;
+    color: $corporate-two;
 }
 
 p {
-	margin: 10px 0;
+	margin: 15px 0;
     line-height: 22px;
 }
 

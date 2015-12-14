@@ -1,5 +1,5 @@
-//$site: "http://blankor.q4web.com/" !default;
-$site: "http://yamanaor.q4web.com/" !default;
+$site: "http://blankor.q4web.com/" !default;
+//$site: "http://yamanaor.q4web.com/" !default;
 //$site: "/" !default;
 
 
@@ -16,8 +16,8 @@ $details-default: url($site+'files/design/banner/details-default.jpg') !default;
 $overlay-background: url($site+'files/temp/overlay-bg.png') !default;
 
 //Corporate Fonts 
-$default-font: 'Open Sans', sans-serif !default;
-$corporate-font: 'OCRB', sans-serif !default;
+$default-font: 'Roboto', sans-serif !default;
+$corporate-font: 'Open Sans', sans-serif !default;
 
 //Default Screen Sizes
 $screen-large: 1200px !default;

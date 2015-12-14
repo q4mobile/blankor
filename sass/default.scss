@@ -164,11 +164,15 @@ img {
 	color: $corporate-six;
 }
 
+.corporate-font {
+	font-family: $corporate-font;
+}
+
 /* Elements */
 
 .arrow {
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 25px;
 }
 .arrow:before {
 	font-family: 'Q4-Default-Icons';

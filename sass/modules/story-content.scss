@@ -72,6 +72,7 @@
 	&.multi {
 
 		position: relative;
+		text-align: center;
 
 		.story-image, .story-content {
 			width: 100%;
@@ -150,6 +151,9 @@
 			@media screen and (max-width: $screen-small) {
 				.story-image, .story-content {
 					width: 100%;
+				}
+
+				.story-content {
 					padding-top: 25%;
 				}
 
@@ -200,6 +204,18 @@
 	/* Download Item */
 
 	&.download {
+
+		&.center {
+
+			.download-item img {
+				display: inline-block;
+			}
+
+		}
+
+		.download-item img {
+			max-width: 250px;
+		}
 
 		.download-text {
 			display: block;

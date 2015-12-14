@@ -55,6 +55,7 @@
 }
 .story-item.multi {
   position: relative;
+  text-align: center;
 }
 .story-item.multi .story-image, .story-item.multi .story-content {
   width: 100%;
@@ -66,11 +67,11 @@
   left: 0;
 }
 .story-item.multi .story-content:hover {
-  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
 }
 .story-item.multi.split:hover {
-  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
 }
 .story-item.multi.split .story-image, .story-item.multi.split .story-content {
@@ -105,6 +106,8 @@
 @media screen and (max-width: 480px) {
   .story-item.multi.split .story-image, .story-item.multi.split .story-content {
     width: 100%;
+  }
+  .story-item.multi.split .story-content {
     padding-top: 25%;
   }
   .story-item.multi.split.second .story-image, .story-item.multi.split.third .story-image, .story-item.multi.split.fourth .story-image {
@@ -128,6 +131,12 @@
 }
 .story-item.feature .arrow:before {
   content: "\e806";
+}
+.story-item.download.center .download-item img {
+  display: inline-block;
+}
+.story-item.download .download-item img {
+  max-width: 250px;
 }
 .story-item.download .download-text {
   display: block;

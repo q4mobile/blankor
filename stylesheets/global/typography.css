@@ -21,11 +21,11 @@ i {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #949494;
 }
 
-b {
+b, strong {
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@ h2, h2 span {
 }
 
 h3 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   line-height: 28px;
   font-weight: bold;
@@ -53,14 +53,15 @@ h3 {
 
 h4 {
   margin: 1em 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   line-height: 28px;
   font-weight: bold;
+  color: #ec6a4c;
 }
 
 p {
-  margin: 10px 0;
+  margin: 15px 0;
   line-height: 22px;
 }
 
@@ -70,7 +71,7 @@ a {
 }
 
 button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {

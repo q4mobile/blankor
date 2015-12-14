@@ -60,7 +60,7 @@ img {
 }
 
 .overlay-background {
-  background-image: url("http://yamanaor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
   background-repeat: repeat;
 }
 
@@ -157,10 +157,14 @@ img {
   color: #949494;
 }
 
+.corporate-font {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* Elements */
 .arrow {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .arrow:before {
