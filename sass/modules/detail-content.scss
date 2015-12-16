@@ -22,24 +22,28 @@
 		width: 100%;
 		position: absolute;
 		top: 30%;
+		padding: 20px;
+		background-color: rgba(0,0,0,0.4);
 		font-size: 20px;
 		color: #fff;
 		text-transform: uppercase;
 		text-align: center;
 
-		i {
-			display: block;
-			width: auto;
-			height: auto;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 20px;
-			font-size: 100px;
-			cursor: pointer;
+		a {
+			color: #fff;
 
 			&:hover {
-				color: $corporate-one;
+				color: $corporate-two;
 			}
+		}
+
+		i {
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 100px;
+			line-height: 100px;
+			margin-bottom: 20px;
+			cursor: pointer;
 
 		}
 	}
@@ -65,6 +69,7 @@
 
 			i {
 				font-size: 80px;
+				line-height: 80px;
 			}
 
 		}
@@ -93,10 +98,6 @@
 }
 
 .story-details-container {
-
-	a {
-		color: $corporate-one;
-	}
 
 	img {
 		max-width: 100%;

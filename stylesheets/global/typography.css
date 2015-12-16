@@ -67,7 +67,10 @@ p {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #3498db;
+}
+a:hover {
+  color: #ec6a4c;
 }
 
 button {

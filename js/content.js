@@ -37,7 +37,10 @@
                     '<div id="{{SeoName}}" class="story-item multi col {{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="col story-image fade-in">' +
-                            '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
+                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}">{{/LinkToDetailPage}}' +
+                                '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
+                                '{{#overlay}}<div class="overlay-background"></div>{{/overlay}}' +
+                            '{{#LinkToDetailPage}}</a>{{/LinkToDetailPage}}' +
                         '</div>' +
                         '<div class="col story-content">' +
                             '{{#Headline}}<h2 class="{{animationCls}}">{{{Headline}}}</h2>{{/Headline}}' +
@@ -50,7 +53,10 @@
                     '<div id="{{SeoName}}" class="story-item multi alt col {{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="col story-image fade-in">' +
-                            '<a href=""><img data-src="{{ThumbnailPath}}" alt="{{Headline}}"></a>' +
+                            '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}">{{/LinkToDetailPage}}' +
+                                '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
+                                '{{#overlay}}<div class="overlay-background"></div>{{/overlay}}' +
+                            '{{#LinkToDetailPage}}</a>{{/LinkToDetailPage}}' +
                         '</div>' +
                         '<div class="col story-content">' +
                             '{{#Headline}}<h2 class="{{animationCls}}">{{{Headline}}}</h2>{{/Headline}}' +

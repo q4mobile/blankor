@@ -46,7 +46,7 @@
                 },
                 overlay: function() {
                     if (this.config.overlay !== undefined) {
-                        return '<i class="'+ this.config.overlay +'"></i>' + this.text();
+                        return '<i class="'+ this.config.overlay +'"></i>' + '<p class="header-text">' + this.text() + '</p>';
                     }
 
                     return this.text();
@@ -65,7 +65,7 @@
                     container.css({
                         'background-image': 'url(' + header.image() + ')',
                         'background-position': header.position()
-                    }).append( '<div class="header-overlay">'+ header.overlay() +'</div>' );
+                    }).append( '<div class="header-overlay"><a href="' + header.image() + '" target="_blank">'+ header.overlay() +'</div>' );
                 }
             }
         },

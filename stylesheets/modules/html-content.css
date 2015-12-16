@@ -118,3 +118,32 @@
   text-align: center;
   margin-top: 20px;
 }
+
+/* Data Table */
+.data-table-container .data-desktop {
+  display: table;
+  width: 100%;
+  margin-top: 50px;
+}
+.data-table-container .data-table-header {
+  background-color: #ec6a4c;
+}
+.data-table-container .data-mobile .data-table-header .data-table, .data-table-container .data-mobile .data-table-content .data-table {
+  display: table;
+  width: 100%;
+}
+.data-table-container .data-toggle {
+  padding-right: 25px;
+  text-align: right;
+  cursor: pointer;
+}
+.data-table-container ul {
+  display: table-row;
+  list-style: none;
+}
+.data-table-container ul li {
+  display: table-cell;
+  padding: 15px 10px;
+  border-bottom: 1px solid #fff;
+  text-align: left;
+}
