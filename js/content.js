@@ -260,9 +260,16 @@
                 }
 
                 $(window).on( 'DOMContentLoaded load resize scroll', function(){
-                    $('.story-container > div').isInViewport({
+                    var $viewport = $('.story-container > div');
+
+                    $viewport.isInViewport({
                         tolerance: inst.options.tolerance
                     }).addClass('animate');
+
+                    if ( $viewport.filter('.animate').find('.count-to').not('.complete').length ){
+                        $viewport.filter('.animate').find('.count-to').addClass('complete');
+                        inst._countTo( $viewport.filter('.animate').find('.count-to .timer') );
+                    }
                 });
             });
         },
