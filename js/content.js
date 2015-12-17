@@ -2,6 +2,7 @@
     $.widget("q4.stories", {
         options: {
             tolerance: '-250',
+            downloads: 'even',
             templates: {
                 single: (
                     '<div id="{{SeoName}}" class="story-item single {{cls}}">' +
@@ -93,8 +94,21 @@
                         '</div>' +
                     '</div>'
                 ),
-                download: (
+                'download-even': (
                     '<div id="{{SeoName}}" class="story-item download col col-1-of-2 {{cls}}">' +
+                        '<div class="in-viewport"></div>' +
+                        '<div class="container">' +
+                            '<div class="story-body {{animationCls}}">' +
+                                '<a href="{{LinkToDetailPage}}" target="_blank" class="download-item">' +
+                                    '{{#ThumbnailPath}}<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">{{/ThumbnailPath}}' +
+                                    '{{#Headline}}<span class="download-text">{{{Headline}}}</span>{{/Headline}}' +
+                                '</a>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'
+                ),
+                'download-odd': (
+                    '<div id="{{SeoName}}" class="story-item download col col-1-of-3 {{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="container">' +
                             '<div class="story-body {{animationCls}}">' +
@@ -180,8 +194,20 @@
                                 featureHalf += 1;
                                 break;
                             case 'download':
-                                tag = 'download';
-                                animationCls = downloadAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
+                                if (inst.options.downloads == "even") {
+                                    tag = 'download-even';
+                                    animationCls = downloadAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
+                                } else {
+                                    tag = 'download-odd';
+
+                                    if (downloadAlt % 3 === 0) {
+                                        animationCls = 'fade-from-left';
+                                    } else if (downloadAlt % 3 == 1){
+                                        animationCls = 'fade-from-top';
+                                    } else {
+                                        animationCls = 'fade-from-right';
+                                    }
+                                }
                                 downloadAlt += 1;
                                 break;
                             case 'single':
