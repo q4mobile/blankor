@@ -1,7 +1,37 @@
-$site: "http://blankor.q4web.com/" !default;
-//$site: "http://yamanaor.q4web.com/" !default;
-//$site: "/" !default;
+//------------------------------------------------------//
+//-------------------Global Variables-------------------//
+//------------------------------------------------------//
 
+
+//------------------------------------------------------//
+//------------------Site Configuration------------------//
+//------------------------------------------------------//
+
+$site: "http://blankor.q4web.com/" !default;
+//$site: "http://yoursite.q4web.com/" !default;
+
+
+
+//------------------------------------------------------//
+//------------Screen Breakpoint Configuration-----------//
+//------------------------------------------------------//
+
+//Large Screen Size:
+$screen-large: 1200px !default;
+
+//Legacy Screen Size:
+$screen-legacy: 1024px !default;
+
+//Tablet Screen Size:
+$screen-medium: 768px !default;
+
+//Phone Screen Size:
+$screen-small: 480px !default;
+
+
+//------------------------------------------------------//
+//------------------Image Configuration-----------------//
+//------------------------------------------------------//
 
 //Client logo
 $client-logo: url($site+'files/design/nav-logo.png') !default;
@@ -15,15 +45,89 @@ $details-default: url($site+'files/design/banner/details-default.jpg') !default;
 //Default Overlay Background Image:
 $overlay-background: url($site+'files/temp/overlay-bg.png') !default;
 
-//Corporate Fonts 
-$default-font: 'Roboto', sans-serif !default;
-$corporate-font: 'Open Sans', sans-serif !default;
 
-//Default Screen Sizes
-$screen-large: 1200px !default;
-$screen-legacy: 1024px !default;
-$screen-medium: 768px !default;
-$screen-small: 480px !default;
+
+//------------------------------------------------------//
+//------------------Font Configuration------------------//
+//------------------------------------------------------//
+
+//Font Families:
+$header-font: 'Open Sans', sans-serif !default;
+$body-font: 'Roboto', sans-serif !default;
+$icon-font: 'Q4-Default-Icons' !default;
+
+//Default Body Text:
+$body-color: #949494 !default;
+$body-size: 14px !default;
+$body-line-height: 22px !default;
+
+//Default Link Text:
+$link-color: #3498db !default;
+
+//Default Link Text on hover:
+$link-hover-color: #ec6a4c !default;
+$link-hover-decoration: none !default;
+
+//Hero Image Heading Text:
+$hero-title-size: 50px !default;
+$hero-title-color: #fff !default;
+
+//Hero Image Sub-Heading Text:
+$hero-subtitle-size: 20px !default;
+$hero-subtitle-color: #fff !default;
+
+//Story Title Text:
+$story-title-size: 36px !default;
+$story-title-color: #3498db !default;
+
+//Story Arrow Text:
+$story-arrow-color: #ec6a4c !default;
+
+//
+
+//Default Table Heading Text:
+$data-header-color: #fff !default;
+$data-header-size: #fff !default;
+
+//All Text Colour within a .dark Container
+$dark-bg-text-color: #fff !default;
+
+//All Text Colour within a .light Container
+$light-bg-text-color: #000 !default;
+
+//Brand Colour:
+$brand-text-color: #3498db !default;
+
+
+//------------------------------------------------------//
+//------------Container Colour Configuration------------//
+//------------------------------------------------------//
+
+//Default Body Background Colour:
+$body-bg: #fff;
+
+//Primary Brand Colour:
+$brand-bg: #3498db !default;
+
+//Alternate Brand Colour:
+$brand-bg-alt: #ec6a4c !default;
+
+//Light BG Colour:
+$light-bg: #f5f5f5 !default;
+
+//Dark BG Colour:
+$dark-bg: #22272b !default;
+
+//Grey BG Colour:
+$grey-bg: #727272 !default;
+
+//Default Table Header Background Colour:
+$table-head-bg: #ec6a4c !default;
+
+//Default Border Colors
+$border-dark-color: rgba(0,0,0,0.5) !default;
+$border-light-color: rgba(255,255,255,0.1) !default;
+
 
 //Corporate Themes
 

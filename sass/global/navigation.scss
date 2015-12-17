@@ -41,7 +41,7 @@
 	
 	i {
 		width: 40px;
-		background-color: $corporate-one;
+		background-color: $brand-bg;
 		border-radius: 3px;
 		padding: 10px;
 		text-align: center;
@@ -80,7 +80,7 @@
 	top: 0;
 	bottom: 0;
 	width: 240px;
-	background-color: $corporate-four;
+	background-color: $dark-bg;
 	overflow-y: auto;
 	z-index: 10;
 
@@ -142,16 +142,6 @@
 	.QuickLinks {
 
 		padding: 15px 15px;
-
-		h2 {
-			display: block;
-			color: #fff;
-			text-transform: uppercase;
-			font-size: 13px;
-			line-height: 16px;
-			letter-spacing: 1px;
-			margin-bottom: 15px;
-		}
 
 		.quick-links {
 

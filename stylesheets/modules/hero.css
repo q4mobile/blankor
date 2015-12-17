@@ -46,13 +46,6 @@
   width: 100%;
   height: auto;
 }
-.hero-container h1, .hero-container h2, .hero-container h3, .hero-container h4 {
-  margin-bottom: 15px;
-  color: #FFF;
-}
-.hero-container h2, .hero-container h3, .hero-container h4 {
+.hero-container h4 {
   text-transform: uppercase;
-}
-.hero-container a {
-  font-size: 16px;
 }

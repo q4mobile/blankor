@@ -24,16 +24,16 @@
 	}
 	.story-content {
 		padding: 2% 9%;
+
+		@media screen and (max-width: $screen-legacy) {
+			padding: 2% 4%;
+		}
 	}
 	.story-image a {
 	    font-size: 0;
 	}
 	h2, .story-body {
 		position: relative;
-	}
-
-	.arrow {
-		color: $corporate-two;
 	}
 
 	@media screen and (min-width: $screen-small+1) {
@@ -204,6 +204,11 @@
 
 		.arrow:before {
 			content: "\e806";
+
+			@media screen and (max-width: $screen-legacy) {
+				font-size: 40px;
+			}
+
 		}
 
 	}
@@ -249,5 +254,3 @@
 	}
 
 }
-
-/* Typography */

@@ -27,6 +27,7 @@ img {
 
 .PageDefaultInner {
 	overflow: hidden;
+	background-color: $body-bg;
 }
 
 .clearfix:after,
@@ -103,69 +104,42 @@ img {
 /* Themes */
 
 .dark {
-	color: $corporate-light;
+	color: $dark-bg-text-color;
 	a, h2, .arrow {
-	color: $corporate-light;
+	color: $dark-bg-text-color;
 	}
 }
 
 .light {
-	color: $corporate-dark;
-	a {
-	color: $corporate-dark;
-	}
+	color: $light-bg-text-color;
 }
 
-.corporate-bg-one {
-	background-color: $corporate-one;
+.brand-bg {
+	background-color: $brand-bg;
 }
 
-.corporate-bg-two {
-	background-color: $corporate-two;
+.brand-bg-alt {
+	background-color: $brand-bg-alt;
 }
 
-.corporate-bg-three {
-	background-color: $corporate-three;
+.light-bg {
+	background-color: $light-bg;
 }
 
-.corporate-bg-four {
-	background-color: $corporate-four;
+.dark-bg {
+	background-color: $dark-bg;
 }
 
-.corporate-bg-five {
-	background-color: $corporate-five;
+.grey-bg {
+	background-color: $grey-bg;
 }
 
-.corporate-bg-six {
-	background-color: $corporate-six;
+.brand-color {
+	color: $brand-text-color;
 }
 
-.corporate-color-one {
-	color: $corporate-one;
-}
-
-.corporate-color-two {
-	color: $corporate-two;
-}
-
-.corporate-color-three {
-	color: $corporate-three;
-}
-
-.corporate-color-four {
-	color: $corporate-four;
-}
-
-.corporate-color-five {
-	color: $corporate-five;
-}
-
-.corporate-color-six {
-	color: $corporate-six;
-}
-
-.corporate-font {
-	font-family: $corporate-font;
+.header-font {
+	font-family: $header-font;
 }
 
 /* Elements */
@@ -173,15 +147,31 @@ img {
 .arrow {
 	display: inline-block;
 	margin-top: 25px;
-}
-.arrow:before {
-	font-family: 'Q4-Default-Icons';
-	content: "\e802";
-	font-size: 60px;
-}
+	color: $story-arrow-color;
 
-.arrow.alt:before {
-	content: "\e806";
+	&:before {
+		font-family: $icon-font;
+		content: "\e802";
+		font-size: 50px;
+	}
+
+	&.alt:before {
+		content: "\e806";
+	}
+
+	@media screen and (max-width: $screen-legacy) {
+
+		margin-top: 10px;
+
+		&:before {
+			font-size: 35px;
+		}
+
+		&.alt:before {
+			font-size: 40px;
+		}
+	}
+
 }
 
 /* Lazy Loading XT */
@@ -228,7 +218,7 @@ img {
 }
 
 .slick-dots li.slick-active button {
-    background-color: $corporate-two;
+    background-color: $brand-bg-alt;
 }
 
 .slick-dots li button:before {

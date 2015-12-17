@@ -2,7 +2,7 @@
   Details module CSS
 \*-----------------------------------*/
 .header-image {
-  background-color: #FFF;
+  background-color: #22272b;
   background-image: url("http://blankor.q4web.com/files/design/banner/details-default.jpg");
   position: relative;
   padding-top: 25%;
@@ -22,7 +22,6 @@
   top: 30%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
-  font-size: 20px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -75,7 +74,6 @@
   top: 0;
   left: 0;
   padding: 8px 18px 8px 8px;
-  background-color: #3498db;
   border: none;
   font-size: 18px;
   line-height: 26px;

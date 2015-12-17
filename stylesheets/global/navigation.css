@@ -123,15 +123,6 @@
 .nav-container .QuickLinks {
   padding: 15px 15px;
 }
-.nav-container .QuickLinks h2 {
-  display: block;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-}
 .nav-container .QuickLinks .quick-links li {
   display: inline-block;
   margin-right: 8px;

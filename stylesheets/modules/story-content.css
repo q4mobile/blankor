@@ -23,14 +23,16 @@
 .story-item .story-content {
   padding: 2% 9%;
 }
+@media screen and (max-width: 1024px) {
+  .story-item .story-content {
+    padding: 2% 4%;
+  }
+}
 .story-item .story-image a {
   font-size: 0;
 }
 .story-item h2, .story-item .story-body {
   position: relative;
-}
-.story-item .arrow {
-  color: #ec6a4c;
 }
 @media screen and (min-width: 481px) {
   .story-item h2, .story-item .story-body, .story-item .arrow, .story-item .story-image {
@@ -140,6 +142,11 @@
 .story-item.feature .arrow:before {
   content: "\e806";
 }
+@media screen and (max-width: 1024px) {
+  .story-item.feature .arrow:before {
+    font-size: 40px;
+  }
+}
 .story-item.download.center .download-item img {
   display: inline-block;
 }
@@ -162,5 +169,3 @@
     padding: 9%;
   }
 }
-
-/* Typography */

@@ -5,7 +5,7 @@
 @import "includes/variables.scss";
 
 .header-image { 
-	background-color: $corporate-three;
+	background-color: $dark-bg;
 	background-image: $details-default;
 	position: relative;
 	padding-top: 25%; 
@@ -24,16 +24,15 @@
 		top: 30%;
 		padding: 20px;
 		background-color: rgba(0,0,0,0.4);
-		font-size: 20px;
-		color: #fff;
+		color: $dark-bg-text-color;
 		text-transform: uppercase;
 		text-align: center;
 
 		a {
-			color: #fff;
+			color: $dark-bg-text-color;
 
 			&:hover {
-				color: $corporate-two;
+				color: $link-hover-color;
 			}
 		}
 
@@ -83,11 +82,10 @@
 	top: 0;
 	left: 0;
 	padding: 8px 18px 8px 8px;
-	background-color: $corporate-one;
 	border: none;
 	font-size: 18px;
 	line-height: 26px;
-	color: #fff;
+	color: $dark-bg-text-color;
 	cursor: pointer;
 	z-index: 999;
 

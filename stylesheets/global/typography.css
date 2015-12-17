@@ -13,16 +13,16 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   font-size: 14px;
-  line-height: 24px;
-}
-
-i {
-  font-family: 'Q4-Default-Icons';
+  line-height: 22px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: #949494;
+}
+
+i {
+  font-family: "Q4-Default-Icons";
 }
 
 b, strong {
@@ -33,68 +33,72 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 50px;
   line-height: 50px;
-  margin: 15px 0;
+  color: #fff;
+  margin: 10px 0;
 }
 
 h2, h2 span {
   font-family: "Open Sans", sans-serif;
   color: #3498db;
   font-size: 36px;
-  line-height: 45px;
+  line-height: 46.8px;
+  margin: 18px 0;
+}
+@media screen and (max-width: 1024px) {
+  h2, h2 span {
+    font-size: 32.4px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h2, h2 span {
+    font-size: 28.8px;
+    line-height: 32.4px;
+  }
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  line-height: 28px;
-  font-weight: bold;
+  line-height: 20px;
   color: #3498db;
 }
 
 h4 {
-  margin: 1em 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  line-height: 28px;
-  font-weight: bold;
-  color: #ec6a4c;
+  line-height: 30px;
+  color: #fff;
+  margin: 20px 0;
 }
 
 p {
-  margin: 15px 0;
-  line-height: 22px;
+  margin: 14px 0;
 }
 
 a {
-  text-decoration: none;
   color: #3498db;
+  text-decoration: none;
 }
 a:hover {
   color: #ec6a4c;
+  text-decoration: none;
 }
 
 button {
+  background-color: #3498db;
   font-family: "Roboto", sans-serif;
 }
 
 ul {
-  margin: 10px 0;
-  line-height: 22px;
+  margin: 9.8px 0;
   list-style-type: disc;
   list-style-position: inside;
 }
 ul li {
-  margin: 10px 0;
-  line-height: 22px;
+  margin: 9.8px 0;
 }
 ul ul {
   margin-left: 2em;
   list-style-type: circle;
-}
-
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 30px;
-    line-height: 36px;
-  }
 }
