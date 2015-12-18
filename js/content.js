@@ -300,12 +300,9 @@
         },
 
         _onMobileTableClick: function() {
-            var inst = this;
-
-            inst.element.find('.data-mobile-header').on('click', '.data-toggle', function(){
-                var $container = $(this).parent();
+            this.element.find('.data-mobile-header').on('click', function(){
                 $(this).find('i').toggleClass('selected');
-                $container.find('.data-mobile-content').slideToggle();
+                $(this).parent().find('.data-mobile-content').toggle();
             });
         },
 
