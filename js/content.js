@@ -243,6 +243,7 @@
                 inst.element.html(stories);
                 inst._lazyLoad();
                 inst._onTabClick();
+                inst._onMobileTableClick();
 
                 if (location.hash.length){
                     inst._scrollTo(location.hash);
@@ -295,6 +296,16 @@
                 formatter: function (value, options) {
                     return value.toFixed($(this).data('decimal') !== undefined ? $(this).data('decimal') : 0);
                 }
+            });
+        },
+
+        _onMobileTableClick: function() {
+            var inst = this;
+
+            inst.element.find('.data-mobile-header').on('click', '.data-toggle', function(){
+                var $container = $(this).parent();
+                $(this).find('i').toggleClass('selected');
+                $container.find('.data-mobile-content').slideToggle();
             });
         },
 

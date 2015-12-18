@@ -18,14 +18,14 @@
 			display: inline-block;
 			margin: 10px 0;
 			padding: 0 20px;
-			color: $corporate-three;
 			font-size: 36px;
 			line-height: 45px;
 			opacity: 0.5;
 			cursor: pointer;
 
 			&:first-child {
-				border-right: 1px solid $corporate-four;
+				border-right: 1px solid;
+				border-color: $border-dark-color;
 			}
 
 			&.selected {
@@ -51,8 +51,10 @@
 		}
 
 		.data-border {
-			border-right: 2px solid $corporate-four;
-			border-left: 2px solid $corporate-four;
+			border-right: 2px solid;
+			border-color: $border-dark-color;
+			border-left: 2px solid;
+			border-color: $border-dark-color;
 		}
 
 		span {
@@ -152,46 +154,107 @@
 
 .data-table-container {
 
-	.data-desktop {
-		display: table;
+	margin: 35px 0;
+
+	table {
 		width: 100%;
-		margin-top: 50px;
+		border-collapse: collapse;
 	}
 
-	.data-table-header {
-		background-color: $corporate-two;
+	th, td {
+		padding: 20px 10px;
+		text-align: left;
+
+		&.data {
+			text-align: right;
+		}
+	}
+
+	td {
+		border-top: 1px solid;
+		border-color: $border-dark-color;
+	}
+
+	.data-desktop {
+
+		th {
+			background-color: $table-head-bg;
+			color: $data-header-color;
+			font-size: $data-header-size;
+			padding: 15px 10px 30px;
+
+			&.current {
+				color: $data-current-color;
+			}
+		}
+
 	}
 
 	.data-mobile {
 
-		.data-table-header, .data-table-content {
+		display: none;
+		margin-top: 10px;
 
-			.data-table {
-				display: table;
-				width: 100%
+		th {
+			color: $data-current-color;
+			font-size: $data-header-size;
+		}
+
+		.data-mobile-header {
+			margin: 10px 0;
+			border: 1px solid;
+			border-color: $border-dark-color;
+		}
+
+		.data-toggle {
+			font-size: 14px;
+			text-align: right;
+			padding-right: 25px;
+			cursor: pointer; 
+
+			i:before {
+				content: "\e605";
 			}
 
+			i.selected:before {
+				content: "\e604";
+			}
+		}
+
+		.data-mobile-content {
+			display: none;
 		}
 
 	}
 
-	.data-toggle {
-		padding-right: 25px;
-		text-align: right;
-		cursor: pointer;
+	.current {
+		color: $data-current-color;
 	}
 
-	ul {
-		display: table-row;
-		list-style: none;
+	@media screen and (max-width: $screen-small) {
 
-		li {
-			display: table-cell;
-			padding: 15px 10px;
-			border-bottom: 1px solid $corporate-light;
-
-			text-align: left;
+		.data-mobile {
+			display: block;
 		}
+
+		.data-desktop {
+			display: none;
+		}
+
+	}
+
+}
+
+/* Dark Adjustments */
+
+.dark {
+
+	td, .data-mobile-header {
+		border-color: $border-light-color !important;
+	}
+
+	.data-desktop th {
+		color: $dark-bg-text-color
 	}
 
 }

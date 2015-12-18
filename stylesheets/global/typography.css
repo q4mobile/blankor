@@ -4,8 +4,8 @@
 span, applet, object, iframe, h1, h2, h3, h4,
 h5, h6, p, blockquote, pre, a, abbr, acronym,
 address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong,
-sub, sup, tt, var, b, u, i, center, dl, dt,
+ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, u, center, dl, dt,
 dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -17,7 +17,7 @@ time, mark, audio, video {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #949494;
 }
 
@@ -42,7 +42,7 @@ h2, h2 span {
   color: #3498db;
   font-size: 36px;
   line-height: 46.8px;
-  margin: 18px 0;
+  margin-bottom: 18px;
 }
 @media screen and (max-width: 1024px) {
   h2, h2 span {
@@ -87,7 +87,7 @@ a:hover {
 
 button {
   background-color: #3498db;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 ul {

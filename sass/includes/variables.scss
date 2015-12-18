@@ -53,7 +53,8 @@ $overlay-background: url($site+'files/temp/overlay-bg.png') !default;
 
 //Font Families:
 $header-font: 'Open Sans', sans-serif !default;
-$body-font: 'Roboto', sans-serif !default;
+//$body-font: 'Roboto', sans-serif !default;
+$body-font: 'Open Sans', sans-serif !default;
 $icon-font: 'Q4-Default-Icons' !default;
 
 //Default Body Text:
@@ -86,8 +87,11 @@ $story-arrow-color: #ec6a4c !default;
 //
 
 //Default Table Heading Text:
-$data-header-color: #fff !default;
-$data-header-size: #fff !default;
+$data-header-color: #000 !default;
+$data-header-size: 18px !default;
+
+//Default Table Current Year Text:
+$data-current-color: #3498db !default;
 
 //All Text Colour within a .dark Container
 $dark-bg-text-color: #fff !default;
@@ -122,29 +126,8 @@ $dark-bg: #22272b !default;
 $grey-bg: #727272 !default;
 
 //Default Table Header Background Colour:
-$table-head-bg: #ec6a4c !default;
+$table-head-bg: transparent !default;
 
 //Default Border Colors
-$border-dark-color: rgba(0,0,0,0.5) !default;
-$border-light-color: rgba(255,255,255,0.1) !default;
-
-
-//Corporate Themes
-
-//Brand Colour
-$corporate-one: #3498db !default;
-//Salmon BG 
-$corporate-two: #ec6a4c !default;
-//Hero Text
-$corporate-three: #FFF !default;
-//Dark BG
-$corporate-four: #22272b !default;
-//Dark BG Text
-$corporate-five: #727272 !default;
-//Light BG Text 
-$corporate-six: #949494 !default;
-
-//Text colour within .dark container
-$corporate-light: #fff !default;
-//Text colour within .light container
-$corporate-dark: #727272 !default;
+$border-dark-color: rgba(0,0,0,0.2) !default;
+$border-light-color: rgba(255,255,255,0.2) !default;
