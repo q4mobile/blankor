@@ -9,6 +9,7 @@
                         '<div class="in-viewport"></div>' +
                         '<div class="col col-1-of-3 story-image fade-from-left">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
+                            '{{#imgContent}}{{{imgContent}}}{{/imgContent}}' +
                         '</div>' +
                         '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
@@ -31,6 +32,7 @@
                         '</div>' +
                         '<div class="col col-1-of-3 story-image fade-from-right">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
+                            '{{#imgContent}}{{{imgContent}}}{{/imgContent}}' +
                         '</div>' +
                     '</div>'
                 ),
@@ -213,6 +215,11 @@
                             case 'single':
                                 tag = storyAlt % 2 === 0 ? 'single' : 'single-alt';
                                 storyAlt += 1;
+
+                                if ( $(story.Body).find('.image-content')[0] !== undefined) {
+                                    story.imgContent = $(story.Body).find('.image-content')[0].outerHTML;
+                                }
+
                                 break;
                             case 'multi':
                                 tag = storiesAlt % 2 === 0 ? 'multi' : 'multi-alt';
