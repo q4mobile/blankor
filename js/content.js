@@ -309,7 +309,7 @@
         _onMobileTableClick: function() {
             this.element.find('.data-mobile-header').on('click', function(){
                 $(this).find('i').toggleClass('selected');
-                $(this).parent().find('.data-mobile-content').toggle();
+                $(this).parent().find('.data-mobile-content').slideToggle();
             });
         },
 

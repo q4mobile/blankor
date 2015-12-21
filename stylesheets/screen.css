@@ -1127,25 +1127,27 @@ ul ul {
   width: 100%;
   position: absolute;
   top: 30%;
-  padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   text-transform: uppercase;
   text-align: center;
 }
 .header-image .header-overlay a {
+  display: block;
   color: #fff;
 }
 .header-image .header-overlay a:hover {
   color: #ec6a4c;
 }
 .header-image .header-overlay i {
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  margin: 20px auto 0;
   font-size: 100px;
   line-height: 100px;
-  margin-bottom: 20px;
   cursor: pointer;
+}
+.header-image .header-overlay p {
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1200px) {
   .header-image {
