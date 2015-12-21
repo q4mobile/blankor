@@ -45,6 +45,15 @@ var q4 = {
             location.hash = '';
         });
     },
+    _afterHeroScroll: function() {
+        var $main = $('.main-wrapper');
+
+        if ($(window).scrollTop() >= $('.hero-container').height()){
+            $main.addClass('past-hero');
+        } else {
+            $main.removeClass('past-hero');
+        }
+    },
     _letScroll: function(position){
         $('html, body').animate({
             scrollTop: position
@@ -79,6 +88,11 @@ $(function(){
 
 $(window).resize(function() {
     q4._setHeight( $('.hero-container') );
+    q4._afterHeroScroll();
+});
+
+$(window).scroll(function() {
+    q4._afterHeroScroll();
 });
 
 // lazyLoadXT
