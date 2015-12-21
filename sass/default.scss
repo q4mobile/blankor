@@ -191,36 +191,57 @@ img {
 
 /* Slick Override */
 
+.dark {
+	.slick-dots li button {
+		background-color: #fff;
+	}
+}
+
 .slick-dots {
 	position: relative;
 	bottom: 0;
 	margin-top: 20px;
+
+	li {
+	    position: relative;
+	    display: inline-block;
+	    height: 10px;
+	    width: 10px;
+	    cursor: pointer;
+
+	    button {
+		    display: block;
+		    height: 8px;
+		    width: 8px;
+		    background-color: rgba(255,255,255,0.5);
+		    border-radius: 100%;
+
+		    &:before {
+			    display: none;
+			}
+		}
+
+		&.slick-active button {
+		    background-color: $brand-bg-alt;
+		}
+	}
 }
 
-.slick-dots li {
-    position: relative;
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    cursor: pointer;
-}
+.slick-arrow {
 
-.slick-dots li button {
-    display: block;
-    height: 8px;
-    width: 8px;
-    background-color: rgba(255,255,255,0.5);
-    border-radius: 100%;
-}
+	&.slick-prev {
+		left: -50px;
+	}
 
-.dark .slick-dots li button {
-	background-color: #fff;
-}
+	&.slick-prev:before, &.slick-next:before {
+		font-family: $icon-font;
+		font-size: 50px;
+	}
 
-.slick-dots li.slick-active button {
-    background-color: $brand-bg-alt;
-}
-
-.slick-dots li button:before {
-    display: none;
+	&.slick-prev:before {
+		content: "\e801";
+	}
+	&.slick-next:before {
+		content: "\e802";
+	}
 }
