@@ -47,6 +47,23 @@
 
 	&.single {
 
+		.story-image {
+			position: relative;
+
+			.image-content {
+				width: 100%;
+				padding: 5px;
+				background-color: $image-content-bg;
+				position: absolute;
+				bottom: 25px;
+				text-align: center;
+
+				h6 {
+					text-transform: uppercase;
+				}
+			}
+		}
+
 		/* Responsive */
 
 		@media screen and (max-width: $screen-medium) {

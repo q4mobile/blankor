@@ -76,6 +76,20 @@ h4 {
     margin: $hero-subtitle-size 0;
 }
 
+h5 {
+    font-family: $header-font;
+    font-size: $image-title-size;
+    line-height: $image-title-size*1.5;
+    color: $image-title-color;
+}
+
+h6 {
+    font-family: $header-font;
+    font-size: $image-subtitle-size;
+    line-height: $image-title-size*1.5;
+    color: $image-subtitle-color;
+}
+
 p {
 	margin: $body-size 0;
 }

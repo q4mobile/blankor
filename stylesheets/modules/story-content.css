@@ -42,6 +42,20 @@
 .story-item.single {
   /* Responsive */
 }
+.story-item.single .story-image {
+  position: relative;
+}
+.story-item.single .story-image .image-content {
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 25px;
+  text-align: center;
+}
+.story-item.single .story-image .image-content h6 {
+  text-transform: uppercase;
+}
 @media screen and (max-width: 768px) {
   .story-item.single .story-image {
     display: none;

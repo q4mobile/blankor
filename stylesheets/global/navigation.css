@@ -86,12 +86,12 @@
   padding: 0;
   list-style: none;
 }
-.nav-container .toggle-nav .level2 li {
+.nav-container .toggle-nav .level1 li {
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
   margin: 0;
 }
-.nav-container .toggle-nav .level2 li a {
+.nav-container .toggle-nav .level1 li a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -101,14 +101,14 @@
   padding: 15px 15px;
   letter-spacing: 1px;
 }
-.nav-container .toggle-nav .level2 li a:hover {
+.nav-container .toggle-nav .level1 li a:hover {
   background-color: #444343;
 }
-.nav-container .toggle-nav .level2 li:first-child {
+.nav-container .toggle-nav .level1 li:first-child {
   border-top: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
 }
-.nav-container .toggle-nav .level1 > li > a {
+.nav-container .toggle-nav .level2 > li > a {
   display: none;
 }
 .nav-container .close {

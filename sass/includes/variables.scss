@@ -84,6 +84,12 @@ $story-title-color: #3498db !default;
 //Story Arrow Text:
 $story-arrow-color: #ec6a4c !default;
 
+//Single Story Image Text:
+$image-title-size: 28px !default;
+$image-title-color: #fff !default;
+$image-subtitle-size: 18px !default;
+$image-subtitle-color: #fff !default;
+
 //
 
 //Default Table Heading Text:
@@ -124,6 +130,9 @@ $dark-bg: #22272b !default;
 
 //Grey BG Colour:
 $grey-bg: #727272 !default;
+
+//Default Single Story Image Text Stripe Colour
+$image-content-bg: rgba(0,0,0,0.5) !default;
 
 //Default Table Header Background Colour:
 $table-head-bg: transparent !default;

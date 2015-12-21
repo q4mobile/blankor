@@ -144,12 +144,12 @@ table {
   padding: 0;
   list-style: none;
 }
-.nav-container .toggle-nav .level2 li {
+.nav-container .toggle-nav .level1 li {
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
   margin: 0;
 }
-.nav-container .toggle-nav .level2 li a {
+.nav-container .toggle-nav .level1 li a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -159,14 +159,14 @@ table {
   padding: 15px 15px;
   letter-spacing: 1px;
 }
-.nav-container .toggle-nav .level2 li a:hover {
+.nav-container .toggle-nav .level1 li a:hover {
   background-color: #444343;
 }
-.nav-container .toggle-nav .level2 li:first-child {
+.nav-container .toggle-nav .level1 li:first-child {
   border-top: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
 }
-.nav-container .toggle-nav .level1 > li > a {
+.nav-container .toggle-nav .level2 > li > a {
   display: none;
 }
 .nav-container .close {
@@ -262,6 +262,20 @@ h4 {
   line-height: 30px;
   color: #fff;
   margin: 20px 0;
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  line-height: 42px;
+  color: #fff;
+}
+
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 42px;
+  color: #fff;
 }
 
 p {
@@ -977,6 +991,20 @@ ul ul {
 .story-item.single {
   /* Responsive */
 }
+.story-item.single .story-image {
+  position: relative;
+}
+.story-item.single .story-image .image-content {
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 25px;
+  text-align: center;
+}
+.story-item.single .story-image .image-content h6 {
+  text-transform: uppercase;
+}
 @media screen and (max-width: 768px) {
   .story-item.single .story-image {
     display: none;
@@ -1690,7 +1718,7 @@ img {
 /*-----------------------------------*\
   Client CSS
 \*-----------------------------------*/
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 

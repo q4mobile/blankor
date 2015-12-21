@@ -72,6 +72,20 @@ h4 {
   margin: 20px 0;
 }
 
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  line-height: 42px;
+  color: #fff;
+}
+
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 42px;
+  color: #fff;
+}
+
 p {
   margin: 14px 0;
 }
