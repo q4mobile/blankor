@@ -3,9 +3,10 @@
         options: {
             tolerance: '-250',
             downloads: 'even',
+            year: 2015,
             templates: {
                 single: (
-                    '<div id="{{SeoName}}" class="story-item single {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item single{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="col col-1-of-3 story-image fade-from-left">' +
                             '<img data-src="{{ThumbnailPath}}" alt="{{Headline}}">' +
@@ -21,7 +22,7 @@
                     '</div>'
                 ),
                 'single-alt': (
-                    '<div id="{{SeoName}}" class="story-item single alt {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item single alt{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="col col-2-of-3 col-md-1-of-1 col-sm-1-of-1 story-content">' +
                             '<div class="story-inner">' +
@@ -37,7 +38,7 @@
                     '</div>'
                 ),
                 multi: (
-                    '<div id="{{SeoName}}" class="story-item multi col {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item multi col{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="col story-image fade-in">' +
                             '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}">{{/LinkToDetailPage}}' +
@@ -53,7 +54,7 @@
                     '</div>'
                 ),
                 'multi-alt': (
-                    '<div id="{{SeoName}}" class="story-item multi alt col {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item multi alt col{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="col story-image fade-in">' +
                             '{{#LinkToDetailPage}}<a href="{{LinkToDetailPage}}">{{/LinkToDetailPage}}' +
@@ -69,7 +70,7 @@
                     '</div>'
                 ),
                 feature: (
-                    '<div id="{{SeoName}}" class="story-item feature {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item feature{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div{{#ThumbnailPath}} data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
@@ -83,7 +84,7 @@
                     '</div>'
                 ),
                 'feature-half': (
-                    '<div id="{{SeoName}}" class="story-item feature feature-half col col-1-of-2 col-md-1-of-1 {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item feature feature-half col col-1-of-2 col-md-1-of-1{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div{{#ThumbnailPath}} data-bg="{{{ThumbnailPath}}}"{{/ThumbnailPath}} class="fixed-bg">' +
                             '{{#overlay}}<div class="overlay-background">{{/overlay}}' +
@@ -97,7 +98,7 @@
                     '</div>'
                 ),
                 'download-even': (
-                    '<div id="{{SeoName}}" class="story-item download col col-1-of-2 {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item download col col-1-of-2{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="container">' +
                             '<div class="story-body {{animationCls}}">' +
@@ -110,7 +111,7 @@
                     '</div>'
                 ),
                 'download-odd': (
-                    '<div id="{{SeoName}}" class="story-item download col col-1-of-3 {{cls}}">' +
+                    '<div id="{{SeoName}}" class="story-item download col col-1-of-3{{cls}}">' +
                         '<div class="in-viewport"></div>' +
                         '<div class="container">' +
                             '<div class="story-body {{animationCls}}">' +
@@ -167,6 +168,7 @@
 
             inst._getData('/Services/PressReleaseService.svc/GetPressReleaseList', 
                 $.extend( inst._buildParams(), {
+                    year: inst.options.year,
                     excludeSelection: 0,
                     pressReleaseSelection: 3,
                     pressReleaseCategoryWorkflowId: "1cb807d2-208f-4bc3-9133-6a9ad45ac3b0",
