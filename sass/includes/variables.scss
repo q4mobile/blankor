@@ -99,6 +99,9 @@ $data-header-size: 18px !default;
 //Default Table Current Year Text:
 $data-current-color: #3498db !default;
 
+//Default Screen-size for Data Table to switch to Mobile Version
+$data-mobile-breakpoint: 768px !default;
+
 //All Text Colour within a .dark Container
 $dark-bg-text-color: #fff !default;
 
@@ -130,6 +133,9 @@ $dark-bg: #22272b !default;
 
 //Grey BG Colour:
 $grey-bg: #727272 !default;
+
+//Header Assets BG Colour when scrolling past Hero Image
+$header-assets-bg: rgba(0,0,0,0.1) !default;
 
 //Default Single Story Image Text Stripe Colour
 $image-content-bg: rgba(0,0,0,0.5) !default;

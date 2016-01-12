@@ -16,6 +16,9 @@
   -webkit-transition: left 0.5s, ease-in-out;
   transition: left 0.5s, ease-in-out;
 }
+.main-wrapper.past-hero .header-assets {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .header-assets {
   width: 100%;

@@ -25,6 +25,12 @@
 	left:0;
 	
 	@include transition(left .5s, ease-in-out);
+
+	&.past-hero {
+		.header-assets {
+			background-color: $header-assets-bg;
+		}
+	}
 }
 
 

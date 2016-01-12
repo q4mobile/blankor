@@ -231,7 +231,7 @@
 		color: $data-current-color;
 	}
 
-	@media screen and (max-width: $screen-small) {
+	@media screen and (max-width: $data-mobile-breakpoint) {
 
 		.data-mobile {
 			display: block;

@@ -25,6 +25,10 @@ i {
   font-family: "Q4-Default-Icons";
 }
 
+em {
+  font-style: italics;
+}
+
 b, strong {
   font-weight: bold;
 }

@@ -27,6 +27,9 @@ body {
 i {
   font-family: $icon-font;
 }
+em {
+    font-style: italics;
+}
 
 b, strong {
     font-weight: bold;

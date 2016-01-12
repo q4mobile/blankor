@@ -74,6 +74,9 @@ table {
   -webkit-transition: left 0.5s, ease-in-out;
   transition: left 0.5s, ease-in-out;
 }
+.main-wrapper.past-hero .header-assets {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .header-assets {
   width: 100%;
@@ -215,6 +218,10 @@ body {
 
 i {
   font-family: "Q4-Default-Icons";
+}
+
+em {
+  font-style: italics;
 }
 
 b, strong {
@@ -1434,7 +1441,7 @@ ul ul {
 .data-table-container .current {
   color: #3498db;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .data-table-container .data-mobile {
     display: block;
   }
