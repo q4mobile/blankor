@@ -15,14 +15,14 @@
         _setBackURL: function(){
             $('button.back').on('click', function(e){
                 e.preventDefault();
-                var hash = location.href.split('/')[5];
-                window.location = hash !== undefined ? '/default.aspx#' + hash : '/default.aspx';
+                var hash = location.href.split('/');
+                window.location = '/' + hash[hash.length - 5] + '/default.aspx#' + hash[hash.length - 2];
             });
         },
 
         _setHeaderImage: function(){
             var header = {
-                config: $('.story-container').data(),
+                config: $('.story-container').length ? $('.story-container').data() : {},
                 image: function() {
                     if (this.config !== undefined && this.config.image !== undefined) {
                         return this.config.image;
