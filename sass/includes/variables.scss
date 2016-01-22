@@ -43,7 +43,7 @@ $hero-default: url($site+'files/design/hero/hero-desktop.jpg') !default;
 $details-default: url($site+'files/design/banner/details-default.jpg') !default;
 
 //Default Overlay Background Image:
-$overlay-background: url($site+'files/temp/overlay-bg.png') !default;
+$overlay-background: url($site+'files/design/overlay-bg.png') !default;
 
 
 
@@ -69,13 +69,23 @@ $link-color: #3498db !default;
 $link-hover-color: #ec6a4c !default;
 $link-hover-decoration: none !default;
 
+//Hero Overlay:
+$hero-overlay-bg: transparent !default;
+$hero-text-align: right !default;
+
 //Hero Image Heading Text:
 $hero-title-size: 50px !default;
 $hero-title-color: #fff !default;
+$hero-title-transform: none !default;
 
 //Hero Image Sub-Heading Text:
 $hero-subtitle-size: 20px !default;
 $hero-subtitle-color: #fff !default;
+$hero-subtitle-transform: uppercase !default;
+
+//Hero Bouncing Arrow Colour:
+$hero-arrow-bg: #ec6a4c !default;
+$hero-arrow-color: #fff !default;
 
 //Story Title Text:
 $story-title-size: 36px !default;

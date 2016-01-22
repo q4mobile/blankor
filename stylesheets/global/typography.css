@@ -33,6 +33,13 @@ b, strong {
   font-weight: bold;
 }
 
+sup {
+  display: inline-block;
+  font-size: smaller;
+  vertical-align: top;
+  margin-top: -5px;
+}
+
 h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 50px;

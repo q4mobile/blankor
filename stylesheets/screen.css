@@ -228,6 +228,13 @@ b, strong {
   font-weight: bold;
 }
 
+sup {
+  display: inline-block;
+  font-size: smaller;
+  vertical-align: top;
+  margin-top: -5px;
+}
+
 h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 50px;
@@ -850,7 +857,7 @@ ul ul {
     width: auto;
   }
 }
-@media (max-width: 1200px) and (min-width: 768px) {
+@media (max-width: 1200px) and (min-width: 1024px) {
   .col[class*="col-lg-"] {
     display: inline-block;
     margin-right: -.24em;
@@ -871,6 +878,30 @@ ul ul {
     width: 25%;
   }
   .col.col-lg-3-of-4 {
+    width: 75%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .col[class*="col-lc-"] {
+    display: inline-block;
+    margin-right: -.24em;
+  }
+  .col.col-lc-1-of-1 {
+    width: 100%;
+  }
+  .col.col-lc-1-of-2, .col.col-lc-2-of-4 {
+    width: 50%;
+  }
+  .col.col-lc-1-of-3 {
+    width: 33.33333%;
+  }
+  .col.col-lc-2-of-3 {
+    width: 66.66667%;
+  }
+  .col.col-lc-1-of-4 {
+    width: 25%;
+  }
+  .col.col-lc-3-of-4 {
     width: 75%;
   }
 }
@@ -1473,6 +1504,7 @@ ul ul {
   position: absolute;
   bottom: 5%;
   right: 5%;
+  background-color: transparent;
   text-align: right;
 }
 @media screen and (max-width: 768px) {
@@ -1500,11 +1532,15 @@ ul ul {
 }
 .hero-container .scroll-button i {
   font-size: 40px;
+  color: #fff;
   line-height: 1;
 }
 .hero-container img {
   width: 100%;
   height: auto;
+}
+.hero-container h1 {
+  text-transform: none;
 }
 .hero-container h4 {
   text-transform: uppercase;
@@ -1573,7 +1609,7 @@ img {
 }
 
 .overlay-background {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://blankor.q4web.com/files/design/overlay-bg.png");
   background-repeat: repeat;
 }
 

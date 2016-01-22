@@ -19,6 +19,7 @@ $toast-gutter-width: 0 !default;
 
 // Breakpoints
 $toast-breakpoint-large: $screen-large !default;
+$toast-breakpoint-legacy: $screen-legacy !default;
 $toast-breakpoint-medium: $screen-medium !default;
 $toast-breakpoint-small: $screen-small !default;
 
@@ -42,27 +43,27 @@ $toast-pulls: true !default;
 %two-quarters   { width: percentage(2/4); }
 %three-quarters { width: percentage(3/4); }
 
-%push-span-all       { margin-left: percentage(1/1); }
+// %push-span-all       { margin-left: percentage(1/1); }
 
-%push-one-half       { margin-left: percentage(1/2); }
+// %push-one-half       { margin-left: percentage(1/2); }
 
-%push-one-third      { margin-left: percentage(1/3); }
-%push-two-thirds     { margin-left: percentage(2/3); }
+// %push-one-third      { margin-left: percentage(1/3); }
+// %push-two-thirds     { margin-left: percentage(2/3); }
 
-%push-one-quarter    { margin-left: percentage(1/4); }
-%push-two-quarters   { margin-left: percentage(2/4); }
-%push-three-quarters { margin-left: percentage(3/4); }
+// %push-one-quarter    { margin-left: percentage(1/4); }
+// %push-two-quarters   { margin-left: percentage(2/4); }
+// %push-three-quarters { margin-left: percentage(3/4); }
 
-%pull-span-all       { margin-left: -(percentage(1/1)); }
+// %pull-span-all       { margin-left: -(percentage(1/1)); }
 
-%pull-one-half       { margin-left: -(percentage(1/2)); }
+// %pull-one-half       { margin-left: -(percentage(1/2)); }
 
-%pull-one-third      { margin-left: -(percentage(1/3)); }
-%pull-two-thirds     { margin-left: -(percentage(2/3)); }
+// %pull-one-third      { margin-left: -(percentage(1/3)); }
+// %pull-two-thirds     { margin-left: -(percentage(2/3)); }
 
-%pull-one-quarter    { margin-left: -(percentage(1/4)); }
-%pull-two-quarters   { margin-left: -(percentage(2/4)); }
-%pull-three-quarters { margin-left: -(percentage(3/4)); }
+// %pull-one-quarter    { margin-left: -(percentage(1/4)); }
+// %pull-two-quarters   { margin-left: -(percentage(2/4)); }
+// %pull-three-quarters { margin-left: -(percentage(3/4)); }
 
 // For each of our column groups...
 @each $group in $toast-col-groups {
@@ -159,7 +160,7 @@ $toast-pulls: true !default;
     width: auto;
   }
 
-  @media (max-width: $toast-breakpoint-large) and (min-width: $toast-breakpoint-medium) {
+  @media (max-width: $toast-breakpoint-large) and (min-width: $toast-breakpoint-legacy) {
     &[class*="#{$toast-grid-column-namespace}-lg-"] {
       display: inline-block;
       margin-right: -.24em;
@@ -189,6 +190,40 @@ $toast-pulls: true !default;
     }
 
     &.#{$toast-grid-column-namespace}-lg-3-of-4 {
+      width: percentage(3/4);
+    }
+  }
+
+  @media (max-width: $toast-breakpoint-legacy) and (min-width: $toast-breakpoint-medium) {
+    &[class*="#{$toast-grid-column-namespace}-lc-"] {
+      display: inline-block;
+      margin-right: -.24em;
+    }
+
+    &.#{$toast-grid-column-namespace}-lc-1-of-1 {
+      width: percentage(1);
+    }
+    &.#{$toast-grid-column-namespace}-lc-1-of-2 {
+      width: percentage(1/2);
+    }
+
+    &.#{$toast-grid-column-namespace}-lc-1-of-3 {
+      width: percentage(1/3);
+    }
+
+    &.#{$toast-grid-column-namespace}-lc-2-of-3 {
+      width: percentage(2/3);
+    }
+
+    &.#{$toast-grid-column-namespace}-lc-1-of-4 {
+      width: percentage(1/4);
+    }
+
+    &.#{$toast-grid-column-namespace}-lc-2-of-4 {
+      @extend .#{$toast-grid-column-namespace}-lc-1-of-2;
+    }
+
+    &.#{$toast-grid-column-namespace}-lc-3-of-4 {
       width: percentage(3/4);
     }
   }
