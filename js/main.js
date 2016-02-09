@@ -21,8 +21,12 @@ var q4 = {
     _onMenuItemClick: function(container) {
         $('.toggle-nav').on('click', 'a', function(){
 
+            var offsetHeight = !$('.header-assets') ? 0 : $('.header-assets').innerHeight(),
+                heroHeight = $('.hero-container').innerHeight(),
+                scrollHeight = $( $.attr(this, 'href') ).offset().top - offsetHeight;
+
             container.animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
+                scrollTop: heroHeight >= scrollHeight ? heroHeight : scrollHeight
             }, 500, 'linear', function(){
                 $('body').removeClass('toggle-nav-open');
             });
@@ -3977,6 +3981,7 @@ $(window).scroll(function() {
       return this.replace(/^\s*(.*?)\s*$/, '$1');
     };
   }
+
 
   // lets you chain any arbitrary function or an array of functions and returns a jquery object
   var run = function(args) {
