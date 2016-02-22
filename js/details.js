@@ -1,7 +1,10 @@
 (function($) {
     $.widget("q4.details", {
         options: {
-            showHeader: true
+            showHeader: true,
+            onComplete: function(){
+
+            }
         },
 
         _init: function() {
@@ -9,6 +12,7 @@
                 this._setHeaderImage();
             }
 
+            this._trigger('onComplete');
             this._setBackURL();
         },
 

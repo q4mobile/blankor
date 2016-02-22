@@ -1,6 +1,10 @@
 (function($) {
     $.widget("q4.stories", {
         options: {
+            isStatic: false,
+            usePublic: false,
+            publicUrl: '',
+            apiKey: '',
             tolerance: '-250',
             downloads: 'even',
             year: 2015,
@@ -132,11 +136,18 @@
                 autoplay: true,
                 autoplaySpeed: 5000
             },
+            onInit: function(){},
             onComplete: function(){}
         },
 
         _init: function() {
-            this._getStories();
+            this._trigger('onInit');
+
+            if (this.options.isStatic){
+                this._afterContentLoaded();
+            } else {
+                this._getStories();
+            }
         },
 
         _buildParams: function () {
@@ -153,28 +164,47 @@
             };
         },
 
-        _getData: function (url, params) {
-            return $.ajax({
-                type: 'POST',
-                url: url,
-                data: JSON.stringify(params),
-                contentType: 'application/json; charset=utf-8',
-                dataType: 'json'
-            });
+        _getData: function () {
+            var inst = this;
+
+            if (inst.options.usePublic) {
+                return $.ajax({
+                    type: 'GET',
+                    url: this.options.publicUrl + '/feed/PressRelease.svc/GetPressReleaseList',
+                    data: {
+                        apiKey: inst.options.apiKey,
+                        includeTags: true,
+                        year: inst.options.year,
+                        pressReleaseDateFilter: 3,
+                        categoryId: "1cb807d2-208f-4bc3-9133-6a9ad45ac3b0",
+                        bodyType : 2
+                    },
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'jsonp'
+                });
+            } else {
+                return $.ajax({
+                    type: 'POST',
+                    url: '/Services/PressReleaseService.svc/GetPressReleaseList',
+                    data: JSON.stringify(
+                        $.extend( inst._buildParams(), {
+                            year: inst.options.year,
+                            excludeSelection: 0,
+                            pressReleaseSelection: 3,
+                            pressReleaseCategoryWorkflowId: "1cb807d2-208f-4bc3-9133-6a9ad45ac3b0",
+                            pressReleaseBodyType: 2
+                        })
+                    ),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json'
+                });
+            }
         },
 
         _getStories: function(ticker){
             var inst = this;
 
-            inst._getData('/Services/PressReleaseService.svc/GetPressReleaseList', 
-                $.extend( inst._buildParams(), {
-                    year: inst.options.year,
-                    excludeSelection: 0,
-                    pressReleaseSelection: 3,
-                    pressReleaseCategoryWorkflowId: "1cb807d2-208f-4bc3-9133-6a9ad45ac3b0",
-                    pressReleaseBodyType: 2
-                })
-            ).done(function (data) {
+            inst._getData().done(function (data) {
                 var stories = '',
                     storyAlt = 0,
                     storiesAlt = 0,
@@ -187,100 +217,114 @@
                         cls = '', 
                         tag = '';
 
-                    $.each(story.TagsList, function(idx, item){
-                        switch(item) {
-                            case 'feature':
-                                tag = 'feature';
-                                break;
-                            case 'feature-half':
-                                tag = 'feature-half';
-                                animationCls = featureHalf % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
-                                featureHalf += 1;
-                                break;
-                            case 'download':
-                                if (inst.options.downloads == "even") {
-                                    tag = 'download-even';
-                                    animationCls = downloadAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
-                                } else {
-                                    tag = 'download-odd';
-
-                                    if (downloadAlt % 3 === 0) {
-                                        animationCls = 'fade-from-left';
-                                    } else if (downloadAlt % 3 == 1){
-                                        animationCls = 'fade-from-top';
+                    if ( $.inArray('no-display', story.TagsList) == -1 ) {
+                        
+                        $.each(story.TagsList, function(idx, item){
+                            switch(item) {
+                                case 'feature':
+                                    tag = 'feature';
+                                    break;
+                                case 'feature-half':
+                                    tag = 'feature-half';
+                                    animationCls = featureHalf % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
+                                    featureHalf += 1;
+                                    break;
+                                case 'download':
+                                    if (inst.options.downloads == "even") {
+                                        tag = 'download-even';
+                                        animationCls = downloadAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
                                     } else {
-                                        animationCls = 'fade-from-right';
+                                        tag = 'download-odd';
+
+                                        if (downloadAlt % 3 === 0) {
+                                            animationCls = 'fade-from-left';
+                                        } else if (downloadAlt % 3 == 1){
+                                            animationCls = 'fade-from-top';
+                                        } else {
+                                            animationCls = 'fade-from-right';
+                                        }
                                     }
-                                }
-                                downloadAlt += 1;
-                                break;
-                            case 'single':
-                                tag = storyAlt % 2 === 0 ? 'single' : 'single-alt';
-                                storyAlt += 1;
+                                    downloadAlt += 1;
+                                    break;
+                                case 'single':
+                                    tag = storyAlt % 2 === 0 ? 'single' : 'single-alt';
+                                    storyAlt += 1;
 
-                                if ( $(story.Body).find('.image-content')[0] !== undefined) {
-                                    story.imgContent = $(story.Body).find('.image-content')[0].outerHTML;
-                                }
+                                    if ( $(story.Body).find('.image-content')[0] !== undefined) {
+                                        story.imgContent = $(story.Body).find('.image-content')[0].outerHTML;
+                                    }
 
-                                break;
-                            case 'multi':
-                                tag = storiesAlt % 2 === 0 ? 'multi' : 'multi-alt';
-                                animationCls = storiesAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
-                                storiesAlt += 1;
-                                break;
-                            case 'no-title':
-                                story.Headline = '';
-                                break;
-                            case 'overlay-background':
-                                story.overlay = true;
-                                break;
-                            default:
-                                cls += ' ' + item;
-                                break;
-                        }
-                    });
+                                    break;
+                                case 'multi':
+                                    tag = storiesAlt % 2 === 0 ? 'multi' : 'multi-alt';
+                                    animationCls = storiesAlt % 2 === 0 ? 'fade-from-left' : 'fade-from-right';
+                                    storiesAlt += 1;
+                                    break;
+                                case 'no-title':
+                                    story.Headline = '';
+                                    break;
+                                case 'overlay-background':
+                                    story.overlay = true;
+                                    break;
+                                default:
+                                    cls += ' ' + item;
+                                    break;
+                            }
+                        });
                     
-                    story.cls = cls;
-                    story.animationCls = animationCls;
-                    story.LinkToDetailPage = story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
-                    story.Body = $(story.Body).find('.landing-content')[0] !== undefined || $(story.Body).hasClass('landing-content') ? $(story.Body).wrap('<div/>').parent().find('.landing-content')[0].outerHTML : '';
-                    
-                    stories += Mustache.render(tpl[tag], story);
+                        story.cls = cls;
+                        story.animationCls = animationCls;
+                        story.LinkToDetailPage = story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
+                        story.Body = story.Body.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "").replace(/<!-- details-content-start -->.*?<!-- details-content-end -->/g, '');
+
+                        stories += Mustache.render(tpl[tag], story);
+                    }
+
                 });
 
 
                 inst.element.html(stories);
-                inst._lazyLoad();
-                inst._onTabClick();
-                inst._onMobileTableClick();
+                inst._afterContentLoaded();
+            });
+        },
 
+        _afterContentLoaded: function(){
+            var inst = this;
+
+            inst._lazyLoad();
+            inst._onTabClick();
+            inst._onMobileTableClick();
+
+            $(window).load(function(){
                 if (location.hash.length){
                     inst._scrollTo(location.hash);
                 }
+            });
 
-                if (inst.element.find('.story-slider').length){
-                    var slick = $('.story-slider').slick(inst.options.slickOpts);
+            if (inst.element.find('.story-slider').length){
+                var slick = $('.story-slider').slick(inst.options.slickOpts);
 
-                    slick.on('afterChange', function() {
-                        var activeSlide = $('.slick-slide.slick-active');
-                        activeSlide.next().find('img[data-srcset]').lazyLoadXT({
-                            show: true
-                        });
+                slick.on('afterChange', function() {
+                    var activeSlide = $('.slick-slide.slick-active');
+                    activeSlide.next().find('img[data-srcset]').lazyLoadXT({
+                        show: true
                     });
-                }
-
-                $(window).on( 'DOMContentLoaded load resize scroll', function(){
-                    var $viewport = $('.story-container > div');
-
-                    $viewport.isInViewport({
-                        tolerance: inst.options.tolerance
-                    }).addClass('animate');
-
-                    if ( $viewport.filter('.animate').find('.count-to').not('.complete').length ){
-                        $viewport.filter('.animate').find('.count-to').addClass('complete');
-                        inst._countTo( $viewport.filter('.animate').find('.count-to .timer') );
-                    }
                 });
+            }
+
+            inst._trigger('onComplete');
+
+            $(window).on( 'DOMContentLoaded load resize scroll', function(){
+                var $viewport = $('.story-container > div');
+
+                $viewport.isInViewport({
+                    tolerance: inst.options.tolerance
+                }).addClass('animate');
+
+                if ( $viewport.filter('.animate').find('.count-to').not('.complete').length ){
+                    $viewport.filter('.animate').find('.count-to').addClass('complete');
+                    inst._countTo( $viewport.filter('.animate').find('.count-to .timer') );
+                }
             });
         },
 
@@ -341,7 +385,3 @@
         
     });
 })(jQuery);
-
-$(function(){
-    $('.story-container').stories();
-})
