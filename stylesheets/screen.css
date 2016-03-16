@@ -1029,6 +1029,9 @@ ul ul {
 .story-item.single {
   /* Responsive */
 }
+.story-item.single .story-body .image-content {
+  display: none;
+}
 .story-item.single .story-image {
   position: relative;
 }
@@ -1079,11 +1082,11 @@ ul ul {
   padding: 2%;
 }
 .story-item.multi .story-content:hover {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://blankor.q4web.com/files/design/overlay-bg.png");
   background-repeat: repeat;
 }
 .story-item.multi.split:hover {
-  background-image: url("http://blankor.q4web.com/files/temp/overlay-bg.png");
+  background-image: url("http://blankor.q4web.com/files/design/overlay-bg.png");
   background-repeat: repeat;
 }
 .story-item.multi.split .story-image, .story-item.multi.split .story-content {

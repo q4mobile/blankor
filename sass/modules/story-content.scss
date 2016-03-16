@@ -47,6 +47,12 @@
 
 	&.single {
 
+		.story-body {
+			.image-content {
+				display: none;
+			}
+		}
+
 		.story-image {
 			position: relative;
 
@@ -112,7 +118,7 @@
 			padding: 2%;
 
 			&:hover {
-				background-image: url($site+'files/temp/overlay-bg.png');
+				background-image: $overlay-background;
 				background-repeat: repeat;
 			}
 		}
@@ -120,7 +126,7 @@
 		&.split {
 
 			&:hover {
-				background-image: url($site+'files/temp/overlay-bg.png');
+				background-image: $overlay-background;
 				background-repeat: repeat;
 			}
 
