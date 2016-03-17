@@ -162,17 +162,10 @@
         },
 
         _scrollTo: function(val){
-            var inst = this, offset,
-                $header = inst.options.headerOffset;
+            var inst = this, offset;
 
-                if ( isNaN( $header ) ) {
-                    offset = !$( $header ).length ? 0 : $( $header ).outerHeight();
-                } else {
-                    offset = $header;
-                }
-
-            $('html, body').animate({
-                scrollTop: val - offset
+            $('html, body').stop(true, true).animate({
+                scrollTop: val - $('#Navigation').outerHeight()
             }, 500, 'linear', function(){
                 $('body').removeClass('toggle-nav-open');
             });
@@ -363,7 +356,8 @@
                 }
             });
 
-            inst._trigger('onComplete');
+            //inst._trigger('onComplete');
+            inst.options.onComplete(inst);
         },
 
         _onTabClick: function() {
