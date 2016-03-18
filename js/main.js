@@ -145,6 +145,8 @@
         _init: function() {
             var inst = this;
 
+            console.log('dd')
+
             inst._trigger('onInit');
             inst._getStories();
             inst._onMenuItemClick();
@@ -164,8 +166,14 @@
         _scrollTo: function(val){
             var inst = this, offset;
 
+            if ( isNaN(inst.options.headerOffset) ) {
+                offset = $(inst.options.headerOffset).length ? $(inst.options.headerOffset).outerHeight() : 0;
+            } else {
+                offset = inst.options.headerOffset
+            }
+
             $('html, body').stop(true, true).animate({
-                scrollTop: val - $('#Navigation').outerHeight()
+                scrollTop: val - offset
             }, 500, 'linear', function(){
                 $('body').removeClass('toggle-nav-open');
             });
