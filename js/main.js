@@ -356,7 +356,6 @@
                 }
             });
 
-            //inst._trigger('onComplete');
             inst.options.onComplete(inst);
         },
 
