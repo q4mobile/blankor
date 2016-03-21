@@ -145,8 +145,6 @@
         _init: function() {
             var inst = this;
 
-            console.log('dd')
-
             inst._trigger('onInit');
             inst._getStories();
             inst._onMenuItemClick();
@@ -155,7 +153,8 @@
 
         _onMenuItemClick: function(container) {
             var inst = this;
-            $(inst.options.nav).on('click', 'a', function(){
+            $(inst.options.nav).on('click', 'a', function(e){
+                e.preventDefault();
                 var hash = $.attr(this, 'href');
                 inst._scrollTo( $(hash).offset().top );
                 location.hash = hash;
