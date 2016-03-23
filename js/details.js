@@ -2,6 +2,7 @@
     $.widget("q4.details", {
         options: {
             showHeader: true,
+            isPublic: false,
             onComplete: function(){
 
             }
@@ -17,10 +18,17 @@
         },
 
         _setBackURL: function(){
+            var o = this.options;
+
             $('button.back').on('click', function(e){
                 e.preventDefault();
                 var hash = location.href.split('/');
-                window.location = '/' + hash[hash.length - 5] + '/default.aspx#' + hash[hash.length - 2];
+
+                if (o.isPublic) {
+                    window.location = '../index.html#' + hash[hash.length - 2];
+                } else {
+                    window.location = '/' + hash[hash.length - 5] + '/default.aspx#' + hash[hash.length - 2];
+                }
             });
         },
 
@@ -66,6 +74,7 @@
                 // Check that an image is defined on the container and set the image accordingly.
 
                 if (header.config !== undefined && header.config.image !== undefined){
+                    console.log(container)
                     container.css({
                         'background-image': 'url(' + header.image() + ')',
                         'background-position': header.position()

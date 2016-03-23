@@ -147,13 +147,13 @@
 
             inst._trigger('onInit');
             inst._getStories();
-            inst._onMenuItemClick();
+            inst._onMenuItemClick($(inst.options.nav));
             inst._onHeroScroll();
         },
 
         _onMenuItemClick: function(container) {
             var inst = this;
-            $(inst.options.nav).on('click', 'a', function(e){
+            container.on('click', 'a', function(e){
                 e.preventDefault();
                 var hash = $.attr(this, 'href');
                 inst._scrollTo( $(hash).offset().top );
@@ -314,6 +314,11 @@
                         story.animationCls = animationCls;
                         story.LinkToDetailPage = story.LinkToDetailPage == '#' ? '' : story.LinkToDetailPage;
                         story.Body = story.Body.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "").replace(/<!-- details-content-start -->.*?<!-- details-content-end -->/g, '');
+
+                        if (inst.options.usePublic && story.LinkToDetailPage.length && !(/^https?:\/\//i).test(story.LinkToDetailPage)){
+                            var url = story.LinkToDetailPage.split('/');
+                            story.LinkToDetailPage = url[ url.length - 2 ] + '/index.html';
+                        }
 
                         stories += Mustache.render(tpl[tag], story);
                     }
