@@ -74,7 +74,6 @@
                 // Check that an image is defined on the container and set the image accordingly.
 
                 if (header.config !== undefined && header.config.image !== undefined){
-                    console.log(container)
                     container.css({
                         'background-image': 'url(' + header.image() + ')',
                         'background-position': header.position()

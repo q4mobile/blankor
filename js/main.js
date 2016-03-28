@@ -2,6 +2,7 @@
     $.widget("q4.stories", {
         options: {
             nav: '.toggle-nav',
+            categoryId: '1cb807d2-208f-4bc3-9133-6a9ad45ac3b0',
             headerOffset: '.header-assets',
             isStatic: false,
             usePublic: false,
@@ -209,9 +210,9 @@
                     data: {
                         apiKey: inst.options.apiKey,
                         includeTags: true,
-                        year: inst.options.year,
+                        //year: inst.options.year,
                         pressReleaseDateFilter: 3,
-                        categoryId: "1cb807d2-208f-4bc3-9133-6a9ad45ac3b0",
+                        categoryId: inst.options.categoryId,
                         bodyType : 2
                     },
                     contentType: 'application/json; charset=utf-8',
@@ -223,10 +224,10 @@
                     url: '/Services/PressReleaseService.svc/GetPressReleaseList',
                     data: JSON.stringify(
                         $.extend( inst._buildParams(), {
-                            year: inst.options.year,
+                            //year: inst.options.year,
                             excludeSelection: 0,
                             pressReleaseSelection: 3,
-                            pressReleaseCategoryWorkflowId: "1cb807d2-208f-4bc3-9133-6a9ad45ac3b0",
+                            pressReleaseCategoryWorkflowId: inst.options.categoryId,
                             pressReleaseBodyType: 2
                         })
                     ),
