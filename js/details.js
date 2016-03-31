@@ -2,7 +2,7 @@
     $.widget("q4.details", {
         options: {
             showHeader: true,
-            isPublic: false,
+            usePublic: false,
             onComplete: function(){
 
             }
@@ -24,7 +24,7 @@
                 e.preventDefault();
                 var hash = location.href.split('/');
 
-                if (o.isPublic) {
+                if (o.usePublic) {
                     window.location = '../index.html#' + hash[hash.length - 2];
                 } else {
                     window.location = '/' + hash[hash.length - 5] + '/default.aspx#' + hash[hash.length - 2];
