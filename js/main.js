@@ -4666,3 +4666,14 @@ $(window).scroll(function() {
         });
     });
 })(window, window.jQuery);
+
+// Disable Smooth Scrolling on IE11
+
+if(navigator.userAgent.match(/Trident\/7\./)) {
+    $('body').on("mousewheel", function () {
+        event.preventDefault();
+        var wd = event.wheelDelta;
+        var csp = window.pageYOffset;
+        window.scrollTo(0, csp - wd);
+    });
+}
